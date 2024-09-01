@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Heebo:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        @apply m-0 p-0 box-border;
+    }
+
+    body {
+        font-family: "Heebo", sans-serif;
+    }
+
+    li {
+        @apply list-none;
+    }
+
+    a {
+        @apply no-underline;
+    }
+
+    a,
+    img,
+    span,
+    input,
+    button {
+        @apply block;
+    }
+
+    input,
+    button {
+        @apply border-none bg-none;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    input {
+        @apply w-full;
+    }
+
+    img {
+        @apply h-auto;
+    }
+
+    :focus-visible {
+        @apply outline-offset-[5px];
+    }
+
+    html {
+        @apply scroll-smooth;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-[10px];
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-white;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-white2;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-lightGray;
+    }
+
+    .animate {
+        animation: rotate 7s linear infinite;
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .image-transition {
+        @apply relative rounded-md overflow-hidden;
+    }
+
+    .image-transition img {
+        @apply transition-all duration-500 transform;
+    }
+
+    .image-transition:hover img {
+        @apply scale-[1.1];
+    }
+
+    .gradiant {
+        background: linear-gradient(
+            hsla(222, 46%, 17%, 0),
+            hsla(222, 46%, 17%, 0.7)
+        );
+    }
+
+    .footer-bg {
+        background-image: url("./assets/images/footer-bg.png");
+    }
+
+    .btn {
+        @apply bg-white text-viridianGreen font-[700] w-max px-[25px] py-[10px] border-[2px] border-white border-solid rounded-md;
+    }
+
+    .btn-secondary:is(:hover, :focus) {
+        @apply bg-transparent text-white;
+    }
+
+    .btn-primary {
+        @apply bg-viridianGreen text-white border-viridianGreen;
+    }
+
+    .btn-primary:is(:hover, :focus) {
+        @apply bg-transparent text-viridianGreen;
+    }
+
+    .btn-outline {
+        @apply text-oxfordBlue border-silverChalice;
+    }
+
+    .btn-outline:is(:hover, :focus) {
+        @apply text-viridianGreen border-viridianGreen;
+    }
+}
