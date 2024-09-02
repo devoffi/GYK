@@ -15,7 +15,7 @@ const Footer = () => {
             id="contact us"
         >
             <div className="container px-4 py-20 m-auto">
-                <div className="flex flex-wrap gap-4 mb-12">
+                <div className="flex flex-wrap gap-4 mb-4">
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">
                             About us
@@ -168,7 +168,8 @@ const Footer = () => {
                         </form>
                     </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-5 justify-between items-center">
+                <hr />
+                <div className="flex flex-col sm:flex-row gap-5 justify-between items-center mt-6">
                     <div className="text-xl flex sm:text-2xl uppercase font-semibold">
                         GUARDMYKIDS <span className="text-xs flex  items-end pb-1 lowercase">.com</span>
                     </div>

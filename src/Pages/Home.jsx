@@ -3,8 +3,10 @@ import React from 'react'
 function Home() {
   return (
     <>
-    
-    <h1>Devvvvvvvvvvvvvv</h1>
+    <div className='h-[100vh]'>
+
+      <h1>Home</h1>
+    </div>
     </>
   )
 }
