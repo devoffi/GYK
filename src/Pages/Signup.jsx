@@ -10,7 +10,7 @@ function Signup() {
         <img
           src={logo}
           alt="courses"
-          className=" w-52 h-20 rounded-sm shadow-2xl  object-cover"
+          className=" w-52 h-20 rounded-sm   object-cover"
         />
       </div>
       <div className="w-full lg:w-1/2 shadow-2xl py-16 px-24 gap-1 flex flex-col">
