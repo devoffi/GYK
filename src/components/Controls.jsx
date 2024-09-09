@@ -7,6 +7,7 @@ import {
   FaShieldHalved,
 } from "react-icons/fa6";
 import { BsArrowUpRight } from "react-icons/bs";
+import PrimaryButton from "./common/PrimaryButton";
 
 function Controls() {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -213,6 +214,7 @@ function Controls() {
           </video>
         </div>
       </div>
+      <div className=" self-center"><PrimaryButton>Get started free</PrimaryButton></div>
     </div>
   );
 }

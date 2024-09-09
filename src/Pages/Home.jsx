@@ -4,6 +4,7 @@ import PrimaryButton from "../components/common/PrimaryButton";
 import AvailableFor from "../components/common/AvailableFor";
 import Rating from "../components/Rating";
 import Controls from "../components/Controls";
+import Concern from "../components/Concern";
 
 function Home() {
   return (
@@ -41,7 +42,7 @@ function Home() {
       />
 
       <Controls/>
-      
+      <Concern/>
     </SectionContainer>
   );
 }
