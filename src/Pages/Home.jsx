@@ -5,6 +5,7 @@ import AvailableFor from "../components/common/AvailableFor";
 import Rating from "../components/Rating";
 import Controls from "../components/Controls";
 import Concern from "../components/Concern";
+import Testimonial from "../components/Testimonial";
 
 function Home() {
   return (
@@ -43,6 +44,7 @@ function Home() {
 
       <Controls/>
       <Concern/>
+      <Testimonial/>
     </SectionContainer>
   );
 }
