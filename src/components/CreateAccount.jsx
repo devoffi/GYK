@@ -4,17 +4,15 @@ import PrimaryButton from "./common/PrimaryButton";
 
 function CreateAccount() {
   return (
-    <div className="flex bg-blue-50 py-20 gap-10 justify-center">
-      <div className="w-[45%]">
+    <div className="flex flex-col lg:flex-row bg-blue-50 py-20 gap-10 justify-center">
+      <div className="lg:w-[45%]">
         <img src="https://static.qustodio.com/public-site/uploads/2024/05/08151750/Signupform_image-en.png" />
       </div>
-      <div className="w-[45%]">
+      <div className="lg:w-[45%]">
         <div className="flex gap-3 justify-center">
-          <span className="text-xl lg:text-3xl font-bold">Create your </span>
-          <span className="text-xl lg:text-3xl font-bold text-blue-600">
-            FREE
-          </span>
-          <span className="text-xl lg:text-3xl font-bold">account now</span>
+          <p className="text-xl lg:text-3xl font-bold">Create your </p>
+          <p className="text-xl lg:text-3xl font-bold text-blue-600">FREE</p>
+          <p className="text-xl lg:text-3xl font-bold">account now</p>
         </div>
         <p className="text-md lg:text-xl font-medium mt-2 text-center">
           And enjoy a trial of our Premium parental control features

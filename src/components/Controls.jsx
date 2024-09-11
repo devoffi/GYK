@@ -19,10 +19,10 @@ function Controls() {
 
   return (
     <div className="flex flex-col gap-20 mb-20">
-      <p className="lg:text-3xl text-xl font-bold text-center mt-20">
+      <p className="lg:text-3xl text-xl font-bold text-center lg:mt-20 mt-5">
         Parental controls made easy
       </p>
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-32">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10">
         <div>
           <video autoPlay muted loop type="webm">
             <source src="https://static.qustodio.com/public-site/uploads/2024/04/26094644/Keep-your-child-safe_EN.webm" />
@@ -40,7 +40,7 @@ function Controls() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-32">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10">
         <div>
           <p className="text-xl lg:text-4xl font-bold my-8">
             Supervise the way you want
@@ -58,7 +58,7 @@ function Controls() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-32">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10">
         <div>
           <video autoPlay muted loop type="webm">
             <source src="https://static.qustodio.com/public-site/uploads/2024/04/26094831/build-positive-digital-habits.webm" />
@@ -76,8 +76,8 @@ function Controls() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center gap-32">
-        <div className="w-[50%]">
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10">
+        <div className="lg:w-[50%]">
           <div className="flex flex-col justify-center items-center gap-1">
             {/* Accordion Item 1 */}
             <div
@@ -208,7 +208,7 @@ function Controls() {
             </div>
           </div>
         </div>
-        <div className="w-[50%]">
+        <div className="lg:w-[50%]">
           <video autoPlay muted loop type="webm">
             <source src="https://static.qustodio.com/public-site/uploads/2024/04/26094644/Keep-your-child-safe_EN.webm" />
           </video>
