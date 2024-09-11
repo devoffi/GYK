@@ -21,7 +21,7 @@ function Login() {
           <TextInputBox label="Email" />
           <TextInputBox label="Password" />
         </div>
-        <a className="text-blue-600 font-medium" href="#">
+        <a className="text-blue-600 font-medium" href="/forgot-password">
           Forgot your password ?
         </a>
         <div className="mx-auto my-6">
@@ -29,7 +29,7 @@ function Login() {
         </div>
         <div className="flex gap-2 justify-center">
           <p>First time here? </p>
-          <a className="text-blue-600 font-medium" href="#">
+          <a className="text-blue-600 font-medium" href="/signup">
             Sign up
           </a>
         </div>

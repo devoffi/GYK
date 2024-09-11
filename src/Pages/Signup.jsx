@@ -29,7 +29,7 @@ function Signup() {
         </div>
         <div className="flex gap-2 justify-center">
           <p>Already have an account? </p>
-          <a className="text-blue-600 font-medium" href="#">
+          <a className="text-blue-600 font-medium" href="/login">
             Log in
           </a>
         </div>

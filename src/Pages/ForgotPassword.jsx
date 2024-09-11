@@ -18,7 +18,7 @@ function ForgotPassword() {
         <div className="mb-5">
           <p className="font-semibold text-lg text-center">Recover password</p>
           <p className="text-center">
-            Please enter the email address used to create your Qustodio account
+            Please enter the email address used to create your GuardMyKid account
             below:{" "}
           </p>
         </div>
