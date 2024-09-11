@@ -6,6 +6,8 @@ import Rating from "../components/Rating";
 import Controls from "../components/Controls";
 import Concern from "../components/Concern";
 import Testimonial from "../components/Testimonial";
+import Feature from "../components/Feature";
+import CreateAccount from "../components/CreateAccount";
 
 function Home() {
   return (
@@ -42,9 +44,11 @@ function Home() {
         src="https://static.qustodio.com/public-site/uploads/2021/08/13130800/group-16%402x.png"
       />
 
-      <Controls/>
-      <Concern/>
-      <Testimonial/>
+      <Controls />
+      <Concern />
+      <Testimonial />
+      <Feature />
+      <CreateAccount/>
     </SectionContainer>
   );
 }

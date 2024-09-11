@@ -1,0 +1,40 @@
+import React from "react";
+
+function Feature() {
+  return (
+    <div className="py-10">
+      <p className="text-xl lg:text-4xl text-center font-bold mb-10">
+        Featured in the media
+      </p>
+      <div className="flex justify-evenly bg-green-100 py-20">
+        <div className="w-52">
+          <img src="https://static.qustodio.com/public-site/uploads/2023/11/22081232/parents-logo%402x.png" />
+          <p className="text-center mt-8">
+            "Everything you need to know about your kid’s screen time is
+            beautifully displayed on Qustodio’s online dashboard."
+          </p>
+        </div>
+        <div className="w-52">
+          <img src="https://static.qustodio.com/public-site/uploads/2023/11/22111239/chicago-logo%402x.png" />
+          <p className="text-center mt-8">
+          “Makes device monitoring easy for parents.”
+          </p>
+        </div>
+        <div className="w-52">
+          <img src="https://static.qustodio.com/public-site/uploads/2023/11/22111345/mashable-logo%402x.png" />
+          <p className="text-center mt-8">
+          “From YouTube monitoring to a panic button for kids away from home, Qustodio covers just about everything.”
+          </p>
+        </div>
+        <div className="w-52">
+          <img src="https://static.qustodio.com/public-site/uploads/2023/11/22111520/business-logo%402x.png" />
+          <p className="text-center mt-8">
+          “Most complete parental control application available.”
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Feature;
