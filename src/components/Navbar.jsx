@@ -59,7 +59,7 @@ const Header = () => {
                 <div
                     className={`${
                         toggle
-                            ? "top-[50px] md:top-[63px] py-12 gap-8"
+                            ? "top-[65px] md:top-[63px] py-12 gap-8"
                             : "top-[-1000px] gap-16 py-0"
                     } flex md:flex-row flex-col items-center absolute z-10 left-0 bg-viridianGreen w-full md:w-auto md:static transition-all duration-300`}
                 >
@@ -98,7 +98,7 @@ const Header = () => {
                           }}>
                           <div className="py-1 w-full" role="none">
                             <div className=" flex px-4 py-2 text-sm text-gray-700 w-full gap-5"  >
-                              <div className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div  onClick={() => navigate('/why')} className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex">
                                       <img src={icon} alt="courses" className='w-20 h-15  object-cover'/>
                                   </div>
@@ -110,7 +110,7 @@ const Header = () => {
                                   </div>
                                   <BsArrowUpRight size={13} style={{ color:'#1a9068' }} className='icon items-start mt-7 '/>
                               </div>
-                              <div className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div onClick={() => navigate('/features')} className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-4  pl-3">
                                       < FaListCheck size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -124,7 +124,7 @@ const Header = () => {
                               </div>
                             </div>
                             <div className=" flex px-4 py-2 text-sm text-gray-700 w-full gap-5"  role="menuitem"  tabIndex="-1"  id="menu-item-0">
-                              <div className='category bg-white px-2 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div   onClick={() => navigate('/get-started')} className='category bg-white px-2 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-4  pl-3">
                                       <BsRocketTakeoff size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -136,7 +136,7 @@ const Header = () => {
                                   </div>
                                   <BsArrowUpRight size={23} style={{ color:'#1a9068' }} className='icon items-start mt-10'/>
                               </div>
-                              <div className='category bg-white px-2 py-3 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div  onClick={() => navigate('/downloads')} className='category bg-white px-2 py-3 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-2  pl-3 ">
                                       <RiFolderDownloadLine size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -204,6 +204,36 @@ const Header = () => {
                           Pricing
                         </a>
                       </li>
+                      <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
+                        <a
+                          href="/learn"
+                          smooth={true}
+                          duration={100}
+                          offset={-50}
+                          onClick={() => setToggle(false)}>
+                          Learn
+                        </a>
+                      </li>
+                      <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
+                        <a
+                          href="/help"
+                          smooth={true}
+                          duration={100}
+                          offset={-50}
+                          onClick={() => setToggle(false)}>
+                          Support
+                        </a>
+                      </li>
+                      <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
+                        <a
+                          href="/family-stories"
+                          smooth={true}
+                          duration={100}
+                          offset={-50}
+                          onClick={() => setToggle(false)}>
+                          Family Stories
+                        </a>
+                      </li>
                       <div
                         className=" relative  flex-row font-medium cursor-pointer group hover:text-lightGray hidden md:block">
                         <a
@@ -229,7 +259,7 @@ const Header = () => {
                           }}>
                           <div className="py-1 w-full" role="none">
                             <div className=" flex px-4 py-2 text-sm text-gray-700 w-full gap-5"  >
-                              <div className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div onClick={() => navigate('/product-tips')} className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex px-4">
                                       < MdDevices  size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -241,7 +271,7 @@ const Header = () => {
                                   </div>
                                   <BsArrowUpRight size={23} style={{ color:'#1a9068' }} className='icon items-start mt-7 '/>
                               </div>
-                              <div className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div onClick={() => navigate('/safety-guide')} className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-4  px-2">
                                       < AiOutlineSafety  size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -255,7 +285,7 @@ const Header = () => {
                               </div>
                             </div>
                             <div className=" flex px-4 py-2 text-sm text-gray-700 w-full gap-5"  role="menuitem"  tabIndex="-1"  id="menu-item-0">
-                              <div className='category bg-white px-2 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div onClick={() => navigate('/parenting-tip')} className='category bg-white px-2 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-4  pl-3">
                                       <FaRegLightbulb size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -267,7 +297,7 @@ const Header = () => {
                                   </div>
                                   <BsArrowUpRight size={23} style={{ color:'#1a9068' }} className='icon items-start mt-10'/>
                               </div>
-                              <div className='category bg-white px-2 py-3 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
+                              <div onClick={() => navigate('/family-stories')} className='category bg-white px-2 py-3 pb-4 shadow-2xl rounded-md flex items-center  justify-between border border-transparent hover:border-[#1a9068] hover:cursor-pointer group/edit' style={{width : "365px"}}>
                                   <div className="flex pt-2  px-2 ">
                                       <AiOutlineSafety  size={25} color="hsl(180, 98%, 31%)" />
                                   </div>
@@ -311,6 +341,7 @@ const Header = () => {
                           <div className="py-1 w-full" role="none">
                             <div className="flex px-4 py-2 text-sm text-gray-700 w-full gap-5">
                               <div
+                                onClick={() => navigate('/help')}
                                 className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit'
                                 style={{ width: "365px" }}
                               >
@@ -326,6 +357,7 @@ const Header = () => {
                                 <BsArrowUpRight size={13} style={{ color: '#1a9068' }} className='icon items-start mt-7' />
                               </div>
                               <div
+                                onClick={() => navigate('/care')}
                                 className='category bg-white px-2 pb-4 shadow-xl rounded-md flex items-center justify-between border border-transparent hover:bg-gray-50 hover:border-[#1a9068] hover:cursor-pointer group/edit'
                                 style={{ width: "365px" }}
                               >
