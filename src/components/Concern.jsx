@@ -12,15 +12,15 @@ function Concern() {
 
   return (
     <div className="my-20">
-      <p className="text-4xl font-bold text-center">
+      <p className="lg:text-4xl text-xl font-bold text-center">
         We’re here to help with your concerns
       </p>
       <p className="text-center my-5">
         Whatever their age and needs, Qustodio’s parental control tools help
         reduce the risks your kids face online.
       </p>
-      <div className="flex">
-        <div className="w-[30%]">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-0">
+        <div className="lg:w-[30%]">
           <img src="https://static.qustodio.com/public-site/uploads/2023/11/16115935/studykid-image-en%402x.png" />
         </div>
         <div className="flex flex-col justify-center items-center gap-1">
