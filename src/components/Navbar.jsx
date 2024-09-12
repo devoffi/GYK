@@ -59,11 +59,11 @@ const Header = () => {
                 <div
                     className={`${
                         toggle
-                            ? "top-[65px] md:top-[63px] py-12 gap-8"
+                            ? "top-[65px] md:top-[63px] pt-6 pb-12 gap-8"
                             : "top-[-1000px] gap-16 py-0"
                     } flex md:flex-row flex-col items-center absolute z-10 left-0 bg-viridianGreen w-full md:w-auto md:static transition-all duration-300`}
                 >
-                    <div className="flex flex-col md:flex-row items-center gap-8  sm:text-lg text-md">
+                    <div className="flex flex-col md:flex-row items-center gap-7  sm:text-lg text-md">
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
                         <a
                           href="/"
