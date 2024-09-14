@@ -13,7 +13,7 @@ function Login() {
           className=" w-52 h-20 rounded-sm  object-cover"
         />
       </div>
-      <div className="w-full lg:w-1/2 shadow-2xl py-16 px-24 gap-1 flex flex-col">
+      <div className="w-full lg:w-1/2 shadow-2xl lg:py-16 px-4 py-5 lg:px-24 gap-1 flex flex-col">
       <div className="mb-5">
       <p className="font-semibold text-lg">Welcome Back! </p>
       </div>
