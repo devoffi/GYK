@@ -22,6 +22,7 @@ export default {
       },
       fontFamily: {
           f: "'Comforter Brush', cursive",
+          titan: ['Titan One', 'sans-serif'],
       },
       screens: {
           xs: "575px",
