@@ -13,10 +13,10 @@ function Concern() {
   return (
     <div className="my-20">
       <p className="lg:text-4xl text-xl font-bold text-center">
-        We’re here to help with your concerns
+        Were here to help with your concerns
       </p>
       <p className="text-center my-5">
-        Whatever their age and needs, Qustodio’s parental control tools help
+        Whatever their age and needs, Qustodios parental control tools help
         reduce the risks your kids face online.
       </p>
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-0">
