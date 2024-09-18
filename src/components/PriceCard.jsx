@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
-import { IoIosLock } from "react-icons/io";
+import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
 import CustomDot from "./common/CustomDot"
 
@@ -167,7 +167,7 @@ const Package = () => {
             
             <div className="mb-6 border-b ">
               <h2 className="text-xl font-semibold text-gray-700 mb-2 flex gap-2"> 
-                < IoIosLock color="hsl(180, 98%, 31%)" size={26} />
+                < MdOutlineLock color="hsl(180, 98%, 31%)" size={26} />
                 BASIC
               </h2>
               <p className="text-gray-900 text-base font-light md:text-xl ">The tools you need for core protection.</p>
@@ -234,7 +234,7 @@ const Package = () => {
           <div className="md:hidden  w-full relative border border-gray-200 rounded-xl p-8 bg-white  hover:shadow-xl transition-shadow duration-300 mb-10">
              <div className="mb-6 border-b ">
               <h2 className="text-xl font-semibold text-gray-700 mb-2 flex gap-2"> 
-                < IoIosLock color="hsl(180, 98%, 31%)" size={26} />
+                < MdOutlineLock color="hsl(180, 98%, 31%)" size={26}  />
                 BASIC
               </h2>
               <p className="text-gray-900 text-base font-light md:text-xl ">The tools you need for core protection.</p>
