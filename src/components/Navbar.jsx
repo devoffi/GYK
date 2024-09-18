@@ -50,7 +50,7 @@ const Header = () => {
     <div
             className={`${
                 active ? "shadow-lg" : ""
-            } w-full px-3 top-0 left-0 z-20 bg-viridianGreen text-white sticky`}
+            } w-full px-3 top-0 left-0 z-50 bg-viridianGreen text-white sticky`}
         >
             <div className="py-3 transition-all duration-300 container m-auto flex items-center justify-between">
                 <div className="flex text-xl sm:text-2xl uppercase font-semibold cursor-pointer"  onClick={() => navigate('/')}>
