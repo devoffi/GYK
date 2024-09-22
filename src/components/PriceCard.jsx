@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
 import CustomDot from "./common/CustomDot"
