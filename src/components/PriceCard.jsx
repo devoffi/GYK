@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
+import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
 import CustomDot from "./common/CustomDot"
@@ -255,7 +255,7 @@ const Package = () => {
           
       </Carousel>
       <div className='flex justify-center w-full'>
-        <p className='w-4/6 text-[14px] leading-1'>* Calls & messages for iOS requires a Windows or Mac computer. Unlimited includes your family devices and does not apply to schools or businesses. Offer valid until September 30, 2024 on 1-year plans only.</p>
+        <p className='w-[85%] text-center md:w-4/6 text-[14px] leading-1'>* Calls & messages for iOS requires a Windows or Mac computer. Unlimited includes your family devices and does not apply to schools or businesses. Offer valid until September 30, 2024 on 1-year plans only.</p>
       </div>  
     </div>
   );
