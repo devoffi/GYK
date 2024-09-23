@@ -128,4 +128,8 @@
     .btn-outline:is(:hover, :focus) {
         @apply text-viridianGreen border-viridianGreen;
     }
+    .custom-clip {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
 }
