@@ -11,7 +11,6 @@ import Carousel from 'react-multi-carousel';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
-import CustomDot from "../components/common/CustomDot"
 
 
 const responsive = {
@@ -148,7 +147,6 @@ function Care() {
     slidesToShow: 1,
     swipeable: true,
     responsive,
-    customDot: <CustomDot />, 
   };
   const accordionItems = [
     {
@@ -594,7 +592,7 @@ function Care() {
       <div className='flex justify-center w-full px-4 md:px-0'>
         <p className='w-[85%] text-center md:w-4/6 text-[14px] leading-1'>* Calls & messages for iOS requires a Windows or Mac computer. Unlimited includes your family devices and does not apply to schools or businesses. Offer valid until September 30, 2024 on 1-year plans only.</p>
       </div>  
-      <div className='px-4 md:px-0 w-full flex flex-col gap-3 justify-center items-center py-10'>
+      <div className='px-4 md:px-0 w-full flex flex-col gap-3 justify-center items-center py-10 md:py-20'>
         <p className='text-xs'>AvailableFor:</p>
         <img width={400} src='https://www.qustodio.com/wp-content/themes/Divi-child/assets/dist/svg/blocks/planbox-b/device-list.svg'/>
       </div>

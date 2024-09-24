@@ -24,24 +24,6 @@ const Footer = () => {
                             href="#"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
-                            Company
-                        </a>
-                        <a
-                            href="#"
-                            className="text-base text-lightGray hover:text-white mb-3"
-                        >
-                            Team
-                        </a>
-                        <a
-                            href="#"
-                            className="text-base text-lightGray hover:text-white mb-3"
-                        >
-                            Careers
-                        </a>
-                        <a
-                            href="#"
-                            className="text-base text-lightGray hover:text-white mb-3"
-                        >
                            Partners
                         </a>
                         <a

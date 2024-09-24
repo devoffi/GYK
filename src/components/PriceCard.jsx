@@ -4,7 +4,6 @@ import 'react-multi-carousel/lib/styles.css';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
-import CustomDot from "./common/CustomDot"
 
 const responsive = {
     desktop: {
@@ -142,7 +141,6 @@ const Package = () => {
     slidesToShow: 1,
     swipeable: true,
     responsive,
-    customDot: <CustomDot />, 
   };
 
   return (

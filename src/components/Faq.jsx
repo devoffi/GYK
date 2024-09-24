@@ -80,7 +80,7 @@ function Faq() {
 
   return (
     <>
-        <div className='container mx-auto md:flex justify-between w-full pb-10 md:pb-20 '>
+        <div className='container mx-auto md:flex justify-between w-full pb-10 md:py-20 '>
             <div className='w-full md:w-4/12 pb-8 md:pt-8 text-center'>
                 <p className='text-3xl md:text-4xl leading-20 text-gray-700 font-bold'>Frequently Asked Questions</p>
             </div>
