@@ -268,10 +268,10 @@ function Price() {
               </div>
             <p className='text-[12px] pt-8 md:pt-0'>* Panic button is only available for Android. Calls & messages for iOS requires a Windows or Mac computer. Unlimited includes your family devices and does not apply to schools or businesses. Care Plus is available upon request.</p>
         </div>
-        </div>
         < Testimonial/>
         < Feature />
         <Faq />
+        </div>
     </>
   )
 }
