@@ -39,6 +39,7 @@ function App() {
       <Route path="/safety-guide" element={<SafetyGuide />} />
       <Route path="/parenting-tip" element={<ParentingTip />} />
       <Route path="/family-stories" element={<FamilyStories />} />
+      <Route path="/blog" element={<Blog />} />
 
       <Route path="/help" element={<Help />} />
       <Route path="/care" element={<Care />} />
