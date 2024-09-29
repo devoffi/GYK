@@ -176,7 +176,7 @@ const Header = () => {
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
                         <a
-                          href="/getStarted"
+                          href="/get-started"
                           smooth={true}
                           duration={100}
                           offset={-50}
@@ -304,7 +304,7 @@ const Header = () => {
                                   <div className="rounded-lg  group-hover px-4">
                                       <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start "> Family stories  </p>
                                       <p className="text-xs">
-                                      "Qustodio gives me the peace of mind that I have been looking for to ensure my kids are safe"
+                                      "GuardMyKids gives me the peace of mind that I have been looking for to ensure my kids are safe"
                                       </p>
                                   </div>
                                   <BsArrowUpRight size={23} style={{ color:'#1a9068' }} className='icon items-start mt-11 '/>
@@ -351,7 +351,7 @@ const Header = () => {
                                 <div className="rounded-lg group-hover">
                                   <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start">Help center</p>
                                   <p className="text-xs">
-                                    Step-by-step guides and videos to help you set up, use, and troubleshoot Qustodio
+                                    Step-by-step guides and videos to help you set up, use, and troubleshoot GuardMyKids
                                   </p>
                                 </div>
                                 <BsArrowUpRight size={13} style={{ color: '#1a9068' }} className='icon items-start mt-7' />
@@ -367,7 +367,7 @@ const Header = () => {
                                 <div className="rounded-lg group-hover">
                                   <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start">Care</p>
                                   <p className="text-xs">
-                                    Personalized support and guidance from dedicated experts throughout your Qustodio journey.
+                                    Personalized support and guidance from dedicated experts throughout your GuardMyKids journey.
                                   </p>
                                 </div>
                                 <BsArrowUpRight size={13} style={{ color: '#1a9068' }} className='icon items-start mt-7' />

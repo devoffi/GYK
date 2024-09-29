@@ -9,70 +9,140 @@ import {
 } from "react-icons/fa6";
 import Testimonial from "../components/Testimonial";
 import CreateAccount from "../components/CreateAccount";
+import { FaRegFaceAngry } from "react-icons/fa6";
+import { GiNightSleep } from "react-icons/gi";
+import { IoPhonePortraitOutline } from "react-icons/io5";
+import { FaLaptop } from "react-icons/fa";
+import { TbMoodCry } from "react-icons/tb";
+import { BsPersonLock } from "react-icons/bs";
+import { GiSpy } from "react-icons/gi";
+import { RiShapesLine } from "react-icons/ri";
+import AccordionIcon from '../components/common/AccordianIcon';
+import { LuBookOpen } from "react-icons/lu";
+import { ImEye } from "react-icons/im";
+import { FaBalanceScale } from "react-icons/fa";
+import { FaUserShield } from "react-icons/fa6";
+
+
 
 function Why() {
-  const [openAccordion, setOpenAccordion] = useState(null);
 
-  const handleAccordionToggle = (index) => {
-    // Toggle the clicked accordion open/closed
-    setOpenAccordion(openAccordion === index ? null : index);
+  const colorMapping = {
+    "#22c55e": { text: "green-500", bg: "green-100" },
+    blue: { text: "blue-500", bg: "blue-100" },
+    green: { text: "green-500", bg: "green-100" },
+    red: { text: "red-00", bg: "red-100" },
   };
 
   const data = [
     {
+      icon :  GiSpy ,
+      color: "#22c55e",
       title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. Qustodios advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
+      des: "50% of online exploitation victims are between the ages of 12 and 15. GuardMyKids advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
     },
     {
+      icon : TbMoodCry ,
+      color: "blue",
       title: "Mental health issues",
-      des: "Severe depression has increased 58% since 2010, coinciding with an increase in cell phone ownership. Qustodio can help you limit the amount of time your child spends in front of screens.",
+      des: "Severe depression has increased 58% since 2010, coinciding with an increase in cell phone ownership. GuardMyKids can help you limit the amount of time your child spends in front of screens.",
     },
     {
+      icon :  GiNightSleep,
+      color: " red ",
       title: "Sleep problems",
-      des: "73% of high school students dont get enough sleep. This can lead to difficulty learning, poor moods, and interpersonal conflicts. Use Qustodio to set downtimes before bed, so your kids can avoid sleep-disrupting blue light.",
+      des: "73% of high school students dont get enough sleep. This can lead to difficulty learning, poor moods, and interpersonal conflicts. Use GuardMyKids to set downtimes before bed, so your kids can avoid sleep-disrupting blue light.",
     },
     {
+      icon :  BsPersonLock,
+      color: "green",
+      title: "Online privacy",
+      des: "51% of teens use social media. GuardMyKids helps you ensure they don't share personal information or exchange inappropriate messages with strangers.",
+    },
+    {
+      icon :  FaRegFaceAngry ,
+      color: "blue",
       title: "Cyberbullying",
-      des: "33% of kids have experienced cyberbullying. Use Qustodio to monitor texts so you can catch and block bullies.",
+      des: "33% of kids have experienced cyberbullying. Use GuardMyKids to monitor texts so you can catch and block bullies.",
     },
     {
-      title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. Qustodios advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
+      icon : FaLaptop ,
+      color: "green",
+      title: "Inappropriate content",
+      des: "42% of kids have seen porn online. Use GuardMyKids to monitor YouTube viewing, filter browser results, and block adult websites to reduce the chances your child sees upsetting images or content.",
     },
     {
-      title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. Qustodios advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
+      icon :  IoPhonePortraitOutline ,
+      color: "blue",
+      title: "Online addiction",
+      des: "50% of kids admit to being addicted to their smartphones. GuardMyKids lets you set consistent time limits on your child's devices and block apps that they use excessively.",
     },
     {
-      title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. Qustodios advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
-    },
-    {
-      title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. Qustodios advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
+      icon :  RiShapesLine,
+      color: " red ",
+      title: "Education issues",
+      des: "The 63% of children who have more than 2 hours of daily screen time show lower academic performance than those who spend less time online. Use GuardMyKids to reduce their device use and encourage them to visit educational websites.",
     },
   ];
+  const accordionItems = [
+    {
+      icon : FaUserShield ,
+      title: 'Keep them safe',
+      content: (
+        <>
+          <p>Set up smart website filters, block apps and games, monitor YouTube and Facebook use, track location, and more.</p>
+        </>
+      ),
+    },
+    {
+      icon : FaBalanceScale ,
+      title: 'Create balance',
+      content: (
+        <>
+          <p >Manage your child's screen time by setting daily limits for their devices as well as for specific apps. Protect screen-free moments such as mealtimes and bedtimes.</p>
+        </>
+      ),
+    },
+    {
+      icon : ImEye,
+      title: 'Get full visibility',
+      content: (
+        <>
+          <p >View your child's online activity in real-time to see who they're talking to and what content they're accessing. Receive detailed reports via email and get alerts when limits are met or your child has a problem.</p>
+        </>
+      ),
+    },
+    {
+      icon : LuBookOpen,
+      title: 'Help them learn',
+      content: (
+        <>
+          <p >Customize your settings to help your kids get the most out their education. Block certain apps and websites during school and homework hours, and allow the ones they need to complete their tasks.</p>
+        </>
+      ),
+    },
+  ]
   return (
     <SectionContainer>
-      <p className="text-xl lg:text-5xl font-bold lg:w-[40%] w-[90%] mx-auto text-center lg:pt-20 pt-5">
-        We keep your childs digital activity balanced and safe
+      <div className="text-gray-700 bg-sky-50/50 ">
+      <p className="text-xl lg:text-5xl font-bold lg:w-[60%] w-[90%] mx-auto text-center lg:pt-20 pt-10 md:pt-5">
+        We ensure your child's digital activity is both balanced and safe
       </p>
-      <p className="text-center mt-10 w-[80%] mx-auto text-md lg:text-xl">
-        Screens are here to stay. With children using{" "}
-        <strong>devices at increasingly younger ages</strong>, having the{" "}
-        <strong>right tools to help your kids</strong> develop healthy digital
-        habits is <strong>more important than ever.</strong>
+      ,    
+      <p className="text-center md:mt-10 w-[80%] mx-auto text-md lg:text-xl">
+        Screens are a permanent part of our lives. As children use {" "}
+        <strong>devices at younger ages</strong>, it's crucial{" "}
+        <strong>to equip them with the right tools</strong> to foster  <strong>healthy digital habits.</strong>
       </p>
 
-      <div className="flex flex-col lg:flex-row w-[60%] mx-auto gap-10 mt-20 justify-center items-center">
-        <div>
+      <div className="flex flex-col lg:flex-row w-[90%] rounded-lg  bg-white gap-10 mx-auto px-10 my-10 py-10 md:py-12 justify-center items-center">
+        <div className="flex flex-col mx-auto justify-center">
           <p className="text-xl lg:text-3xl font-bold">
             The first <strong className="text-blue-600">fully digital</strong>{" "}
             generation
           </p>
           <p className="mt-3 lg:mt-8 text-lg lg:text-xl">
-            The percentage of kids who have their own smartphones is on the
-            rise.
+          The number of kids owning their own smartphones is increasing.
           </p>
           <p className="mt-2 lg:mt-5 text-gray-400">
             Source: Stanford Medicine, 2022
@@ -83,22 +153,29 @@ function Why() {
         </div>
       </div>
 
-      <p className="text-xl lg:text-3xl font-bold lg:w-[60%] w-[90%] mx-auto text-center lg:pt-20 pt-5">
-        More time online exposes kids to more risks
+      <p className="text-xl lg:text-3xl font-bold lg:w-[70%] w-full mx-auto text-center lg:pt-20 pt-5">
+        Increased time online exposes children to greater risks.
       </p>
-      <p className="text-center mt-1 w-[65%] mx-auto text-md lg:text-xl">
-        We know that every child faces different risks when it comes to their
-        digital lives. We have the tools to help in every situation.
+      <p className="text-center mt-1 w-[75%] mx-auto text-md lg:text-xl py-3">
+      We understand that each child encounters unique risks in their digital lives, and we provide the tools to support them in every scenario.
       </p>
 
-      <div className="flex flex-wrap mt-5 lg:mt-20 w-[90%] mx-auto gap-10 justify-between">
-        {data?.map((item, index) => (
-          <div className="lg:w-1/5">
-            <p className="font-bold text-xl lg:text-2xl mb-3">{item?.title}</p>
-            <p>{item?.des}</p>
+      <div className="flex flex-wrap mt-5 lg:mt-16 w-full px-6 md:px-10 justify-between">
+      {data.map((item, index) => {
+        const colorClasses = colorMapping[item.color] || { text: "gray-500", bg: "gray-100" };
+        
+        return (
+          <div key={index} className="md:w-[23%] bg-white rounded-xl shadow-lg p-4 my-4">
+            <item.icon 
+              size={40} 
+              className={`m-1 text-${colorClasses.text} bg-${colorClasses.bg} p-1.5 rounded-full`} 
+            />
+            <p className="font-bold text-base md:text-lg my-3">{item.title}</p>
+            <p className="text-sm leading-6">{item.des}</p>
           </div>
-        ))}
-      </div>
+        );
+      })}
+    </div>
 
       <p className="text-xl lg:text-4xl font-bold lg:w-[40%] w-[90%] mx-auto text-center lg:pt-20 pt-5">
         Screen time is on the rise
@@ -139,143 +216,18 @@ function Why() {
           </div>
         </div>
       </div>
+      <p className="text-center text-base md:text-lg py-5">*Source: Common Sense Media and GuardMyKids</p>
 
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10 w-[90%] mx-auto">
-        <div className="lg:w-[50%]">
-          <div className="flex flex-col justify-center items-center gap-1">
-            {/* Accordion Item 1 */}
-            <div
-              className={`w-full ${
-                openAccordion === 1 ? "border-green-500" : "border-gray-300"
-              } border-2 p-4`}
-            >
-              <Collapsible
-                open={openAccordion === 1} // Control open state based on the index
-                trigger={
-                  <div
-                    className="flex items-center justify-between"
-                    onClick={() => handleAccordionToggle(1)}
-                  >
-                    {/* <div className="flex items-center justify-center gap-2"> */}
-                    {/* <div>
-                        {openAccordion === 1 ? (
-                          <FaShieldHalved
-                            className="mt-2 group-hover:rotate-180"
-                            size={15}
-                            color="green"
-                          />
-                        ) : (
-                          <FaShieldHalved
-                            className="mt-2 group-hover:rotate-180"
-                            size={13}
-                          />
-                        )}
-                      </div> */}
-                    <div>
-                      <p className="font-bold"> Filter content & apps</p>
-                    </div>
-                    {/* </div> */}
-                    <div>
-                      {openAccordion === 1 ? (
-                        <FaChevronDown
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      ) : (
-                        <FaChevronUp
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      )}
-                    </div>
-                  </div>
-                }
-              >
-                <p>This is the content of the first accordion item.</p>
-                <p>You can add more content here.</p>
-              </Collapsible>
-            </div>
-
-            {/* Accordion Item 2 */}
-            <div
-              className={`w-full ${
-                openAccordion === 2 ? "border-green-500" : "border-gray-300"
-              } border-2 p-4`}
-            >
-              <Collapsible
-                open={openAccordion === 2}
-                trigger={
-                  <div
-                    className="flex items-center justify-between"
-                    onClick={() => handleAccordionToggle(2)}
-                  >
-                    <div>
-                      <p className="font-bold"> Monitor activity</p>
-                    </div>
-                    <div>
-                      {openAccordion === 2 ? (
-                        <FaChevronDown
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      ) : (
-                        <FaChevronUp
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      )}
-                    </div>
-                  </div>
-                }
-              >
-                <p>This is the content of the second accordion item.</p>
-                <p>Additional content can be added here as well.</p>
-              </Collapsible>
-            </div>
-
-            {/* Accordion Item 3 */}
-            <div
-              className={`w-full ${
-                openAccordion === 3 ? "border-green-500" : "border-gray-300"
-              } border-2 p-4`}
-            >
-              <Collapsible
-                open={openAccordion === 3}
-                trigger={
-                  <div
-                    className="flex items-center justify-between"
-                    onClick={() => handleAccordionToggle(3)}
-                  >
-                    <div>
-                      <p className="font-bold"> See the limits</p>
-                    </div>
-
-                    <div>
-                      {openAccordion === 3 ? (
-                        <FaChevronDown
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      ) : (
-                        <FaChevronUp
-                          className="mt-2 group-hover:rotate-180"
-                          size={13}
-                          color="blue"
-                        />
-                      )}
-                    </div>
-                  </div>
-                }
-              >
-                <p>This is the content of the third accordion item.</p>
-                <p>You can keep adding more items like this.</p>
-              </Collapsible>
-            </div>
+      <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10 w-[90%] mx-auto my-6">
+        <div className='w-full md:w-1/2  text-gray-700 px-0'>
+          <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[1px] text-center md:text-start md:tracking-[3px]'>DIGITAL SAFETY AND WELLBEING WITH GUARDMYKIDS</p>
+          <p className='text-2xl md:text-4xl px-6 md:px-0 font-medium md:font-bold text-center md:text-start  py-3'>Everything you need in one place</p>
+          <p className="text-lg font-extralight md:whitespace-nowrap leading-5  text-center  md:text-start">Explore the features below to see what GuardMyKids can do for you!</p>
+          <AccordionIcon items={accordionItems} />
+          <div>
+            <a href="/features" className="text-blue-500 underline pt-6 pb-2" >
+              View all features
+            </a>
           </div>
         </div>
         <div className="lg:w-[50%]">
@@ -285,14 +237,14 @@ function Why() {
         </div>
       </div>
 
-      <div className="w-[90%] mx-auto my-10">
+      <div className="w-full mx-auto my-10">
         <Testimonial />
         <CreateAccount />
       </div>
 
       <div>
         <p className="text-xl lg:text-4xl font-bold lg:w-[40%] w-[90%] mx-auto text-center lg:pt-20 pt-5">
-          Learn how Qustodio
+          Learn how GuardMyKids
         </p>
         <p className="text-xl lg:text-4xl font-bold lg:w-[50%] w-[90%] mx-auto text-center lg:pt-2 pt-1">
           makes digital parenting easier
@@ -306,7 +258,7 @@ function Why() {
             </p>
             <p>
               The latest product updates and features plus handy how-tos to help
-              you get the most out of Qustodio.
+              you get the most out of GuardMyKids.
             </p>
           </div>
           <div className="lg:w-1/3">
@@ -331,6 +283,7 @@ function Why() {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </SectionContainer>
   );

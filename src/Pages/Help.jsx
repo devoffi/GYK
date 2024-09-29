@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import  Icon1  from "../assets/Icons"
 
 function Help() {
   
@@ -85,6 +86,19 @@ function Help() {
           <a className='w-4/12 hover:text-blue-500 hover:underline'>What is YouTube Monitoring and what does it do?</a>
           <a className='w-4/12 hover:text-blue-500 hover:underline'>What is Qustodio's Family Locator and how do I use it?</a>
           <a className='w-4/12 hover:text-blue-500 hover:underline'>What do Lock Navigation and Lock Device mean for time limits on each platform?</a>
+        </div>
+      </div>
+      <div>
+        <div>
+        <img src="https://help.qustodio.com/hc/theming_assets/01HZM9106ZDVDGRNK563824JNC" />
+        <div className='bg-gray-100'>
+          <p>Can't find what you're looking for?</p>
+          <p>Try our quick links</p>
+        </div>
+          <div>
+          <Icon1/>
+          <p>Hell</p>
+          </div>
         </div>
       </div>
 

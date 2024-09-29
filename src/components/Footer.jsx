@@ -40,7 +40,7 @@ const Footer = () => {
                             href="#"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
-                            Why Qustodio
+                            Why GuardMyKids
                         </a>
                         <a
                             href="#"

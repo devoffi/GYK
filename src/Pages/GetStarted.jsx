@@ -1,6 +1,8 @@
 import React from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 import CreateAccount from "../components/CreateAccount";
+import Faq from "../components/Faq"
+
 function GetStarted() {
   return (
     <SectionContainer>
@@ -101,6 +103,7 @@ function GetStarted() {
         </div>
       </div>
       <CreateAccount/>
+      < Faq />
     </SectionContainer>
   );
 }

@@ -346,7 +346,7 @@ function Care() {
       <div className='container mx-auto md:flex justify-between w-full gap-10 py-10 md:py-20 '>
         <div className='w-full md:w-1/2  text-gray-700  px-4 md:px-0'>
           <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[3px] md:tracking-[5px]'>GET MORE FROM QUSTODIO</p>
-          <p className='text-3xl md:text-4xl px-6 font-bold text-center pb-6 pt-3'>Exclusive care plus features</p>
+          <p className='text-3xl md:text-4xl px-6 md:px-0 font-bold text-center md:text-start pb-6 pt-3'>Exclusive care plus features</p>
           <AccordionIcon items={accordionItems} />
         </div>
         <div className='md:w-1/2 pt-10 md:pt-20 '>

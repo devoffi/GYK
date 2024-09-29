@@ -19,12 +19,11 @@ const AccordionItem = ({icon: Icon, title, content, isOpen, onToggle }) =>{
     const contentRef = useRef(null);
     return (
     
-        <div className={` ${isOpen ? "border" : "shadow-all-directions"} py-4 my-5 pl-2 pr-5 rounded border-gray-300  `}>
+        <div className={` ${isOpen ? "border" : "shadow-all-directions"} py-3 md:py-4 my-3 md:my-5 pl-2 pr-5 rounded border-gray-300  `}>
             <h2
             onClick={onToggle}
-            className={`  flex justify-between items-center  text-lg font-medium text-gray-800 cursor-pointer `}
+            className={`  flex justify-between items-center text-sm md:text-lg font-medium text-gray-800 cursor-pointer `}
             >
-            
             <span className='flex gap-4 px-4 font-medium '> {Icon && <Icon className={` ${isOpen ? "text-viridianGreen" : "text-gray-900"}  text-2xl  mr-2 `} />}  {title}</span>
             {isOpen ? <FaChevronUp className='text-purple-600 text-xl font-thin' /> : <FaChevronDown  className='text-purple-500 text-xl font-thin' />}
             </h2>

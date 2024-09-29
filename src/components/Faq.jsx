@@ -17,25 +17,25 @@ function Faq() {
       title: 'What’s the difference between Free and Premium?	',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>The Free version of Qustodio can protect a single device and includes basic protection features.</p>
+          <p  className='pb-1 md:pb-1.5'>The Free version of GuadrMyKids can protect a single device and includes basic protection features.</p>
           <p>There are two Premium plans to choose from. Basic Premium gives you access to core protection features for up to 5 devices. Complete Premium gives you access to advanced safety features (as well as all core features), and allows you to fully customize them for your family - on unlimited devices. You can see the full list of Premium features above on this page.</p>
         </>
       ),
     },
     {
-      title: 'How to get started with Qustodio?',
+      title: 'How to get started with GuadrMyKids ?',
       content: (
         <>
-          <p className='pb-1 md:pb-1.5'>First choose the plan which is right for you and create your Qustodio account. Next, Qustodio will guide you through an easy configuration process to make sure that all your family devices are protected. Need a download - check out the&nbsp;<a  href="/downloads/" className='text-blue-500 inline'>downloads section</a>&nbsp;of our website.</p>          
+          <p className='pb-1 md:pb-1.5'>First choose the plan which is right for you and create your GuadrMyKids account. Next, GuadrMyKids will guide you through an easy configuration process to make sure that all your family devices are protected. Need a download - check out the&nbsp;<a  href="/downloads/" className='text-blue-500 inline'>downloads section</a>&nbsp;of our website.</p>          
           <p>There are two Premium plans to choose from. Basic Premium gives you access to core protection features for up to 5 devices. Complete Premium gives you access to advanced safety features (as well as all core features), and allows you to fully customize them for your family - on unlimited devices. You can see the full list of Premium features above on this page.</p>
         </>
       ),
     },
     {
-      title: 'What platforms is Qustodio compatible with?',
+      title: 'What platforms is GuadrMyKids compatible with?',
       content: (
         <>
-          <p>Qustodio works on the most popular platforms: Windows, Android, iOS, Mac, and Kindle.</p>        
+          <p>GuadrMyKids works on the most popular platforms: Windows, Android, iOS, Mac, and Kindle.</p>        
         </>
       ),
     },
@@ -67,7 +67,7 @@ function Faq() {
       title: 'More questions?',
       content: (
         <>
-          <p>Qustodio offers email support. If you'd like to ask a question, you can visit our&nbsp;<a href="/help/" className='text-blue-500 inline'>Support Center</a>&nbsp;or contact our support team directly&nbsp;<a href="mailto:premiumsupport@qustodio.com" className='text-blue-500 inline'>here</a>. We're here to help.</p>
+          <p>GuadrMyKids offers email support. If you'd like to ask a question, you can visit our&nbsp;<a href="/help/" className='text-blue-500 inline'>Support Center</a>&nbsp;or contact our support team directly&nbsp;<a href="mailto:premiumsupport@qustodio.com" className='text-blue-500 inline'>here</a>. We're here to help.</p>
         </>
       ),
     },
@@ -82,7 +82,7 @@ function Faq() {
     <>
         <div className='container mx-auto md:flex justify-between w-full pb-10 md:py-20 '>
             <div className='w-full md:w-4/12 pb-8 md:pt-8 text-center'>
-                <p className='text-3xl md:text-4xl leading-20 text-gray-700 font-bold'>Frequently Asked Questions</p>
+                <p className='text-3xl md:text-4xl leading-20 text-gray-700 font-bold'>Frequently Asked GuadrMyKids </p>
             </div>
             <div className='w-full md:w-8/12 md:ml-4 md:border-t px-4'>
               <Accordion items={accordionItems} />

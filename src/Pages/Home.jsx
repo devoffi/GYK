@@ -12,19 +12,18 @@ import CreateAccount from "../components/CreateAccount";
 function Home() {
   return (
     <SectionContainer>
-      <div className="flex flex-col lg:flex-row mt-20">
-        <div className=" gap-6 flex flex-col">
-          <p className="lg:text-5xl font-extrabold">
-            The all-in-one{" "}
-            <span className="text-green-400">parental control</span> and digital
-            wellbeing solution
+      <div className="flex flex-col lg:flex-row mt-10 md:mt-20">
+        <div className="  text-center md:text-start gap-6 flex flex-col">
+          <p className="text-3xl lg:text-5xl font-extrabold  ">
+            A comprehensive {" "}
+            <span className="text-green-400">solution for managing</span> parental controls and digital wellbeing.
           </p>
-          <p className="text-xl">
-            Over 6 million parents trust Qustodio’s parental control tools to
-            keep their kids’ screen time safe and balanced on every device—from
-            one easy-to-use dashboard
+          <p className=" text-lg md:text-xl">
+            Join over 6 million parents who trust GuardMyKids to ensure their kids' screen time is safe and balanced across all devices, all from a single, user-friendly dashboard.
           </p>
-          <PrimaryButton>Get started free</PrimaryButton>
+          <div className="flex justify-center md:justify-start ">
+            <PrimaryButton>Get started free</PrimaryButton>
+          </div>
           <AvailableFor />
         </div>
         <div>
@@ -38,11 +37,13 @@ function Home() {
       {/* rating section */}
 
       <Rating />
-      <p className="text-gray-400 text-center tracking-widest">FEATURED IN</p>
-      <img
+      <div className="hidden">
+        <p className="text-gray-400 text-center tracking-widest">FEATURED IN</p>
+        <img
         className="my-10"
         src="https://static.qustodio.com/public-site/uploads/2021/08/13130800/group-16%402x.png"
-      />
+        />
+      </div>
 
       <Controls />
       <Concern />

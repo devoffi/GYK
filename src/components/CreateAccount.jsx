@@ -4,7 +4,7 @@ import PrimaryButton from "./common/PrimaryButton";
 
 function CreateAccount() {
   return (
-    <div className="flex flex-col lg:flex-row bg-blue-50 py-20 gap-10 justify-center">
+    <div className="flex flex-col lg:flex-row bg-blue-50 rounded-lg py-20 gap-10 justify-center">
       <div className="lg:w-[45%]">
         <img src="https://static.qustodio.com/public-site/uploads/2024/05/08151750/Signupform_image-en.png" />
       </div>
@@ -19,7 +19,7 @@ function CreateAccount() {
         </p>
 
         <div className="flex flex-col justify-center mt-8">
-          <div className="gap-3 flex flex-col w-64 mx-auto">
+          <div className="gap-3 flex flex-col w-80  mx-auto">
             <TextInputBox label="Name" />
             <TextInputBox label="Email" />
             <TextInputBox label="Password" placeholder={"6+ characters"} />
