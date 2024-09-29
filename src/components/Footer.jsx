@@ -9,6 +9,7 @@ import {
 } from "react-icons/bs";
 
 const Footer = () => {
+
     return (
         <div
             className="text-white footer-bg bg-oxfordBlue  bg-no-repeat bg-center bg-cover"
@@ -21,7 +22,7 @@ const Footer = () => {
                             About us
                         </p>
                         <a
-                            href="#"
+                            href="partners-login"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                            Partners

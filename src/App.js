@@ -19,6 +19,7 @@ import ParentingTip from "./Pages/ParentingTip"
 import FamilyStories from "./Pages/FamilyStories"
 import Help from "./Pages/Help"
 import Care from "./Pages/Care"
+import PartnersLogin from "./Pages/PartnersLogin";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/partners-login" element={<PartnersLogin />} />
 
       <Route path="/" element={<Home />} />
       <Route path="/why" element={<Why />} />
