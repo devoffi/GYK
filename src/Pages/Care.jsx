@@ -167,12 +167,12 @@ function Care() {
         </>
       ),
     },
-    {
+    {   
       icon : BiSupport,
       title: 'Technical support',
       content: (
         <>
-          <p >Get fast, guided troubleshooting for any issues you encounter when setting up or using Qustodio</p>
+          <p >Get fast, guided troubleshooting for any issues you encounter when setting up or using GuardMyKids</p>
         </>
       ),
     },
@@ -233,7 +233,7 @@ function Care() {
             </div>
             <p className='text-xl md:text-3xl text-gray-700 font-medium py-8 w-full text-center md:text-start px-4 md:px-0 md:w-3/4'>Get exclusive help over the
                 phone – from expert advice on
-                setting up Qustodio to technical
+                setting up GuardMyKids to technical
                 troubleshooting when you need
             </p>
             <div className='w-full flex justify-center md:justify-start'>
@@ -244,8 +244,8 @@ function Care() {
       </div>
       <div className='flex flex-col text-gray-700 text-center py-10'>
         <p className='text-2xl md:text-3xl font-semibold'>What is Care Plus?</p>
-        <p className='text-lg px-6 md:text-xl py-5 font-medium md:px-72'>Qustodio Care Plus gives you priority help through all our available
-          channels at each stage of your Qustodio journey.
+        <p className='text-lg px-6 md:text-xl py-5 font-medium md:px-72'>GuardMyKids Care Plus gives you priority help through all our available
+          channels at each stage of your GuardMyKids journey.
         </p>
           <div className="py-8 justify-center flex flex-col md:flex-row items-center gap-4 md:gap-44 my-8 md:my-12">
             <div className="flex flex-col items-center">
@@ -276,7 +276,7 @@ function Care() {
             <p className='flex gap-4 text-xl font-semibold pt-4'><BsCheckLg className='text-blue-500 text-2xl bg-blue-200  rounded-full p-[2px]' /> Easy setup</p>
             <span className='pl-10 py-2 text-lg md:text-xl font-medium'>Get started quickly with step-by-step help.</span>
             <p className='flex gap-4 text-xl font-semibold pt-4'><BsCheckLg className='text-blue-500 text-2xl bg-blue-200  rounded-full p-[2px]' /> Proactive guidance</p>
-            <span className='pl-10 py-2 text-lg md:text-xl font-medium'>Receive personalized advice to get more from Qustodio.</span>
+            <span className='pl-10 py-2 text-lg md:text-xl font-medium'>Receive personalized advice to get more from GuardMyKids.</span>
         </div>
       </div>
       <div className='text-center py-16'>
@@ -310,7 +310,7 @@ function Care() {
             />
             <div className="px-6 py-4 text-gray-700 ">
               <div className="font-bold text-xl mb-2">Ongoing check-ins</div>
-              <p className="font-medium text-lg">We’ll ensure you’re making the most of Qustodio</p>
+              <p className="font-medium text-lg">We’ll ensure you’re making the most of GuardMyKids</p>
             </div>
           </div>
         </div>
@@ -329,7 +329,7 @@ function Care() {
               height={"100%"}
               src="https://static.qustodio.com/public-site/uploads/2024/09/02142803/exports-04-parents-section-desktop-icon.png"
             />
-            <p className='text-2xl text-start text-gray-800 font-bold my-4 bg-blue-50/50'>Getting a phone call from an expert to advise me on how I could do more with Qustodio is very impressive.</p>
+            <p className='text-2xl text-start text-gray-800 font-bold my-4 bg-blue-50/50'>Getting a phone call from an expert to advise me on how I could do more with GuardMyKids is very impressive.</p>
             <p className='text-xl font-medium text-gray-600 pt-4'>Michael</p>
           </div>
           <div className='w-full md:w-4/12 flex flex-col px-8 md:pt-28 items-start '>
@@ -345,7 +345,7 @@ function Care() {
       </div>
       <div className='container mx-auto md:flex justify-between w-full gap-10 py-10 md:py-20 '>
         <div className='w-full md:w-1/2  text-gray-700  px-4 md:px-0'>
-          <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[3px] md:tracking-[5px]'>GET MORE FROM QUSTODIO</p>
+          <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[3px] md:tracking-[5px]'>GET MORE FROM GUARDMYKIDS</p>
           <p className='text-3xl md:text-4xl px-6 md:px-0 font-bold text-center md:text-start pb-6 pt-3'>Exclusive care plus features</p>
           <AccordionIcon items={accordionItems} />
         </div>
@@ -359,7 +359,7 @@ function Care() {
       </div>
       <div className='text-center text-gray-700 pt-12 px-4 md:px-0'>
         <p className='text-2xl md:text-5xl px-4 md:px-0 font-bold'>Choose the right plan for your family</p>
-        <p className='text-base md:text-2xl px-6 md:px-0 font-medium md:font-semibold py-4 md:py-8 '>Qustodio Premium is here for every stage of your digital journey</p>
+        <p className='text-base md:text-2xl px-6 md:px-0 font-medium md:font-semibold py-4 md:py-8 '>GuardMyKids Premium is here for every stage of your digital journey</p>
         <div className='flex w-full justify-center gap-10 md:py-12'>
           <div className="relative w-[34%] h-fit hidden md:block border border-gray-200 rounded-xl py-8 bg-white  hover:shadow-xl transition-shadow duration-300 mb-10">
               
@@ -368,7 +368,7 @@ function Care() {
                   < MdOutlineLock color="hsl(180, 98%, 31%)" size={26} />
                   BASIC
                 </h2>
-                <p className="text-gray-900 text-base font-light md:text-xl ">The tools you need for core protection.</p>
+                <p className="text-gray-900 text-start text-base font-light md:text-xl ">The tools you need for core protection.</p>
               </div>
               <div className="text-center my-6 ">
                 <p className="text-3xl font-medium flex items-end text-gray-800 px-8"> {`${bCheak ? "₹2,300.00" :"₹2,070.00"}`} <span className="text-lg pb-1 text-gray-700">/year</span></p>
@@ -425,7 +425,7 @@ function Care() {
                   < GoShieldCheck  color="hsl(180, 98%, 31%)" size={26} />
                   COMPLETE
                 </h2>
-                <p className="text-white text-base font-light md:text-xl ">Advanced safety features with full customization.</p>
+                <p className="text-white text-base text-start font-light md:text-xl ">Advanced safety features with full customization.</p>
               </div>
               <div className="text-center my-6 ">
                 <p className="text-3xl font-medium flex items-end text-white px-8">₹3,680.00<span className="text-lg pb-1 text-white">/year</span></p>
