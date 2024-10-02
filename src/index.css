@@ -140,3 +140,13 @@
       0.5px 0 5px rgba(0, 0, 0, 0.1),  /* Right shadow */
       -0.5px 0 5px rgba(0, 0, 0, 0.1);  /* Left shadow */
   }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  
+  /* Hide scrollbars for other browsers */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
