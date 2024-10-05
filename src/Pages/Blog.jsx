@@ -18,7 +18,7 @@ function Blog() {
           />
           <div>
             <p className="text-gray-700">Michael Guy</p>
-            <p className="text-gray-700">Qustodio wellbeing</p>
+            <p className="text-gray-700">GuardMyKids wellbeing</p>
           </div>
         </div>
 
@@ -184,10 +184,10 @@ function Blog() {
           </div>
           <div className="lg:w-[70%] flex flex-col gap-5">
             <p className="text-xl lg:text-3xl font-bold text-white">
-              How can Qustodio help protect your family?
+              How can GuardMyKids help protect your family?
             </p>
             <p className="text-lg lg:text-xl text-white">
-              Qustodio is the best way to keep your kids safe online and help
+              GuardMyKids is the best way to keep your kids safe online and help
               them create healthy digital habits. Our parental control tools
               ensure they don't access inappropriate content or spend too much
               time in front of their screens.

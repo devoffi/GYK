@@ -5,7 +5,7 @@ function PartnersLogin() {
   return (
     <div className="lg:py-20 py-5">
       <p className="text-2xl lg:text-5xl text-center font-bold">
-        Join the Qustodio Affiliate Program
+        Join the GuardMyKids Affiliate Program
       </p>
       <p className="text-lg lg:text-xl font-medium text-center mt-1 lg:mt-3">
         Earn up to 20% commission by promoting the best Parental Control app!

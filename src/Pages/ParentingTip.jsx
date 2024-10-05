@@ -7,7 +7,7 @@ import PrimaryButton from "../components/common/PrimaryButton";
 function ParentingTip() {
   return (
     <div>
-      <div className="bg-gray-300 py-5 lg:py-16">
+      <div className="bg-gray-100 py-5 lg:py-16">
         <SectionContainer>
           <div className="flex flex-col lg:w-[80%] mx-auto gap-10">
             <div className="w-full lg:w-64 self-end">
@@ -41,7 +41,7 @@ function ParentingTip() {
             </div>
             <div className="lg:w-96 w-full">
               <BlogCard
-                heading={"Qustodio how-tos: Time limits"}
+                heading={"GuardMyKids how-tos: Time limits"}
                 desc={"by Megan Proops on August 13, 2024"}
                 button1={"Parenting tips"}
                 button2={"Product tips"}
@@ -93,7 +93,7 @@ function ParentingTip() {
             </div>
             <div className="lg:w-96 w-full">
               <BlogCard
-                heading={"Qustodio how-tos: Time limits"}
+                heading={"GuardMyKids how-tos: Time limits"}
                 desc={"by Megan Proops on August 13, 2024"}
                 button1={"Parenting tips"}
                 button2={"Product tips"}
@@ -126,10 +126,10 @@ function ParentingTip() {
           </div>
           <div className="lg:w-[70%] flex flex-col gap-5">
             <p className="text-xl lg:text-3xl font-bold text-white">
-              How can Qustodio help protect your family?
+              How can GuardMyKids help protect your family?
             </p>
             <p className="text-lg lg:text-xl text-white">
-              Qustodio is the best way to keep your kids safe online and help
+              GuardMyKids is the best way to keep your kids safe online and help
               them create healthy digital habits. Our parental control tools
               ensure they don't access inappropriate content or spend too much
               time in front of their screens.
