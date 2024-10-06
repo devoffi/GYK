@@ -20,6 +20,12 @@ import FamilyStories from "./Pages/FamilyStories"
 import Help from "./Pages/Help"
 import Care from "./Pages/Care"
 import PartnersLogin from "./Pages/PartnersLogin";
+import School from "./Pages/School";
+import WebsitePolicy from "./Pages/Website-policy";
+import CookiePolicy from "./Pages/Cookie-policy";
+import LegalNotic from "./Pages/Legal-notic";
+import ProductPolicy from "./Pages/Product-policy";
+
 
 function App() {
   return (
@@ -46,7 +52,18 @@ function App() {
       <Route path="/help" element={<Help />} />
       <Route path="/care" element={<Care />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/school" element={<School />} />
       <Route path="/pricing" element={<Price />} />
+      <Route path="/product-privacy" element={<ProductPolicy />} />
+      <Route path="/web-privacy" element={<WebsitePolicy />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
+      <Route path="/legal-notice" element={<LegalNotic />} />
+      
+
+
+
+
     </Routes>
     <Footer />
   </>

@@ -206,7 +206,7 @@ const Header = () => {
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
                         <a
-                          href="/learn"
+                          href="product-tips"
                           smooth={true}
                           duration={100}
                           offset={-50}

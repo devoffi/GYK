@@ -97,9 +97,9 @@ function Help() {
         </div>
       </div>
       <div>
-        <div className=' mt-10'>
-        <img src="https://help.qustodio.com/hc/theming_assets/01HZM9106ZDVDGRNK563824JNC" className='scale-150 md:scale-100' />
-        <div className='bg-gray-100 flex flex-col justify-center items-center mt-2 md:mt-0' >
+        <div className='mt-10'>
+        <img src="https://help.qustodio.com/hc/theming_assets/01HZM9106ZDVDGRNK563824JNC" className='scale-100' />
+        <div className='bg-gray-100 flex flex-col justify-center items-center md:mt-0' >
           <p className='text-2xl font-semibold'>Can't find what you're looking for?</p>
           <p className=''>Try our quick links</p>
         </div>

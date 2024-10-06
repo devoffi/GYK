@@ -4,17 +4,18 @@ import { SectionContainer } from "../components/common/SectionContainer";
 function Contact() {
   return (
     <SectionContainer>
-      <div className=" my-16 p-10 mx-auto   flex md:gap-28 bg-white text-gray-700 rounded-lg shadow-md">
-        <div className="w-1/2 flex flex-col gap-10">
+      <h1 className="text-3xl font-bold text-center pt-16 pb-6 text-gray-800">Contact us</h1>
+      <div className=" md:mb-20 p-3 md:p-10 mx-auto   md:flex md:gap-28 bg-white text-gray-700 rounded-lg md:shadow-md">
+        <div className="md:w-1/2 flex flex-col gap-4 md:gap-10">
           <div>
-            <h2 className="text-4xl font-bold mb-4">Customer support</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-1 md:mb-4">Customer support</h2>
             <p className="mb-4">
               For customer support issues, please visit our {" "} <a href="help" className="text-blue-500  inline ">help center {" "}</a> . There
               you’ll find answers to many common questions.
             </p>
           </div>
           <div>
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold mb-1 md:mb-4">
               Partnership opportunities
             </h2>
             <p className="mb-4">
@@ -25,8 +26,8 @@ function Contact() {
           </div>
           <p>For any other request, please contact us at <a href="mailto:info@qustodio.com" className="text-blue-500 hover:underline inline">info@qustodio.com</a>.</p>
         </div>
-        <div className="w-1/2">
-          <div className="mb-4 flex gap-6 justify-between">
+        <div className="md:w-1/2 my-10 md:my-0">
+          <div className="mb-4 md:flex gap-6 justify-between">
             <div className="font-medium">
               <h2 className="text-xl font-bold py-2">U.S. Office</h2>
               <p>227 W Trade St #1100</p>

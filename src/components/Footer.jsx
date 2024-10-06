@@ -28,7 +28,7 @@ const Footer = () => {
                            Partners
                         </a>
                         <a
-                            href="#"
+                            href="contact"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                            Contact us
@@ -37,37 +37,37 @@ const Footer = () => {
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Product</p>
                         <a
-                            href="#"
+                            href="why"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Why GuardMyKids
                         </a>
                         <a
-                            href="#"
+                            href="features"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Features
                         </a>
                         <a
-                            href="#"
+                            href="get-started"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Get started
                         </a>
                         <a
-                            href="#"
+                            href="downloads"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Downloads
                         </a>
                         <a
-                            href="#"
+                            href="pricing"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Pricing
                         </a>
                         <a
-                            href="#"
+                            href="school"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Schools
@@ -76,47 +76,42 @@ const Footer = () => {
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Resources</p>
                         <a
-                            href="#"
+                            href="help"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Help
                         </a>
                         <a
-                            href="#"
+                            href="product-tips"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Learn
                         </a>
-                        <a
-                            href="#"
-                            className="text-base text-lightGray hover:text-white mb-3"
-                        >
-                            Press & media
-                        </a>
+                       
                         
                     </div>
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Legal</p>
                         <a
-                            href="#"
+                            href="product-privacy"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Product privacy policy
                         </a>
                         <a
-                            href="#"
+                            href="web-privacy"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Website privacy policy
                         </a>
                         <a
-                            href="#"
+                            href="cookie-policy"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Cookie policy
                         </a>
                         <a
-                            href="#"
+                            href="legal-notice"
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Legal notice
