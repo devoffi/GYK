@@ -12,7 +12,7 @@ import { AiOutlineSafety } from "react-icons/ai";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import icon from "../assets/images/img1.jpg";
 import logo from "../assets/images/logo1.jpg";
-import { Link } from "react-scroll";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -58,6 +58,7 @@ const Header = () => {
                </div>
                 <div
                     className={`${
+                      
                         toggle
                             ? "top-[65px] md:top-[63px] pt-6 pb-12 gap-8"
                             : "top-[-1000px] gap-16 py-0"
@@ -65,18 +66,18 @@ const Header = () => {
                 >
                     <div className="flex flex-col md:flex-row items-center gap-7  sm:text-lg text-md">
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/"
+                        <NavLink
+                          to="/"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Home
-                        </a>
+                        </NavLink>
                       </li>
                       <div
                         className=" relative  flex-row font-medium cursor-pointer group hover:text-lightGray hidden md:block">
-                        <a
+                        <NavLink
                           className="flex gap-2 "
                           smooth={true}
                           duration={100}
@@ -87,7 +88,7 @@ const Header = () => {
                             className="mt-2 group-hover:rotate-180"
                             size={13}
                           />
-                        </a>
+                        </NavLink>
                         <div
                           className={` absolute  z-10 mt-0  origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none   hidden group-hover:block `}
                           tabIndex="-1"
@@ -131,7 +132,7 @@ const Header = () => {
                                   <div className="rounded-lg  group-hover pl-4">
                                       <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start "> Get Started </p>
                                       <p className="text-xs">
-                                      Start protecting and supervising your child in just a few minutes with simple, easy setup.
+                                      Start protecting and supervising your child in just NavLink few minutes with simple, easy setup.
                                       </p>
                                   </div>
                                   <BsArrowUpRight size={23} style={{ color:'#1a9068' }} className='icon items-start mt-10'/>
@@ -155,88 +156,88 @@ const Header = () => {
                         </div>
                       </div>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/why"
+                        <NavLink
+                          to="/why"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Why GardmyKid
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/features"
+                        <NavLink
+                          to="/features"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Features
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/get-started"
+                        <NavLink
+                          to="/get-started"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           How to get Started
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/downloads"
+                        <NavLink
+                          to="/downloads"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Downloads
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray">
-                        <a
-                          href="/pricing"
+                        <NavLink
+                          to="/pricing"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Pricing
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="product-tips"
+                        <NavLink
+                          to="product-tips"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Learn
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/help"
+                        <NavLink
+                          to="/help"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Support
-                        </a>
+                        </NavLink>
                       </li>
                       <li className="font-medium cursor-pointer hover:text-lightGray md:hidden">
-                        <a
-                          href="/family-stories"
+                        <NavLink
+                          to="/family-stories"
                           smooth={true}
                           duration={100}
                           offset={-50}
                           onClick={() => setToggle(false)}>
                           Family Stories
-                        </a>
+                        </NavLink>
                       </li>
                       <div
                         className=" relative  flex-row font-medium cursor-pointer group hover:text-lightGray hidden md:block">
-                        <a
+                        <NavLink
                           
                           className="flex gap-2 "
                           smooth={true}
@@ -248,7 +249,7 @@ const Header = () => {
                             className="mt-2 group-hover:rotate-180"
                             size={13}
                           />
-                        </a>
+                        </NavLink>
                         <div
                           className={` absolute  z-10 mt-0  origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none  hidden group-hover:block `}
                           tabIndex="-1"
@@ -316,7 +317,7 @@ const Header = () => {
                         </div>
                       </div>
                       <div className="relative flex-row font-medium cursor-pointer group hover:text-lightGray hidden md:block">
-                        <a
+                        <NavLink
                           className="flex gap-2"
                           smooth={true}
                           duration={100}
@@ -328,7 +329,7 @@ const Header = () => {
                             className="mt-2 group-hover:rotate-180 transition-transform"
                             size={13}
                           />
-                        </a>
+                        </NavLink>
                         <div
                           className="absolute z-10 mt-0 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden group-hover:block"
                           tabIndex="-1"
@@ -378,20 +379,20 @@ const Header = () => {
                       </div>
                     </div>
                     <div className="flex gap-5"   >
-                      <a
+                      <NavLink
                         onClick={() => setToggle(false)}
-                        href="/login"
+                        to="/login"
                         className="hover:text-viridianGreen hover:bg-white font-[700] w-max px-[25px] py-[10px] border-[2px] border-white border-solid rounded-md bg-transparent text-white sm:text-md text-sm"
                       >
                         Login
-                      </a>
-                      <a
+                      </NavLink>
+                      <NavLink
                         onClick={() => setToggle(false)}
-                        href="/signup"
+                        to="/signup"
                         className="btn btn-secondary sm:text-md text-sm"
                       >
                         SignUp
-                      </a>
+                      </NavLink>
                    </div>
                 </div>
                 {!toggle && (

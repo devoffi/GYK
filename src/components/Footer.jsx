@@ -7,132 +7,131 @@ import {
     BsGoogle,
     BsHousesFill
 } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-
     return (
         <div
-            className="text-white footer-bg bg-oxfordBlue  bg-no-repeat bg-center bg-cover"
+            className="text-white footer-bg bg-oxfordBlue bg-no-repeat bg-center bg-cover"
             id="contact us"
         >
             <div className="container px-4 py-20 m-auto">
                 <div className="flex flex-wrap gap-4 mb-4">
                     <div className="w-[220px]">
-                        <p className="text-2xl font-bold mb-6">
-                            About us
-                        </p>
-                        <a
-                            href="partners-login"
+                        <p className="text-2xl font-bold mb-6">About us</p>
+                        <Link
+                            to="/partners-login" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                            Partners
-                        </a>
-                        <a
-                            href="contact"
+                        </Link>
+                        <Link
+                            to="/contact" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                            Contact us
-                        </a>
+                        </Link>
                     </div>
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Product</p>
-                        <a
-                            href="why"
+                        <Link
+                            to="/why" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Why GuardMyKids
-                        </a>
-                        <a
-                            href="features"
+                        </Link>
+                        <Link
+                            to="/features" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Features
-                        </a>
-                        <a
-                            href="get-started"
+                        </Link>
+                        <Link
+                            to="/get-started" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Get started
-                        </a>
-                        <a
-                            href="downloads"
+                        </Link>
+                        <Link
+                            to="/downloads" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Downloads
-                        </a>
-                        <a
-                            href="pricing"
+                        </Link>
+                        <Link
+                            to="/pricing" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Pricing
-                        </a>
-                        <a
-                            href="school"
+                        </Link>
+                        <Link
+                            to="/school" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Schools
-                        </a>
+                        </Link>
                     </div>
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Resources</p>
-                        <a
-                            href="help"
+                        <Link
+                            to="/help" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Help
-                        </a>
-                        <a
-                            href="product-tips"
+                        </Link>
+                        <Link
+                            to="/product-tips" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Learn
-                        </a>
-                       
-                        
+                        </Link>
                     </div>
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">Legal</p>
-                        <a
-                            href="product-privacy"
+                        <Link
+                            to="/product-privacy" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Product privacy policy
-                        </a>
-                        <a
-                            href="web-privacy"
+                        </Link>
+                        <Link
+                            to="/web-privacy" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Website privacy policy
-                        </a>
-                        <a
-                            href="cookie-policy"
+                        </Link>
+                        <Link
+                            to="/cookie-policy" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Cookie policy
-                        </a>
-                        <a
-                            href="legal-notice"
+                        </Link>
+                        <Link
+                            to="/legal-notice" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
                         >
                             Legal notice
-                        </a>
-                     
+                        </Link>
                     </div>
                     <div className="w-[220px]">
-                        <p className="text-2xl font-bold mb-6">
-                            Find us
-                        </p>
+                        <p className="text-2xl font-bold mb-6">Find us</p>
                         <p className="text-xl font-semibold text-viridianGreen mb-3 flex gap-3">
-                          <p className="rounded-full bg-viridianGreen p-1.5"> < BsHousesFill color="white" /> </p> Europe
+                            <span className="rounded-full bg-viridianGreen p-1.5">
+                                <BsHousesFill color="white" />
+                            </span> 
+                            Europe
                         </p>
                         <p className="text-base text-lightGray hover:text-white mb-3">
                             Roger de Flor 193, bajos 08013 Barcelona, Spain
                         </p>
                         <p className="text-xl font-semibold text-viridianGreen mb-3 mt-6 flex gap-3">
-                          <p className="rounded-full bg-viridianGreen p-1.5"> < BsHousesFill color="white" /> </p> North America
+                            <span className="rounded-full bg-viridianGreen p-1.5">
+                                <BsHousesFill color="white" />
+                            </span> 
+                            North America
                         </p>
-                        <p className="text- text-lightGray hover:text-white mb-3">
-                        227 W Trade St #1100 Carillon Tower, Charlotte, NC 28202 USA
+                        <p className="text-base text-lightGray hover:text-white mb-3">
+                            227 W Trade St #1100 Carillon Tower, Charlotte, NC 28202 USA
                         </p>
                         <form className="relative mt-6 hidden">
                             <input
@@ -149,43 +148,43 @@ const Footer = () => {
                 <hr />
                 <div className="flex flex-col sm:flex-row gap-5 justify-between items-center mt-6">
                     <div className="text-xl flex sm:text-2xl uppercase font-semibold">
-                        GUARDMYKIDS <span className="text-xs flex  items-end pb-1 lowercase">.com</span>
+                        GUARDMYKIDS <span className="text-xs flex items-end pb-1 lowercase">.com</span>
                     </div>
 
                     <p className="flex justify-center items-center text-sm text-lightGray">
                         &copy; 2024 Dev All Rights Reserved
                     </p>
                     <div className="flex gap-2 text-lightGray">
-                        <a
-                            href="#"
+                        <Link
+                            to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsFacebook />
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsTwitter />
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsInstagram />
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsLinkedin />
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsGoogle />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
