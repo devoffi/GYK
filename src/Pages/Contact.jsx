@@ -24,31 +24,27 @@ function Contact() {
               details, please visit our  <a href="/partners-login" className="text-blue-500  inline "> Affiliate program page.</a>
             </p>
           </div>
-          <p>For any other request, please contact us at <a href="mailto:info@qustodio.com" className="text-blue-500 hover:underline inline">info@qustodio.com</a>.</p>
+          <p>For any other request, please contact us at <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline">Support@guardmykids.com</a>.</p>
         </div>
         <div className="md:w-1/2 my-10 md:my-0">
           <div className="mb-4 md:flex gap-6 justify-between">
             <div className="font-medium">
-              <h2 className="text-xl font-bold py-2">U.S. Office</h2>
-              <p>227 W Trade St #1100</p>
-              <p>Carillon Tower</p>
-              <p>Charlotte, NC 28202 USA</p>
+              <h2 className="text-xl font-bold py-2">INDIA Office</h2>
+              <p>1st floor here showroom building, Raithupeta,</p>
+              <p>Nandigama, NTR District,</p>
+              <p>Andhra Pradesh, 521185</p>
             </div>
-            <div className="font-medium">
-              <h2  className="text-xl font-bold py-2">U.S. Office</h2>
-              <p>227 W Trade St #1100</p>
-              <p>Carillon Tower</p>
-              <p>Charlotte, NC 28202 USA</p>
-            </div>
+
           </div>
           <div className="mt-6">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.339852940479!2d77.2219193143719!3d28.612912482500904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c1c1c7e5d4eab%3A0x639ad4976fa660e0!2sIndia%20Gate%2C%20Rajpath%2C%20Central%20Secretariat%2C%20New%20Delhi%2C%20Delhi%20110001%2C%20India!5e0!3m2!1sen!2sin!4v1634510024765!5m2!1sen!2sin"
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.339852940479!2d80.289630!3d16.776290!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4f9c11e22c1d77%3A0x7f94c7f67e51e8fc!2sLocation!5e0!3m2!1sen!2sin!4v1634510024765!5m2!1sen!2sin"
               width="100%"
               height="300"
               style={{ border: 0 }}
               allowFullScreen
-              loading="lazy"></iframe>
+              loading="lazy">
+          </iframe>
           </div>
         </div>
       </div>
