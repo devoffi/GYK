@@ -5,16 +5,16 @@ function WebsitePolicy() {
   return (
     <SectionContainer >
         <div className=" py-10 md:py-16">
-            <h1 className="text-2xl font-bold text-gray-800">Qustodio Privacy Policy</h1>
+            <h1 className="text-2xl font-bold text-gray-800">GuardMyKids Privacy Policy</h1>
             <p className="mt-4 text-gray-600">
-                Qustodio Technologies S.L. (the “Company” or “We/us”) is committed to respecting and protecting the privacy of all visitors of our Website (www.qustodio.com). This Privacy Policy explains our practices regarding the use of personal data collected and processed through our Website or otherwise provided to us by email or via other websites that link to us. Please note that this privacy policy doesn’t regulate the processing of personal data collected through our services; if you want to know more about how we process our users’ data, please read the legal terms of our services.
+                GuardMyKids Technologies S.L. (the “Company” or “We/us”) is committed to respecting and protecting the privacy of all visitors of our Website (www.mdm.prabhaktech.com). This Privacy Policy explains our practices regarding the use of personal data collected and processed through our Website or otherwise provided to us by email or via other websites that link to us. Please note that this privacy policy doesn’t regulate the processing of personal data collected through our services; if you want to know more about how we process our users’ data, please read the legal terms of our services.
             </p>
             <p className="mt-4 text-gray-600">
-                The data controller of the data you provide us with is Qustodio Technologies SL, with domicile at Roger de Flor Street, 193, bajos, 08013 Barcelona, Spain.
+                The data controller of the data you provide us with is GuardMyKids Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh, 521185.
             </p>
             <p className="mt-4 text-gray-600">
                 You can contact the Data Protection Officer to send any suggestions, queries, doubts or complaints regarding data protection by writing to:&nbsp;
-                <a href="mailto:dpo@qustodio.com" className="text-blue-500 hover:underline inline ">dpo@qustodio.com</a>
+                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>
             </p>
             
             <p className="mt-4 font-bold text-gray-800">1. User acceptance of this Privacy Policy</p>
@@ -28,7 +28,7 @@ function WebsitePolicy() {
             </p>
             <p className="mt-2 text-gray-600">
                 <strong>Navigation data:</strong> Due to internet communication standards, when you visit our Website we automatically receive the URL of the site you came from and the site you visit when you leave our website. We also receive the Internet Protocol ("IP") address of your computer and the type of browser you are using. We use this information to analyze overall trends to improve the service. This information is not shared with third parties without your consent. Other than the above, and as stated in our&nbsp;
-                <a href="https://www.qustodio.com/en/cookie-policy/" className="text-blue-500 hover:underline inline">cookie policy</a>, we do not collect any personal data if you are only browsing the website.
+                <a href="/cookie-policy" className="text-blue-500 hover:underline inline">cookie policy</a>, we do not collect any personal data if you are only browsing the website.
             </p>
 
             <p className="mt-4 font-bold text-gray-800">3. Legal basis</p>
@@ -75,7 +75,7 @@ function WebsitePolicy() {
             <p className="mt-4 font-bold text-gray-800">9. User Rights</p>
             <p className="mt-2 text-gray-600">
                 You are informed you may exercise at any time right to the portability of your data sent to us, to access, rectify, erase, block and oppose any processing of your personal data by sending an email request to&nbsp;
-                <a href="mailto:dpo@qustodio.com" className="text-blue-500 hover:underline inline ">dpo@qustodio.com</a>&nbsp;or by writing to Qustodio Technologies SL, with domicile at Roger de Flor Street, 193, bajos, 08013 Barcelona, Spain. You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
+                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>&nbsp;or by writing to GuardMyKids Technologies SL, with domicile at Roger de Flor Street, 193, bajos, 08013 Barcelona, Spain. You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
             </p>
             <p className="mt-2 text-gray-600">
                 You also have the right to lodge a complaint with a supervisory authority, in this case the Spanish Data Protection Agency (Agencia Española de Protección de Datos), C/ Jorge Juan, 6, 28001 Madrid, Spain.

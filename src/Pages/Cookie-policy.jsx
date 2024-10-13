@@ -11,11 +11,11 @@ function CookiePolicy() {
             COOKIES POLICY
         </h1>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
-            Qustodio Technologies S.L.U. is the owner of the website 
-            <a href="https://www.qustodio.com/en/" className="text-blue-500 hover:underline inline mx-1 "> 
-            https://www.qustodio.com
+            GuardMyKids Technologies S.L.U. is the owner of the website 
+            <a href="https://mdm.prabhaktech.com" className="text-blue-500 hover:underline inline mx-1 "> 
+            https://www.prabhaktech.com
             </a> 
-            (hereinafter the “website”) and the Qustodio Parental Control app and platform (hereinafter the “app”) and uses cookies that collect information related to the connection, browsers and devices used by users who access and use the website and app (hereinafter the “users”) to manage and improve the proper functioning of the website, as further explained below.
+            (hereinafter the “website”) and the GuardMyKids Parental Control app and platform (hereinafter the “app”) and uses cookies that collect information related to the connection, browsers and devices used by users who access and use the website and app (hereinafter the “users”) to manage and improve the proper functioning of the website, as further explained below.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
             This policy applies to both the website and the app, and describes what information the cookies and similar technologies (hereinafter, collectively, “cookies”) collect, how they are used and for what purpose. It also indicates how the user can restrict or block the automatic downloading of cookies; however, this may reduce or even hinder certain elements of the website and app’s functionality. Likewise, the user can choose the category of cookies they wish to activate in the cookies banner that appears the first time they access the website.
@@ -31,7 +31,7 @@ function CookiePolicy() {
             <a href="https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)" className="text-blue-500 hover:underline inline "> article</a>.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-2">
-            <strong className="text-lg">2. How does the Qustodio website use cookies?</strong>
+            <strong className="text-lg">2. How does the GuardMyKids website use cookies?</strong>
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
             We use cookies to improve the functionality of our website and app and to collect information about how users use them to enable us to continually improve our users’ experience.
@@ -43,7 +43,7 @@ function CookiePolicy() {
             No information such as your address, password, credit card details, etc. is stored in the cookies used by our website.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-2">
-        <strong className="text-lg">3. What cookies does the Qustodio website use?</strong>
+        <strong className="text-lg">3. What cookies does the GuardMyKids website use?</strong>
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
         The website and app use both own and third-party cookies:
@@ -59,13 +59,13 @@ function CookiePolicy() {
       </p>
       <ul className="list-disc list-inside text-gray-700 text-base mb-4">
         <li>
-          <strong>Technical cookies (necessary)</strong>: cookies necessary for navigation and for the proper functioning of the website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, controlling any fraud linked to service security, and ensuring secure navigation. The legal basis for collecting data through these cookies is the execution of the contract (the Terms and Conditions) applicable to all users and Qustodio's legitimate interest in managing the website and app.
+          <strong>Technical cookies (necessary)</strong>: cookies necessary for navigation and for the proper functioning of the website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, controlling any fraud linked to service security, and ensuring secure navigation. The legal basis for collecting data through these cookies is the execution of the contract (the Terms and Conditions) applicable to all users and GuardMyKids's legitimate interest in managing the website and app.
         </li>
         <li>
           <strong>Preference cookies</strong>: allow remembering information that modifies the behavior or appearance of the website or app itself, such as your preferred language or the region in which the user is located. The legitimate basis for collecting data through these cookies is the consent of the user.
         </li>
         <li>
-          <strong>Analytical cookies</strong>: cookies that allow Qustodio to perform follow-up and analyses of user behavior on the website and app; this includes a quantitative measurement of the impact of an advertisement. The information collected through these cookies is used for measuring the activity of the website and app and for profiling users’ browsing to improve them. The legal basis for collecting this data is the consent of the user.
+          <strong>Analytical cookies</strong>: cookies that allow GuardMyKids to perform follow-up and analyses of user behavior on the website and app; this includes a quantitative measurement of the impact of an advertisement. The information collected through these cookies is used for measuring the activity of the website and app and for profiling users’ browsing to improve them. The legal basis for collecting this data is the consent of the user.
         </li>
         <li>
           <strong>Advertising cookies</strong>: cookies that store information on user behavior obtained through continuous observation of their browsing habits, allowing the development of a specific profile to display advertisements appropriate to this profile. The legitimate basis for collecting this data through these cookies is the consent of the user.
@@ -78,7 +78,7 @@ function CookiePolicy() {
         a) <strong>Session cookies</strong>: those designed to collect and store data while users access our website. They are regularly used to store information that is only relevant with regard to the specific session, and disappear once the session is closed.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
-        b) <strong>Persistent cookies</strong>: cookies on which data stay stored and may be accessed and processed for a period of time defined by Qustodio, which may range from a few minutes to several years.
+        b) <strong>Persistent cookies</strong>: cookies on which data stay stored and may be accessed and processed for a period of time defined by GuardMyKids, which may range from a few minutes to several years.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
         <span style={{ fontWeight: '400' }}>Technical:</span> These are cookies necessary for navigation and for the proper functioning of the Website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, and controlling any fraud linked to service security.
@@ -134,13 +134,11 @@ function CookiePolicy() {
       </li>
     </ul>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
-        If you have any questions about our use of cookies, you can contact us at <a href="mailto:info@qustodio.com" className="text-blue-500 hover:underline inline ">info@qustodio.com</a>.
+        If you have any questions about our use of cookies, you can contact us at <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4 inline ">
         Your consent applies to the following domains: 
-        <a href="https://www.qustodio.com" className="text-blue-500 hover:underline inline "> www.qustodio.com</a>, 
-        <a href="https://family.qustodio.com" className="text-blue-500 hover:underline inline "> family.qustodio.com</a>, 
-        <a target="_blank" rel="noopener noreferrer" href="http://auth.qustodio.com" className="text-blue-500 hover:underline inline "> auth.qustodio.com</a>.
+        <a href="https://www.prabhaktech.com" className="text-blue-500 hover:underline inline "> www.prabhaktech.com</a>, 
       </p>
 
       <h4 className="text-lg font-bold mt-4" dir="ltr">
@@ -181,14 +179,14 @@ function CookiePolicy() {
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">rc::a</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">auth.qustodio.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Used to distinguish between humans and bots.</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Persistent</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTML</td>
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">rc::c</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">auth.qustodio.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Used to distinguish between humans and bots.</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Session</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTML</td>
@@ -231,7 +229,7 @@ function CookiePolicy() {
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">ps_session</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">qustodio.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">mdm.prabhaktech.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Preserves user session state across page requests.</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">1 day</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTTP</td>
@@ -256,14 +254,14 @@ function CookiePolicy() {
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">_q_language [x2]</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">auth.qustodio.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Remembers user’s language</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">30 days</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTTP</td>
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">wp-api-schema-modelhttps://#.#/#/</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">qustodio.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">mdm.prabhaktech.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Required by WordPress to function correctly</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Session</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTML</td>
@@ -291,7 +289,7 @@ function CookiePolicy() {
               <p><span className="font-normal">adroll#adroll [x2]</span></p>
             </td>
             <td className="border border-gray-200 px-4 py-2">
-              <span className="font-normal">auth.qustodio.com, auth-pre.qustodio.com</span>
+              <span className="font-normal">Support@guardmykids.com, auth-pre.mdm.prabhaktech.com</span>
             </td>
             <td className="border border-gray-200 px-4 py-2">
               <span className="font-normal">Stores the user’s cookie consent state for the current domain</span>
@@ -323,7 +321,7 @@ function CookiePolicy() {
             <tbody>
                 <tr className="text-gray-600 hover:bg-gray-50">
                     <td className="py-2 px-4 border-b">bounce</td>
-                    <td className="py-2 px-4 border-b">auth.qustodio.com</td>
+                    <td className="py-2 px-4 border-b">Support@guardmykids.com</td>
                     <td className="py-2 px-4 border-b">Determines if a user leaves the website straight away. This information is used for internal statistics and analytics by the website operator.</td>
                     <td className="py-2 px-4 border-b">Session</td>
                     <td className="py-2 px-4 border-b">Pixel</td>
@@ -344,7 +342,7 @@ function CookiePolicy() {
                 </tr>
                 <tr className="text-gray-600 hover:bg-gray-50">
                     <td className="py-2 px-4 border-b">__utm.gif</td>
-                    <td className="py-2 px-4 border-b">auth.qustodio.com</td>
+                    <td className="py-2 px-4 border-b">Support@guardmykids.com</td>
                     <td className="py-2 px-4 border-b">Google Analytics Tracking Code that logs details about the visitor’s browser and computer.</td>
                     <td className="py-2 px-4 border-b">Session</td>
                     <td className="py-2 px-4 border-b">Pixel</td>
@@ -425,7 +423,7 @@ function CookiePolicy() {
         <tr>
             <td className="px-6 py-4 ">_uetsid [x2]</td>
             <td className="px-6 py-4 ">
-              www.qustodio.com<br />
+              www.mdm.prabhaktech.com<br />
               <a href="https://privacy.microsoft.com/en-US/privacystatement" className="text-blue-600 hover:underline">Microsoft</a>
             </td>
             <td className="px-6 py-4 ">Used to track visitors on multiple websites, in order to present relevant advertisement based on the visitor’s preferences.</td>
@@ -435,7 +433,7 @@ function CookiePolicy() {
           <tr>
             <td className="px-6 py-4 ">_uetsid_exp [x2]</td>
             <td className="px-6 py-4 ">
-              www.qustodio.com<br />
+              www.mdm.prabhaktech.com<br />
               <a href="https://privacy.microsoft.com/en-US/privacystatement" className="text-blue-600 hover:underline">Microsoft</a>
             </td>
             <td className="px-6 py-4 ">Contains the expiry-date for the cookie with corresponding name.</td>
@@ -445,7 +443,7 @@ function CookiePolicy() {
           <tr>
             <td className="px-6 py-4 ">_uetvid [x2]</td>
             <td className="px-6 py-4 ">
-              www.qustodio.com<br />
+              www.mdm.prabhaktech.com<br />
               <a href="https://privacy.microsoft.com/en-US/privacystatement" className="text-blue-600 hover:underline">Microsoft</a>
             </td>
             <td className="px-6 py-4">Used to track visitors on multiple websites, in order to present relevant advertisement based on the visitor’s preferences.</td>
@@ -455,7 +453,7 @@ function CookiePolicy() {
           <tr>
             <td className="px-6 py-4">_uetvid_exp [x2]</td>
             <td className="px-6 py-4">
-              www.qustodio.com<br />
+              www.mdm.prabhaktech.com<br />
               <a href="https://privacy.microsoft.com/en-US/privacystatement" className="text-blue-600 hover:underline">Microsoft</a>
             </td>
             <td className="px-6 py-4">Contains the expiry-date for the cookie with corresponding name.</td>
@@ -1008,7 +1006,7 @@ function CookiePolicy() {
           </tr>
           <tr>
             <td className="px-6 py-4  ">w/1.0/sd</td>
-            <td className="px-6 py-4  ">auth.qustodio.com</td>
+            <td className="px-6 py-4  ">Support@guardmykids.com</td>
             <td className="px-6 py-4  ">Registers data on visitors such as IP addresses, geographical location and advertisement interaction. This information is used optimize the advertisement on websites that make use of OpenX.net services.</td>
             <td className="px-6 py-4  ">Session</td>
             <td className="px-6 py-4  ">Pixel</td>
@@ -1053,7 +1051,7 @@ function CookiePolicy() {
           </tr>
           <tr>
             <td className="px-6 py-4  ">AdServer/Pug</td>
-            <td className="px-6 py-4  ">auth.qustodio.com</td>
+            <td className="px-6 py-4  ">Support@guardmykids.com</td>
             <td className="px-6 py-4  ">Sets a timestamp for when the visitor entered the website. This is used for analytical purposes on the website.</td>
             <td className="px-6 py-4  ">Session</td>
             <td className="px-6 py-4  ">Pixel</td>
@@ -1097,7 +1095,7 @@ function CookiePolicy() {
 
           <tr>
             <td className="px-6 py-4  ">aw_source</td>
-            <td className="px-6 py-4  ">qustodio.com</td>
+            <td className="px-6 py-4  ">mdm.prabhaktech.com</td>
             <td className="px-6 py-4  ">Collects information about the users and their activity on the website. The information is used to track and analyze the user behaviour and to deliver product recommendations, product display and product features for optimized user experience.</td>
             <td className="px-6 py-4  ">30 days</td>
             <td className="px-6 py-4  ">HTTP</td>
@@ -1368,7 +1366,7 @@ function CookiePolicy() {
         </tr>
         <tr class="h-12">
             <td class="w-1/4 px-4 py-2 text-gray-800"><span>dap-uuid [x2]</span><span class="font-normal"><br/></span></td>
-            <td class="w-1/4 px-4 py-2 text-gray-800"><span class="font-normal"><a href="https://qustodio.com" class="text-gray-800">qustodio.com</a></span></td>
+            <td class="w-1/4 px-4 py-2 text-gray-800"><span class="font-normal"><a href="https://mdm.prabhaktech.com" class="text-gray-800">mdm.prabhaktech.com</a></span></td>
             <td class="w-1/4 px-4 py-2 text-gray-800"><span class="font-normal">Anonymously identifies the visitor’s device to collect usage stats</span></td>
             <td class="w-1/4 px-4 py-2 text-gray-800"><span class="font-normal">Persistent</span></td>
             <td class=" px-4 py-2 text-gray-800"><span class="font-normal">HTML</span></td>
