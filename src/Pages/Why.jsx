@@ -39,49 +39,49 @@ function Why() {
       icon :  GiSpy ,
       color: "#22c55e",
       title: "Online predators",
-      des: "50% of online exploitation victims are between the ages of 12 and 15. GuardMyKids advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
+      des: "50% of online exploitation victims are between the ages of 12 and 15. Safekidly advice articles help you talk to your children about how to spot and avoid data thieves, groomers, sexual predators, and stalkers.",
     },
     {
       icon : TbMoodCry ,
       color: "blue",
       title: "Mental health issues",
-      des: "Severe depression has increased 58% since 2010, coinciding with an increase in cell phone ownership. GuardMyKids can help you limit the amount of time your child spends in front of screens.",
+      des: "Severe depression has increased 58% since 2010, coinciding with an increase in cell phone ownership. Safekidly can help you limit the amount of time your child spends in front of screens.",
     },
     {
       icon :  GiNightSleep,
       color: " red ",
       title: "Sleep problems",
-      des: "73% of high school students dont get enough sleep. This can lead to difficulty learning, poor moods, and interpersonal conflicts. Use GuardMyKids to set downtimes before bed, so your kids can avoid sleep-disrupting blue light.",
+      des: "73% of high school students dont get enough sleep. This can lead to difficulty learning, poor moods, and interpersonal conflicts. Use Safekidly to set downtimes before bed, so your kids can avoid sleep-disrupting blue light.",
     },
     {
       icon :  BsPersonLock,
       color: "green",
       title: "Online privacy",
-      des: "51% of teens use social media. GuardMyKids helps you ensure they don't share personal information or exchange inappropriate messages with strangers.",
+      des: "51% of teens use social media. Safekidly helps you ensure they don't share personal information or exchange inappropriate messages with strangers.",
     },
     {
       icon :  FaRegFaceAngry ,
       color: "blue",
       title: "Cyberbullying",
-      des: "33% of kids have experienced cyberbullying. Use GuardMyKids to monitor texts so you can catch and block bullies.",
+      des: "33% of kids have experienced cyberbullying. Use Safekidly to monitor texts so you can catch and block bullies.",
     },
     {
       icon : FaLaptop ,
       color: "green",
       title: "Inappropriate content",
-      des: "42% of kids have seen porn online. Use GuardMyKids to monitor YouTube viewing, filter browser results, and block adult websites to reduce the chances your child sees upsetting images or content.",
+      des: "42% of kids have seen porn online. Use Safekidly to monitor YouTube viewing, filter browser results, and block adult websites to reduce the chances your child sees upsetting images or content.",
     },
     {
       icon :  IoPhonePortraitOutline ,
       color: "blue",
       title: "Online addiction",
-      des: "50% of kids admit to being addicted to their smartphones. GuardMyKids lets you set consistent time limits on your child's devices and block apps that they use excessively.",
+      des: "50% of kids admit to being addicted to their smartphones. Safekidly lets you set consistent time limits on your child's devices and block apps that they use excessively.",
     },
     {
       icon :  RiShapesLine,
       color: " red ",
       title: "Education issues",
-      des: "The 63% of children who have more than 2 hours of daily screen time show lower academic performance than those who spend less time online. Use GuardMyKids to reduce their device use and encourage them to visit educational websites.",
+      des: "The 63% of children who have more than 2 hours of daily screen time show lower academic performance than those who spend less time online. Use Safekidly to reduce their device use and encourage them to visit educational websites.",
     },
   ];
   const accordionItems = [
@@ -216,13 +216,13 @@ function Why() {
           </div>
         </div>
       </div>
-      <p className="text-center text-base md:text-lg py-5">*Source: Common Sense Media and GuardMyKids</p>
+      <p className="text-center text-base md:text-lg py-5">*Source: Common Sense Media and Safekidly</p>
 
       <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10 w-[90%] mx-auto my-6">
         <div className='w-full md:w-1/2  text-gray-700 px-0'>
-          <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[1px] text-center md:text-start md:tracking-[3px]'>DIGITAL SAFETY AND WELLBEING WITH GUARDMYKIDS</p>
+          <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[1px] text-center md:text-start md:tracking-[3px]'>DIGITAL SAFETY AND WELLBEING WITH SAFEKIDLY</p>
           <p className='text-2xl md:text-4xl px-6 md:px-0 font-medium md:font-bold text-center md:text-start  py-3'>Everything you need in one place</p>
-          <p className="text-lg font-extralight md:whitespace-nowrap leading-5  text-center  md:text-start">Explore the features below to see what GuardMyKids can do for you!</p>
+          <p className="text-lg font-extralight md:whitespace-nowrap leading-5  text-center  md:text-start">Explore the features below to see what Safekidly can do for you!</p>
           <AccordionIcon items={accordionItems} />
           <div>
             <a href="/features" className="text-blue-500 underline pt-6 pb-2" >
@@ -244,7 +244,7 @@ function Why() {
 
       <div>
         <p className="text-xl lg:text-4xl font-bold lg:w-[40%] w-[90%] mx-auto text-center lg:pt-20 pt-5">
-          Learn how GuardMyKids
+          Learn how Safekidly
         </p>
         <p className="text-xl lg:text-4xl font-bold lg:w-[50%] w-[90%] mx-auto text-center lg:pt-2 pt-1">
           makes digital parenting easier
@@ -258,7 +258,7 @@ function Why() {
             </p>
             <p>
               The latest product updates and features plus handy how-tos to help
-              you get the most out of GuardMyKids.
+              you get the most out of Safekidly.
             </p>
           </div>
           <div className="lg:w-1/3">

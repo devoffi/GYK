@@ -8,7 +8,7 @@ function FamilyStories() {
         Real stories from parents like you
       </p>
       <p className="text-lg lg:text-xl font-bold text-center lg:mt-3 mb-2 lg:mb-10">
-        Learn how families of all types use GuardMyKids to stay safe online and
+        Learn how families of all types use Safekidly to stay safe online and
         balance their screen time.
       </p>
       <div className="lg:w-[80%] mx-auto flex flex-col gap-10">
@@ -27,7 +27,7 @@ function FamilyStories() {
               2 parents, 2 kids
             </p>
             <div>
-              <p className="font-bold my-3">Favorite GuardMyKids features:</p>
+              <p className="font-bold my-3">Favorite Safekidly features:</p>
               <p> Time Limits</p>
               <p> Apps & game blocking</p>
             </div>
@@ -49,7 +49,7 @@ function FamilyStories() {
               2 parents, 2 kids
             </p>
             <div>
-              <p className="font-bold my-3">Favorite GuardMyKids features:</p>
+              <p className="font-bold my-3">Favorite Safekidly features:</p>
               <p> Time Limits</p>
               <p> Apps & game blocking</p>
             </div>
@@ -71,7 +71,7 @@ function FamilyStories() {
               2 parents, 2 kids
             </p>
             <div>
-              <p className="font-bold my-3">Favorite GuardMyKids features:</p>
+              <p className="font-bold my-3">Favorite Safekidly features:</p>
               <p> Time Limits</p>
               <p> Apps & game blocking</p>
             </div>
@@ -92,7 +92,7 @@ function FamilyStories() {
             <p className="text-center font-bold">Dr. Nicole Beurkens</p>
             <p>Holistic psychologist</p>
             <p className="text-center font-bold mt-2">
-              “I have been recomending GuardMyKids to my clients for years with
+              “I have been recomending Safekidly to my clients for years with
               great success.”
             </p>
           </div>
@@ -105,7 +105,7 @@ function FamilyStories() {
             <p>Family psychologist</p>
             <p className="text-center font-bold mt-2">
               “Consistency and communication are the keys to good parenting.
-              GuardMyKids helps families with both.”
+              Safekidly helps families with both.”
             </p>
           </div>
           <div className="lg:w-1/4 flex flex-col gap-5 justify-center items-center lg:px-10">
@@ -116,7 +116,7 @@ function FamilyStories() {
             <p className="text-center font-bold">Marc Masip</p>
             <p>Child psychologist & addiction specialist</p>
             <p className="text-center font-bold mt-2">
-              “Kids are over-dosing on screen time. I recommend GuardMyKids over
+              “Kids are over-dosing on screen time. I recommend Safekidly over
               and over again to parents who need help combating online addiction
               and finding balance.”
             </p>
@@ -129,7 +129,7 @@ function FamilyStories() {
             <p className="text-center font-bold">Dr. Nicole Beurkens</p>
             <p>Holistic psychologist</p>
             <p className="text-center font-bold mt-2">
-              “I have been recomending GuardMyKids to my clients for years with
+              “I have been recomending Safekidly to my clients for years with
               great success.”
             </p>
           </div>

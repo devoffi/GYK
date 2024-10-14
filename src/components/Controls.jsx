@@ -97,7 +97,7 @@ function Controls() {
             Ensure your child’s online safety.
           </p>
           <p className="text-lg">
-          Establish a secure online environment for your children with GuardMyKids. Gain peace of mind as you effortlessly monitor and manage their activity across all devices, no matter where they are.
+          Establish a secure online environment for your children with Safekidly. Gain peace of mind as you effortlessly monitor and manage their activity across all devices, no matter where they are.
           </p>
         </div>
       </div>
@@ -137,16 +137,16 @@ function Controls() {
             Foster healthy digital habits.
           </p>
           <p className="text-lg">
-          Support your child in cultivating a healthy relationship with technology. With GuardMyKids, you can prioritize real-life activities while helping them develop balanced digital habits as they grow.
+          Support your child in cultivating a healthy relationship with technology. With Safekidly, you can prioritize real-life activities while helping them develop balanced digital habits as they grow.
           </p>
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center items-center mt-10 mb-4 lg:gap-20 gap-10">
           <div className='w-full md:w-1/2  text-gray-700 px-0'>
-            <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[1px] md:tracking-[3px]'>GUARDMYKIDS PARENTAL CONTROLS</p>
+            <p className='text-lg md:text-2xl font-thin px-2 md:px-0  tracking-[1px] md:tracking-[3px]'>SAFEKIDLY PARENTAL CONTROLS</p>
             <p className='text-2xl md:text-4xl px-6 md:px-0 font-medium md:font-bold text-center md:text-start pb-6 pt-3'>Everything you need to safeguard your kids online.</p>
-            <p className="text-lg font-extralight md:whitespace-nowrap leading-5  text-center  md:text-start">Explore the features below to see what GuardMyKids can do for you!</p>
+            <p className="text-lg font-extralight md:whitespace-nowrap leading-5  text-center  md:text-start">Explore the features below to see what Safekidly can do for you!</p>
             <AccordionIcon items={accordionItems} />
             <div>
               <a href="/features" className="text-blue-500 underline pt-6 pb-2" >

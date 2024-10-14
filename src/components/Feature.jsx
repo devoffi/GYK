@@ -11,7 +11,7 @@ function Feature() {
           <img src="https://static.qustodio.com/public-site/uploads/2023/11/22081232/parents-logo%402x.png" />
           <p className="text-center mt-2 lg:mt-8">
             "Everything you need to know about your kid’s screen time is
-            beautifully displayed on  GuardMyKids online dashboard."
+            beautifully displayed on  Safekidly online dashboard."
           </p>
         </div>
         <div className="w-52">
@@ -23,7 +23,7 @@ function Feature() {
         <div className="w-52">
           <img src="https://static.qustodio.com/public-site/uploads/2023/11/22111345/mashable-logo%402x.png" />
           <p className="text-center mt-2 lg:mt-8">
-          “From YouTube monitoring to a panic button for kids away from home,  GuardMyKids covers just about everything.”
+          “From YouTube monitoring to a panic button for kids away from home,  Safekidly covers just about everything.”
           </p>
         </div>
         <div className="w-52">

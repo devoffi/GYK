@@ -20,7 +20,7 @@ function Contact() {
             </h2>
             <p className="mb-4">
               If you’re an individual or a company and would like to promote
-              GuardMyKids, you can apply to our Affiliate program. For more
+              Safekidly, you can apply to our Affiliate program. For more
               details, please visit our  <a href="/partners-login" className="text-blue-500  inline "> Affiliate program page.</a>
             </p>
           </div>

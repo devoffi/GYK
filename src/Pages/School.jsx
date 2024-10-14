@@ -38,7 +38,7 @@ function School() {
         <div className='flex md:flex-row flex-col md:px-10 md:py-20 bg-gray-100 rrounded-xl'>
             <div className='text-center md:hidden'>
                 <p className="text-xl pl-16 lg:text-xl font-medium mt-1 py-6">
-                Our global network of products and services such as Linewize, Smoothwall, Monitor and Pulse, alongside with GuardMyKids provide uninterrupted digital safety to more than 27,000 schools and 23 million students worldwide.
+                Our global network of products and services such as Linewize, Smoothwall, Monitor and Pulse, alongside with Safekidly provide uninterrupted digital safety to more than 27,000 schools and 23 million students worldwide.
                 </p>
             </div>
             <div className='md:w-4/5'>
@@ -48,7 +48,7 @@ function School() {
             </div>
             <div className='px-10 py-20 hidden md:block'>
                 <p className="text-xl pl-16 lg:text-xl font-medium mt-1 py-6">
-                Our global network of products and services such as Linewize, Smoothwall, Monitor and Pulse, alongside with GuardMyKids provide uninterrupted digital safety to more than 27,000 schools and 23 million students worldwide.
+                Our global network of products and services such as Linewize, Smoothwall, Monitor and Pulse, alongside with Safekidly provide uninterrupted digital safety to more than 27,000 schools and 23 million students worldwide.
                 </p>
             </div>
         </div>
@@ -61,7 +61,7 @@ function School() {
             src='https://static.qustodio.com/public-site/uploads/2023/09/28063955/collage-schools%402x.png'
             />
             <div className='bg-green-100 text-start text-lg rounded-xl px-4 md:px-16 py-6 md:py-10 w-full flex flex-col gap-4'>
-                <p> <span className='inline font-bold '>GuardMyKids and Qoria safety platform Linewize are now integrated </span> to provide schools the tools they can share with parents for visibility over their child’s school devices outside of school hours.</p>
+                <p> <span className='inline font-bold '>Safekidly and Qoria safety platform Linewize are now integrated </span> to provide schools the tools they can share with parents for visibility over their child’s school devices outside of school hours.</p>
                 <p>Our goal is to connect the educational community around each child and provide tools to schools and parents that will help them to {" "} <span className='font-bold inline text-blue-600'> create a positive digital environment.</span></p>
             </div>
         </div>
@@ -93,7 +93,7 @@ function School() {
                         <img
                         className='w-40  p-2'
                         src='https://static.qustodio.com/public-site/uploads/2022/11/15140958/group-65-copy%403x-2.png' />
-                        <p className='py-6 px-4 text-2xl font-bold'>Manage everything from a single GuardMyKids application</p>
+                        <p className='py-6 px-4 text-2xl font-bold'>Manage everything from a single Safekidly application</p>
                     </div>
                 </div>
             </div>

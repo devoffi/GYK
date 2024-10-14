@@ -19,13 +19,13 @@ function Help() {
     { id: 2, icon: FaPersonChalkboard , title: " Kids' Android, Kindle & Chromebook", details: "Guides to setting up protection on your children's Android devices", img: 'https://via.placeholder.com/150' },
     { id: 3, icon: FaPersonChalkboard , title: "Parents' features", details: "How to balance screen time, filter content, and view activity reports", img: 'https://via.placeholder.com/150' },
     { id: 4, icon: MdDevices , title: "Kids' iOS (iPhone, iPad & iPod Touch)", details: "Guides to setting up protection on your children's OS devices", img: 'https://via.placeholder.com/150' },
-    { id: 5, icon: IoIosPhonePortrait , title: "Parents' customization", details: "How to customize GuardMyKids features to supervise your family", img: 'https://via.placeholder.com/150' },
+    { id: 5, icon: IoIosPhonePortrait , title: "Parents' customization", details: "How to customize Safekidly features to supervise your family", img: 'https://via.placeholder.com/150' },
     { id: 6, icon: FaLaptop , title: "Kids' computers (Windows & Mac)", details: "Guides to setting up protection on your children's computers", img: 'https://via.placeholder.com/150' },
   ];
 
   const vegetables = [
-    { id: 1, icon: FaPersonChalkboard , title: "For parents", details: "Guides for parents invited to use GuardMyKids by their school", img: 'https://via.placeholder.com/150' },
-    { id: 2, icon: FaLaptop , title: "For administrators", details: "Guades to setting up GuardMyKids Professional on your devices", img: 'https://via.placeholder.com/150' }
+    { id: 1, icon: FaPersonChalkboard , title: "For parents", details: "Guides for parents invited to use Safekidly by their school", img: 'https://via.placeholder.com/150' },
+    { id: 2, icon: FaLaptop , title: "For administrators", details: "Guades to setting up Safekidly Professional on your devices", img: 'https://via.placeholder.com/150' }
   ];
   const renderCards = (items) => {
     return items.map(item => (
@@ -86,13 +86,13 @@ function Help() {
       <div className='w-full text-start text-gray-700 px-12 my-12'>
         <p className='text-2xl font-bold py-10'>Promoted articles</p>
         <div className='flex flex-col md:flex-row w-full gap-4 '>
-          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>GuardMyKids system requirements and supported platforms</a>
-          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What is GuardMyKids and what can I do with it?</a>
-          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>How to install GuardMyKids on a device</a>
+          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>Safekidly system requirements and supported platforms</a>
+          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What is Safekidly and what can I do with it?</a>
+          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>How to install Safekidly on a device</a>
         </div>
         <div className='flex flex-col md:flex-row w-full gap-4 py-4'>
           <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What is YouTube Monitoring and what does it do?</a>
-          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What is GuardMyKids Family Locator and how do I use it?</a>
+          <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What is Safekidly Family Locator and how do I use it?</a>
           <a className='md:w-4/12 hover:text-blue-500 hover:underline'>What do Lock Navigation and Lock Device mean for time limits on each platform?</a>
         </div>
       </div>

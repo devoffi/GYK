@@ -5,12 +5,12 @@ function WebsitePolicy() {
   return (
     <SectionContainer >
         <div className=" py-10 md:py-16">
-            <h1 className="text-2xl font-bold text-gray-800">GuardMyKids Privacy Policy</h1>
+            <h1 className="text-2xl font-bold text-gray-800">Safekidly Privacy Policy</h1>
             <p className="mt-4 text-gray-600">
-                GuardMyKids Technologies S.L. (the “Company” or “We/us”) is committed to respecting and protecting the privacy of all visitors of our Website (www.mdm.prabhaktech.com). This Privacy Policy explains our practices regarding the use of personal data collected and processed through our Website or otherwise provided to us by email or via other websites that link to us. Please note that this privacy policy doesn’t regulate the processing of personal data collected through our services; if you want to know more about how we process our users’ data, please read the legal terms of our services.
+            Safekidly Technologies S.L. (the “Company” or “We/us”) is committed to respecting and protecting the privacy of all visitors of our Website (www.mdm.prabhaktech.com). This Privacy Policy explains our practices regarding the use of personal data collected and processed through our Website or otherwise provided to us by email or via other websites that link to us. Please note that this privacy policy doesn’t regulate the processing of personal data collected through our services; if you want to know more about how we process our users’ data, please read the legal terms of our services.
             </p>
             <p className="mt-4 text-gray-600">
-                The data controller of the data you provide us with is GuardMyKids Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh, 521185.
+                The data controller of the data you provide us with is Safekidly Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh, 521185.
             </p>
             <p className="mt-4 text-gray-600">
                 You can contact the Data Protection Officer to send any suggestions, queries, doubts or complaints regarding data protection by writing to:&nbsp;
@@ -75,18 +75,15 @@ function WebsitePolicy() {
             <p className="mt-4 font-bold text-gray-800">9. User Rights</p>
             <p className="mt-2 text-gray-600">
                 You are informed you may exercise at any time right to the portability of your data sent to us, to access, rectify, erase, block and oppose any processing of your personal data by sending an email request to&nbsp;
-                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>&nbsp;or by writing to GuardMyKids Technologies SL, with domicile at Roger de Flor Street, 193, bajos, 08013 Barcelona, Spain. You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
+                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>&nbsp;or by writing to Safekidly Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh Inida . You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
             </p>
-            <p className="mt-2 text-gray-600">
-                You also have the right to lodge a complaint with a supervisory authority, in this case the Spanish Data Protection Agency (Agencia Española de Protección de Datos), C/ Jorge Juan, 6, 28001 Madrid, Spain.
-            </p>
-
+          
             <p className="mt-4 font-bold text-gray-800">10. General</p>
             <p className="mt-2 text-gray-600">
                 We reserve the right to amend the terms of this Privacy Policy and will notify you by providing a clear notice of these changes by email or on our website, and in this Privacy Policy. If you continue to use and/or access our Website after such update, you will be deemed to accept the new terms. If you do not accept the update, please notify us and we will terminate any account you may have with us, and remove any of your personal data (except as required to be maintained for legal purposes), and you will not be able to continue to use services to which you have subscribed.
             </p>
             <p className="mt-2 text-gray-600">
-                Unless a specific local regulation of mandatory application provides otherwise, the Privacy Policy is governed by the laws of Spain.
+                Unless a specific local regulation of mandatory application provides otherwise, the Privacy Policy is governed by the laws of Inida.
             </p>
         </div>
     </SectionContainer>

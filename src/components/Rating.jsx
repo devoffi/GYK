@@ -3,7 +3,7 @@ import React from "react";
 function Rating() {
   return (
     <div className="py-10 md:py-16 justify-center flex flex-col items-center text-gray-700">
-      <p className="text-green-500 tracking-widest text-xl font-medium my-3 md:my-5">GUARDMYKIDS IN NUMBERS</p>
+      <p className="text-green-500 tracking-widest text-xl font-medium my-3 md:my-5">SAFEKIDLY IN NUMBERS</p>
       <p className="font-bold text-xl md:text-2xl">Expert care for your family's safety. </p>
  
       <div className="flex flex-col md:flex-row gap-8 md:gap-20 my-8 md:my-16">

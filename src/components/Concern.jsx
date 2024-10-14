@@ -32,7 +32,7 @@ function Concern() {
       title: 'Cyberbullying',
       content: (
         <>
-          <p >Use GuardMyKids to monitor messages, social media posts, and phone contacts to catch and block bullies immediately.</p>
+          <p >Use Safekidly to monitor messages, social media posts, and phone contacts to catch and block bullies immediately.</p>
         </>
       ),
     },
@@ -41,7 +41,7 @@ function Concern() {
       title: 'Sleep problems',
       content: (
         <>
-          <p>Use GuardMyKids to set screen-free periods before bed so your child can avoid sleep- disrupting blue light.</p>
+          <p>Use Safekidly to set screen-free periods before bed so your child can avoid sleep- disrupting blue light.</p>
         </>
       ),
     },
@@ -50,7 +50,7 @@ function Concern() {
       title: 'Online addiction',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>Use GuardMyKids to set time limits for devices and specific apps so you can stop your kids from becoming addicted to their screens.</p>
+          <p  className='pb-1 md:pb-1.5'>Use Safekidly to set time limits for devices and specific apps so you can stop your kids from becoming addicted to their screens.</p>
         </>
       ),
     },
@@ -59,7 +59,7 @@ function Concern() {
       title: 'Inappropriate content',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>Use GuardMyKids to block adult websites and monitor your child's YouTube views to prevent them from viewing upsetting content</p>
+          <p  className='pb-1 md:pb-1.5'>Use Safekidly to block adult websites and monitor your child's YouTube views to prevent them from viewing upsetting content</p>
         </>
       ),
     },
@@ -68,7 +68,7 @@ function Concern() {
       title: 'Mental health problems',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>Use GuardMyKids to set screen time limits and monitor social media content which can help reduce your child's risk of developing depression and low self-esteem.</p>
+          <p  className='pb-1 md:pb-1.5'>Use Safekidly to set screen time limits and monitor social media content which can help reduce your child's risk of developing depression and low self-esteem.</p>
         </>
       ),
     },
@@ -79,7 +79,7 @@ function Concern() {
       title: 'Online privacy',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'> GuardMyKids lets you supervise your child's messages and social media posts to ensure they don't share personal information with strangers.</p>
+          <p  className='pb-1 md:pb-1.5'> Safekidly lets you supervise your child's messages and social media posts to ensure they don't share personal information with strangers.</p>
         </>
       ),
     },
@@ -88,7 +88,7 @@ function Concern() {
       title: 'Online predators',
       content: (
         <>
-          <p>Read  GuardMyKids's parenting tips articles for advice on talking to your kids about avoiding online predators.</p>
+          <p>Read  Safekidly's parenting tips articles for advice on talking to your kids about avoiding online predators.</p>
         </>
       ),
     },
@@ -97,7 +97,7 @@ function Concern() {
       title: 'Education issues',
       content: (
         <>
-          <p > GuardMyKids enables you to filter the websites, apps and videos your child can view to reduce distractions from their education.</p>
+          <p > Safekidly enables you to filter the websites, apps and videos your child can view to reduce distractions from their education.</p>
         </>
       ),
     },
@@ -106,7 +106,7 @@ function Concern() {
       title: 'Gaming addiction',
       content: (
         <>
-          <p>Use GuardMyKids to set time limits for specific games, or block them completely, to ensure your child doesn't get addicted to gaming.</p>
+          <p>Use Safekidly to set time limits for specific games, or block them completely, to ensure your child doesn't get addicted to gaming.</p>
         </>
       ),
     },
@@ -115,7 +115,7 @@ function Concern() {
       title: 'Online | offline balance',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>GuardMyKids enables you to set screen-free periods so you can make sure your child enjoys quality time away from their devices.</p>
+          <p  className='pb-1 md:pb-1.5'>Safekidly enables you to set screen-free periods so you can make sure your child enjoys quality time away from their devices.</p>
         </>
       ),
     }
@@ -127,7 +127,7 @@ function Concern() {
         Were here to help with your concerns
       </p>
       <p className="text-center my-5">
-        Whatever their age and needs, GuardMyKids parental control tools help
+        Whatever their age and needs, Safekidly parental control tools help
         reduce the risks your kids face online.
       </p>
       <div className="flex flex-col lg:flex-row md:gap-10 ">

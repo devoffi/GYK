@@ -19,7 +19,7 @@ function Home() {
             <span className="text-green-400">solution for managing</span> parental controls and digital wellbeing.
           </p>
           <p className=" text-lg md:text-xl">
-            Join over 6 million parents who trust GuardMyKids to ensure their kids' screen time is safe and balanced across all devices, all from a single, user-friendly dashboard.
+            Join over 6 million parents who trust Safekidly to ensure their kids' screen time is safe and balanced across all devices, all from a single, user-friendly dashboard.
           </p>
           <div className="flex justify-center md:justify-start ">
             <PrimaryButton>Get started free</PrimaryButton>

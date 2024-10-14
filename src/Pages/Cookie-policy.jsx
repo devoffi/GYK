@@ -11,11 +11,11 @@ function CookiePolicy() {
             COOKIES POLICY
         </h1>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
-            GuardMyKids Technologies S.L.U. is the owner of the website 
+            Safekidly Technologies S.L.U. is the owner of the website 
             <a href="https://mdm.prabhaktech.com" className="text-blue-500 hover:underline inline mx-1 "> 
             https://www.prabhaktech.com
             </a> 
-            (hereinafter the “website”) and the GuardMyKids Parental Control app and platform (hereinafter the “app”) and uses cookies that collect information related to the connection, browsers and devices used by users who access and use the website and app (hereinafter the “users”) to manage and improve the proper functioning of the website, as further explained below.
+            (hereinafter the “website”) and the Safekidly Parental Control app and platform (hereinafter the “app”) and uses cookies that collect information related to the connection, browsers and devices used by users who access and use the website and app (hereinafter the “users”) to manage and improve the proper functioning of the website, as further explained below.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
             This policy applies to both the website and the app, and describes what information the cookies and similar technologies (hereinafter, collectively, “cookies”) collect, how they are used and for what purpose. It also indicates how the user can restrict or block the automatic downloading of cookies; however, this may reduce or even hinder certain elements of the website and app’s functionality. Likewise, the user can choose the category of cookies they wish to activate in the cookies banner that appears the first time they access the website.
@@ -31,7 +31,7 @@ function CookiePolicy() {
             <a href="https://es.wikipedia.org/wiki/Cookie_(inform%C3%A1tica)" className="text-blue-500 hover:underline inline "> article</a>.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-2">
-            <strong className="text-lg">2. How does the GuardMyKids website use cookies?</strong>
+            <strong className="text-lg">2. How does the Safekidly website use cookies?</strong>
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-4">
             We use cookies to improve the functionality of our website and app and to collect information about how users use them to enable us to continually improve our users’ experience.
@@ -43,7 +43,7 @@ function CookiePolicy() {
             No information such as your address, password, credit card details, etc. is stored in the cookies used by our website.
         </p>
         <p dir="ltr" className="text-gray-700 text-base mb-2">
-        <strong className="text-lg">3. What cookies does the GuardMyKids website use?</strong>
+        <strong className="text-lg">3. What cookies does the Safekidly website use?</strong>
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
         The website and app use both own and third-party cookies:
@@ -59,13 +59,13 @@ function CookiePolicy() {
       </p>
       <ul className="list-disc list-inside text-gray-700 text-base mb-4">
         <li>
-          <strong>Technical cookies (necessary)</strong>: cookies necessary for navigation and for the proper functioning of the website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, controlling any fraud linked to service security, and ensuring secure navigation. The legal basis for collecting data through these cookies is the execution of the contract (the Terms and Conditions) applicable to all users and GuardMyKids's legitimate interest in managing the website and app.
+          <strong>Technical cookies (necessary)</strong>: cookies necessary for navigation and for the proper functioning of the website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, controlling any fraud linked to service security, and ensuring secure navigation. The legal basis for collecting data through these cookies is the execution of the contract (the Terms and Conditions) applicable to all users and Safekidly's legitimate interest in managing the website and app.
         </li>
         <li>
           <strong>Preference cookies</strong>: allow remembering information that modifies the behavior or appearance of the website or app itself, such as your preferred language or the region in which the user is located. The legitimate basis for collecting data through these cookies is the consent of the user.
         </li>
         <li>
-          <strong>Analytical cookies</strong>: cookies that allow GuardMyKids to perform follow-up and analyses of user behavior on the website and app; this includes a quantitative measurement of the impact of an advertisement. The information collected through these cookies is used for measuring the activity of the website and app and for profiling users’ browsing to improve them. The legal basis for collecting this data is the consent of the user.
+          <strong>Analytical cookies</strong>: cookies that allow Safekidly to perform follow-up and analyses of user behavior on the website and app; this includes a quantitative measurement of the impact of an advertisement. The information collected through these cookies is used for measuring the activity of the website and app and for profiling users’ browsing to improve them. The legal basis for collecting this data is the consent of the user.
         </li>
         <li>
           <strong>Advertising cookies</strong>: cookies that store information on user behavior obtained through continuous observation of their browsing habits, allowing the development of a specific profile to display advertisements appropriate to this profile. The legitimate basis for collecting this data through these cookies is the consent of the user.
@@ -78,7 +78,7 @@ function CookiePolicy() {
         a) <strong>Session cookies</strong>: those designed to collect and store data while users access our website. They are regularly used to store information that is only relevant with regard to the specific session, and disappear once the session is closed.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
-        b) <strong>Persistent cookies</strong>: cookies on which data stay stored and may be accessed and processed for a period of time defined by GuardMyKids, which may range from a few minutes to several years.
+        b) <strong>Persistent cookies</strong>: cookies on which data stay stored and may be accessed and processed for a period of time defined by Safekidly, which may range from a few minutes to several years.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
         <span style={{ fontWeight: '400' }}>Technical:</span> These are cookies necessary for navigation and for the proper functioning of the Website. Their use allows basic functions, such as controlling data traffic and communication, identifying the session, remembering the items added to the cart, completing the payment process, managing payment, and controlling any fraud linked to service security.
@@ -134,7 +134,7 @@ function CookiePolicy() {
       </li>
     </ul>
       <p dir="ltr" className="text-gray-700 text-base mb-4">
-        If you have any questions about our use of cookies, you can contact us at <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>.
+        If you have any questions about our use of cookies, you can contact us at <a href="mailto:info@prabhaktech.com" className="text-blue-500 hover:underline inline ">info@prabhaktech.com</a>.
       </p>
       <p dir="ltr" className="text-gray-700 text-base mb-4 inline ">
         Your consent applies to the following domains: 

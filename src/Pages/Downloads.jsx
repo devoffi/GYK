@@ -12,7 +12,7 @@ function Downloads() {
       title: ' Android ',
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>GuardMyKids works on Android devices running Android 7 and above.</p>
+          <p  className='pb-1 md:pb-1.5'>Safekidly works on Android devices running Android 7 and above.</p>
           <a className="btn  btn-primary text-white ">Download</a>
         </>
       ),
@@ -23,10 +23,10 @@ function Downloads() {
   return (
     <div className="text-gray-700">
       <p className="md:w-3/5 text-center text-2xl lg:text-5xl font-bold mx-auto mt-10 md:mt-20">
-        Download GuardMyKids for free
+        Download Safekidly for free
       </p>
       <p className="text-lg lg:text-2xl text-center my-6">
-      Get everything you need to keep your kids safe online by installing GuardMyKids now
+      Get everything you need to keep your kids safe online by installing Safekidly now
       </p>
       
       <div className="my-20 lg:w-[80%] mx-auto px-6">
@@ -40,7 +40,7 @@ function Downloads() {
                 Download on childrens devices
               </p>
               <p className="text-center my-5 text-md lg:text-lg">
-                Below you can find all the kids devices that GuardMyKids can
+                Below you can find all the kids devices that Safekidly can
                 protect. Click to check that your kids devices are compatible
                 and to start downloading.
               </p>
@@ -59,8 +59,8 @@ function Downloads() {
                 Download on parents devices
               </p>
               <p className="text-center my-5 text-md lg:text-lg">
-                Download GuardMyKids on your own iOS or Android device, or log in
-                to GuardMyKids Web, to check your childs activity, set rules, and
+                Download Safekidly on your own iOS or Android device, or log in
+                to Safekidly Web, to check your childs activity, set rules, and
                 edit your notifications.
               </p>
             </div>

@@ -17,7 +17,7 @@ function GetStarted() {
     <SectionContainer>
       <div className="text-gray-700">
         <p className="text-center text-2xl lg:text-5xl font-bold mx-auto mt-10 md:mt-20">
-          Getting started with GuardMyKids
+          Getting started with Safekidly
         </p>
         <p className="text-lg lg:text-xl text-center my-5 lg:w-[65%] mx-auto">
           Follow these three simple steps to start protecting your child's devices
@@ -26,14 +26,14 @@ function GetStarted() {
         <div className="hidden md:block">
           <div className="flex flex-wrap gap-5 lg:w-[80%] mx-auto justify-center items-center lg:my-10">
             <p onClick={() => scrollToSection(createAccountRef)} className="cursor-pointer px-4 py-2 border rounded-full">1. Create your account</p>
-            <p onClick={() => scrollToSection(installRef)} className="cursor-pointer px-4 py-2 border rounded-full">2. Install GuardMyKids on your child's devices</p>
+            <p onClick={() => scrollToSection(installRef)} className="cursor-pointer px-4 py-2 border rounded-full">2. Install Safekidly on your child's devices</p>
             <p onClick={() => scrollToSection(superviseRef)} className="cursor-pointer px-4 py-2 border rounded-full">3. Start supervising</p>
           </div>
         </div>
 
         <div className="md:hidden flex overflow-x-auto scrollbar-hidden scrollbar-hide gap-2">
           <p onClick={() => scrollToSection(createAccountRef)} className="cursor-pointer px-4 py-2 border rounded-full whitespace-nowrap">1. Create your account</p>
-          <p onClick={() => scrollToSection(installRef)} className="cursor-pointer px-4 py-2 border rounded-full whitespace-nowrap">2. Install GuardMyKids on your child's devices</p>
+          <p onClick={() => scrollToSection(installRef)} className="cursor-pointer px-4 py-2 border rounded-full whitespace-nowrap">2. Install Safekidly on your child's devices</p>
           <p onClick={() => scrollToSection(superviseRef)} className="cursor-pointer px-4 py-2 border rounded-full whitespace-nowrap ">3. Start supervising</p>
         </div>
 
@@ -45,7 +45,7 @@ function GetStarted() {
                 Create your account
               </p>
               <p className="text-lg my-6 lg:my-10">
-                Sign up for your free GuardMyKids account and then decide if you want
+                Sign up for your free Safekidly account and then decide if you want
                 to upgrade to a Premium plan that suits your family.
               </p>
             </div>
@@ -56,15 +56,15 @@ function GetStarted() {
 
           <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10" ref={installRef}>
             <div className="w-[70%]">
-              <img src="https://static.qustodio.com/public-site/uploads/2023/11/23150606/installqustodio-image%402x.png" alt="Install GuardMyKids" />
+              <img src="https://static.qustodio.com/public-site/uploads/2023/11/23150606/installqustodio-image%402x.png" alt="Install Safekidly" />
             </div>
             <div>
               <p className="text-xl lg:text-4xl md:flex font-bold mt-8 text-center md:text-start">
                 <span className=" text-viridianGreen  mx-3"><span className="  rounded-full pb-2.5 ">2.</span></span>
-                Install GuardMyKids on your child's devices
+                Install Safekidly on your child's devices
               </p>
               <p className="text-lg lg:my-4">
-                Once you've created your account, you're ready to install GuardMyKids
+                Once you've created your account, you're ready to install Safekidly
                 on your child's devices. Protect everything, from smartphones and
                 tablets, to computers and Kindles.
               </p>
@@ -74,15 +74,15 @@ function GetStarted() {
               </div>
               <div className="flex flex-col gap-4">
                 <p className="text-md lg:text-2xl my-10 mb-8">
-                How to install GuardMyKids on your child’s Android phone or tablet (Android OS 7 or higher)
+                How to install Safekidly on your child’s Android phone or tablet (Android OS 7 or higher)
                 </p>
                 <p className="bg-green-50 text-lg py-4 flex rounded-xl ">
                   <span className="text-xl font-bold mx-6">1.</span>
-                  Download Kids App GuardMyKids from Google Play onto your child’s device.
+                  Download Kids App Safekidly from Google Play onto your child’s device.
                 </p>
                 <p className="bg-green-50 text-lg py-4 flex rounded-xl ">
                   <span className="text-xl font-bold mx-6">2.</span>
-                  Log in with your GuardMyKids account credentials.
+                  Log in with your Safekidly account credentials.
                 </p>
                 <p className="bg-green-50 text-lg py-4 flex rounded-xl">
                   <span className="text-xl font-bold mx-6">3.</span>
@@ -106,7 +106,7 @@ function GetStarted() {
                 view your dashboard. There, you can see your child's real-time
                 online activity, and set your preferences to receive reports and
                 alerts by email. Customize your settings in exactly the way you
-                need to make GuardMyKids work for you and your family.
+                need to make Safekidly work for you and your family.
               </p>
             </div>
             <div>

@@ -32,7 +32,7 @@ function Features() {
         All the tools you need to protect your kids online
       </p>
       <p className="text-lg lg:text-xl text-center my-10">
-        GuardMyKids gives you the best parental control and digital wellbeing
+        Safekidly gives you the best parental control and digital wellbeing
         features in one place
       </p>
       <div className="flex flex-wrap gap-6 lg:w-[90%] mx-auto">
@@ -186,11 +186,11 @@ function Features() {
           </div>
           <div className="lg:w-[80%]">
             <p className="text-xl lg:text-4xl font-bold mt-8">
-              Make the most of GuardMyKids with Care Plus
+              Make the most of Safekidly with Care Plus
             </p>
             <p className="text-lg lg:text-xl font-bold mt-1 mb-8">
               Care Plus is our exclusive service designed to elevate your
-              GuardMyKids experience.{" "}
+              Safekidly experience.{" "}
             </p>
             <p className="text-lg">
               Block inappropriate apps, games and websites. Allow your kids to
@@ -207,7 +207,7 @@ function Features() {
       </div>
 
       <p className="text-center text-2xl lg:text-4xl font-bold mx-auto mt-10 md:mt-20">
-      GuardMyKids works on every device you need
+      Safekidly works on every device you need
       </p>
       <p className="text-lg lg:text-xl text-center my-5">
         Click on the icons below for more information on the features we provide
@@ -224,7 +224,7 @@ function Features() {
         </div>
         <div className="lg:w-[80%] py-10 flex flex-col gap-1.5 ">
           <p className="text-lg lg:text-2xl font-medium mt-8 tracking-[1px] md:tracking-[3px] ">
-          GuardMyKids for Android
+          Safekidly for Android
           </p>
           <p className="text-md lg:text-lg mt-1 mb-8  ">
           For smartphones and tablets running Android 7.0 and up.
