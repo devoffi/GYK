@@ -179,14 +179,14 @@ function CookiePolicy() {
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">rc::a</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">info@prabhaktech.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Used to distinguish between humans and bots.</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Persistent</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTML</td>
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">rc::c</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">info@prabhaktech.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Used to distinguish between humans and bots.</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Session</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTML</td>
@@ -254,7 +254,7 @@ function CookiePolicy() {
     </tr>
     <tr class="hover:bg-gray-50">
       <td class="border border-gray-300 px-4 py-2 text-gray-700">_q_language [x2]</td>
-      <td class="border border-gray-300 px-4 py-2 text-gray-700">Support@guardmykids.com</td>
+      <td class="border border-gray-300 px-4 py-2 text-gray-700">info@prabhaktech.com</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">Remembers user’s language</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">30 days</td>
       <td class="border border-gray-300 px-4 py-2 text-gray-700">HTTP</td>
@@ -289,7 +289,7 @@ function CookiePolicy() {
               <p><span className="font-normal">adroll#adroll [x2]</span></p>
             </td>
             <td className="border border-gray-200 px-4 py-2">
-              <span className="font-normal">Support@guardmykids.com, auth-pre.mdm.prabhaktech.com</span>
+              <span className="font-normal">info@prabhaktech.com, auth-pre.mdm.prabhaktech.com</span>
             </td>
             <td className="border border-gray-200 px-4 py-2">
               <span className="font-normal">Stores the user’s cookie consent state for the current domain</span>
@@ -321,7 +321,7 @@ function CookiePolicy() {
             <tbody>
                 <tr className="text-gray-600 hover:bg-gray-50">
                     <td className="py-2 px-4 border-b">bounce</td>
-                    <td className="py-2 px-4 border-b">Support@guardmykids.com</td>
+                    <td className="py-2 px-4 border-b">info@prabhaktech.com</td>
                     <td className="py-2 px-4 border-b">Determines if a user leaves the website straight away. This information is used for internal statistics and analytics by the website operator.</td>
                     <td className="py-2 px-4 border-b">Session</td>
                     <td className="py-2 px-4 border-b">Pixel</td>
@@ -342,7 +342,7 @@ function CookiePolicy() {
                 </tr>
                 <tr className="text-gray-600 hover:bg-gray-50">
                     <td className="py-2 px-4 border-b">__utm.gif</td>
-                    <td className="py-2 px-4 border-b">Support@guardmykids.com</td>
+                    <td className="py-2 px-4 border-b">info@prabhaktech.com</td>
                     <td className="py-2 px-4 border-b">Google Analytics Tracking Code that logs details about the visitor’s browser and computer.</td>
                     <td className="py-2 px-4 border-b">Session</td>
                     <td className="py-2 px-4 border-b">Pixel</td>
@@ -1006,7 +1006,7 @@ function CookiePolicy() {
           </tr>
           <tr>
             <td className="px-6 py-4  ">w/1.0/sd</td>
-            <td className="px-6 py-4  ">Support@guardmykids.com</td>
+            <td className="px-6 py-4  ">info@prabhaktech.com</td>
             <td className="px-6 py-4  ">Registers data on visitors such as IP addresses, geographical location and advertisement interaction. This information is used optimize the advertisement on websites that make use of OpenX.net services.</td>
             <td className="px-6 py-4  ">Session</td>
             <td className="px-6 py-4  ">Pixel</td>
@@ -1051,7 +1051,7 @@ function CookiePolicy() {
           </tr>
           <tr>
             <td className="px-6 py-4  ">AdServer/Pug</td>
-            <td className="px-6 py-4  ">Support@guardmykids.com</td>
+            <td className="px-6 py-4  ">info@prabhaktech.com</td>
             <td className="px-6 py-4  ">Sets a timestamp for when the visitor entered the website. This is used for analytical purposes on the website.</td>
             <td className="px-6 py-4  ">Session</td>
             <td className="px-6 py-4  ">Pixel</td>

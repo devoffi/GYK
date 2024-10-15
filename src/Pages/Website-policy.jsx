@@ -14,7 +14,7 @@ function WebsitePolicy() {
             </p>
             <p className="mt-4 text-gray-600">
                 You can contact the Data Protection Officer to send any suggestions, queries, doubts or complaints regarding data protection by writing to:&nbsp;
-                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>
+                <a href="mailto:info@prabhaktech.com" className="text-blue-500 hover:underline inline ">info@prabhaktech.com</a>
             </p>
             
             <p className="mt-4 font-bold text-gray-800">1. User acceptance of this Privacy Policy</p>
@@ -75,7 +75,7 @@ function WebsitePolicy() {
             <p className="mt-4 font-bold text-gray-800">9. User Rights</p>
             <p className="mt-2 text-gray-600">
                 You are informed you may exercise at any time right to the portability of your data sent to us, to access, rectify, erase, block and oppose any processing of your personal data by sending an email request to&nbsp;
-                <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline ">Support@guardmykids.com</a>&nbsp;or by writing to Safekidly Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh Inida . You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
+                <a href="mailto:info@prabhaktech.com" className="text-blue-500 hover:underline inline ">info@prabhaktech.com</a>&nbsp;or by writing to Safekidly Technologies SL, with domicile at 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh Inida . You can also withdraw your consent to our processing at any time when we use your content as legal basis for processing your data. Withdrawal will not have retroactive effects but may prevent providing certain services.
             </p>
           
             <p className="mt-4 font-bold text-gray-800">10. General</p>

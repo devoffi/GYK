@@ -239,7 +239,7 @@ function Care() {
             <div className='w-full flex justify-center md:justify-start'>
             <PrimaryButton>Buy now</PrimaryButton>
             </div>
-            <span className='pt-5 text-gray-700 font-normal text-center md:text-start'>Available in English and Spanish</span>
+            <span className='pt-5 text-gray-700 font-normal text-center md:text-start'>Available in English h</span>
         </div>
       </div>
       <div className='flex flex-col text-gray-700 text-center py-10'>

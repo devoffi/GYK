@@ -6,7 +6,7 @@ function ProductPolicy() {
     <SectionContainer >
         <div className=" mx-auto p-6 bg-white rounded-lg">
             <h1 className="text-2xl font-bold mb-2">GUARDMYKIDS FAMILY PRIVACY POLICY</h1>
-            <h2 className="text-lg font-normal mb-4">Last Updated: 20 October, 2023</h2>
+            <h2 className="text-lg font-normal mb-4">Last Updated: 10 October, 2024</h2>
 
             <p className="mb-4">
                 Safekidly Technologies SL (“GuardMyKids”, the “Company”, or “we/us”) is committed to respecting and protecting your privacy and that of your Users. This Privacy Policy explains our practices regarding the use of personal data collected and processed through our 
@@ -154,7 +154,7 @@ function ProductPolicy() {
 
             <h2 className="font-bold mt-6 mb-2">F. CONTACT US</h2>
             <p className="mb-4">If you have any questions about this Privacy Policy, please contact us:</p>
-            <p className="ml-4">By email: <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline ">Support@guardmykids.com</a></p>
+            <p className="ml-4">By email: <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline ">info@prabhaktech.com</a></p>
             <p className="ml-4">By mail: Safekidly Technologies 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh, India</p>
         
             <ul className="list-disc list-inside space-y-2">
@@ -191,7 +191,7 @@ function ProductPolicy() {
       </ul>
 
       <p className="mt-4">
-        For more information about our service providers that carry out international data transfers, please contact <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline ">Support@guardmykids.com</a>.
+        For more information about our service providers that carry out international data transfers, please contact <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline ">info@prabhaktech.com</a>.
       </p>
 
       <h2 className="text-xl font-semibold mt-6">Data Security</h2>
@@ -214,7 +214,7 @@ function ProductPolicy() {
       <h2 className="text-xl font-semibold mt-6">Exercising Your Rights</h2>
       <p>
         To exercise your rights, please contact us at 
-        <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline "> Support@guardmykids.com</a> 
+        <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline "> info@prabhaktech.com</a> 
         or send a letter to Safekidly Technologies 1st floor here showroom building, Raithupeta, Nandigama, NTR District, Andhra Pradesh India.
       </p>
       <p>
@@ -226,14 +226,14 @@ function ProductPolicy() {
         To exercise your rights to know or delete, please submit a request by either:
       </p>
       <ul className="list-disc list-inside space-y-2">
-        <li>Emailing us at <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline ">Support@guardmykids.com</a></li>
+        <li>Emailing us at <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline ">info@prabhaktech.com</a></li>
         <li>Submitting a support request within the Safekidly Services.</li>
       </ul>
       <p>
-        Only you, or someone legally authorized to act on your behalf, may make a request to know or delete related to your personal information. To designate an authorized agent, please submit a request by emailing us at <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline ">Support@guardmykids.com</a>.
+        Only you, or someone legally authorized to act on your behalf, may make a request to know or delete related to your personal information. To designate an authorized agent, please submit a request by emailing us at <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline ">info@prabhaktech.com</a>.
       </p>
       <p>
-        You may also make a request to know or delete on behalf of your child by emailing us at <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline ">Support@guardmykids.com</a>.
+        You may also make a request to know or delete on behalf of your child by emailing us at <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline ">info@prabhaktech.com</a>.
       </p>
       <p>You may only submit a request to know twice within a 12-month period. Your request to know or delete must:</p>
       <ul className="list-disc list-inside space-y-2">
@@ -298,7 +298,7 @@ function ProductPolicy() {
       <h2 className="text-xl font-semibold mt-6">Commercial Communications</h2>
       <p>
         As a user of GuardMyKids’s Services, you will receive electronic commercial communications in accordance with applicable law, including alerts, notices, newsletters, offers, and promotions related to GuardMyKids’s Services. If you do not wish to receive such information, you can opt out by clicking “unsubscribe” in one of our emails or by sending a notification to 
-        <a href="mailto:Support@guardmykids.com" className="text-blue-600 hover:underline inline "> Support@guardmykids.com</a>.
+        <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline "> info@prabhaktech.com</a>.
       </p>
 
       <h2 className="text-xl font-semibold mt-6">General</h2>
@@ -411,7 +411,7 @@ function ProductPolicy() {
                     International transfers of User Data about users located in the EU may only be performed if the requirements of national and/or European laws and regulations that regulate them are met. User Data about users located outside the EU may be transferred to our servers located in India. Safekidly uses third-party technological services for the provision of Services, and these entities may be in jurisdictions that generally do not provide adequate safeguards in relation to the processing of personal data.
                 </p>
                 <p className="font-normal">
-                    For all entities outside the Economic European Area, we have entered contracts with such entities that do include such safeguards, including the EC model clauses (see Section A.3 above and Appendix 1 below for a list of these entities). For more information, please contact <a href="mailto:Support@guardmykids.com" className="text-blue-600 inline ">Support@guardmykids.com</a>.
+                    For all entities outside the Economic European Area, we have entered contracts with such entities that do include such safeguards, including the EC model clauses (see Section A.3 above and Appendix 1 below for a list of these entities). For more information, please contact <a href="mailto:info@prabhaktech.com" className="text-blue-600 inline ">info@prabhaktech.com</a>.
                 </p>
             </ol>
             <ol className="list-decimal list-inside mt-4">
@@ -483,7 +483,7 @@ function ProductPolicy() {
                 We will store the School Manager Data until the school, as Data Controller, requests us to delete them. You and your child have the right to exercise your data subject rights as indicated in section A.5; should we receive any request on how Linewize or the school process personal data, we will forward such request to them.
             </p>
             <p>
-                Should you have any questions on how School Manager processes your child’s data, please contact <a href="mailto:Support@guardmykids.com" className="text-blue-600 inline">Support@guardmykids.com</a>.
+                Should you have any questions on how School Manager processes your child’s data, please contact <a href="mailto:info@prabhaktech.com" className="text-blue-600 inline">info@prabhaktech.com</a>.
             </p>
         </div>
     </SectionContainer>

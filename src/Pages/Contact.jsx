@@ -24,7 +24,7 @@ function Contact() {
               details, please visit our  <a href="/partners-login" className="text-blue-500  inline "> Affiliate program page.</a>
             </p>
           </div>
-          <p>For any other request, please contact us at <a href="mailto:Support@guardmykids.com" className="text-blue-500 hover:underline inline">Support@guardmykids.com</a>.</p>
+          <p>For any other request, please contact us at <a href="mailto:info@prabhaktech.com" className="text-blue-500 hover:underline inline">info@prabhaktech.com</a>.</p>
         </div>
         <div className="md:w-1/2 my-10 md:my-0">
           <div className="mb-4 md:flex gap-6 justify-between">
