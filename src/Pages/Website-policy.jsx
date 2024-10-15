@@ -59,7 +59,7 @@ function WebsitePolicy() {
 
             <p className="mt-4 font-bold text-gray-800">6. International transfers</p>
             <p className="mt-2 text-gray-600">
-                We use third-party technological services for the provision of services and Website, whose providers may process your data collected in the course of providing us their services indicated below, as sub-processors. These entities may be in jurisdictions that generally don’t provide adequate safeguards in relation to the processing of personal data. For all entities outside the Economic European Area, we have entered into contracts with such entities that do include such safeguards, including the EC model clauses.
+                We use third-party technological services for the provision of services and Website, whose providers may process your data collected in the course of providing us their services indicated below, as sub-processors. These entities may be in jurisdictions that generally don’t provide adequate safeguards in relation to the processing of personal data. For all entities outside the Indian Area, we have entered into contracts with such entities that do include such safeguards, including the EC model clauses.
             </p>
 
             <p className="mt-4 font-bold text-gray-800">7. Security Measures</p>

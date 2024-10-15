@@ -159,7 +159,7 @@ function ProductPolicy() {
         
             <ul className="list-disc list-inside space-y-2">
         <li>
-          <strong>Amazon Web Services</strong> (Amazon.com, Inc.) provides us with cloud hosting services outside the European Economic Area (USA). For more information, visit <a href="https://aws.amazon.com/privacy/" className="text-blue-600 hover:underline inline ">Amazon’s Privacy Policy</a>.
+          <strong>Amazon Web Services</strong> (Amazon.com, Inc.) provides us with cloud hosting services outside the India. For more information, visit <a href="https://aws.amazon.com/privacy/" className="text-blue-600 hover:underline inline ">Amazon’s Privacy Policy</a>.
         </li>
         <li>
           <strong>Braze, Inc.</strong> allows us to improve the experience of our users. For more information, visit <a href="https://www.braze.com/privacy" className="text-blue-600 hover:underline inline ">Braze’s Privacy Policy</a>.
@@ -186,7 +186,7 @@ function ProductPolicy() {
           <strong>Stripe, Inc.</strong> provides us with payment services. For more information, visit <a href="https://stripe.com/it/privacy-center/legal" className="text-blue-600 hover:underline inline ">Stripe’s Privacy Policy</a>.
         </li>
         <li>
-          <strong>Zendesk Inc.</strong> provides support services outside the European Economic Area (USA). For more information, visit <a href="https://www.zendesk.com/company/agreements-and-terms/privacy-notice/" className="text-blue-600 hover:underline inline">Zendesk’s Privacy Policy</a>.
+          <strong>Zendesk Inc.</strong> provides support services outside the India. For more information, visit <a href="https://www.zendesk.com/company/agreements-and-terms/privacy-notice/" className="text-blue-600 hover:underline inline">Zendesk’s Privacy Policy</a>.
         </li>
       </ul>
 
@@ -384,7 +384,7 @@ function ProductPolicy() {
                     j) Ensure that the DPO is involved in an adequate and timely manner in all matters relating to the protection of User Data.
                 </p>
                 <p className="text-lg">
-                    k) Adhere to a Code of Conduct that is approved by the European Commission or other competent authority, if applicable.
+                    k) Adhere to a Code of Conduct that is approved by the Indian Commission or other competent authority, if applicable.
                 </p>
                 <p className="text-lg">
                     l) Keep a record of processing activities in the case of processing personal data that may pose a risk to the rights and freedoms of the data subject and/or in a non-occasional manner, or which involves the processing of special categories of data and/or data relating to convictions and infractions.
@@ -408,10 +408,10 @@ function ProductPolicy() {
             <ol className="list-decimal list-inside mt-4">
                 <li className="font-bold">International Transfer of Data.</li>
                 <p className="font-normal">
-                    International transfers of User Data about users located in the EU may only be performed if the requirements of national and/or European laws and regulations that regulate them are met. User Data about users located outside the EU may be transferred to our servers located in India. Safekidly uses third-party technological services for the provision of Services, and these entities may be in jurisdictions that generally do not provide adequate safeguards in relation to the processing of personal data.
+                    International transfers of User Data about users located in the EU may only be performed if the requirements of national and/or Indian laws and regulations that regulate them are met. User Data about users located outside the EU may be transferred to our servers located in India. Safekidly uses third-party technological services for the provision of Services, and these entities may be in jurisdictions that generally do not provide adequate safeguards in relation to the processing of personal data.
                 </p>
                 <p className="font-normal">
-                    For all entities outside the Economic European Area, we have entered contracts with such entities that do include such safeguards, including the EC model clauses (see Section A.3 above and Appendix 1 below for a list of these entities). For more information, please contact <a href="mailto:info@prabhaktech.com" className="text-blue-600 inline ">info@prabhaktech.com</a>.
+                    For all entities outside the Economic Indian Area, we have entered contracts with such entities that do include such safeguards, including the EC model clauses (see Section A.3 above and Appendix 1 below for a list of these entities). For more information, please contact <a href="mailto:info@prabhaktech.com" className="text-blue-600 inline ">info@prabhaktech.com</a>.
                 </p>
             </ol>
             <ol className="list-decimal list-inside mt-4">
@@ -465,8 +465,8 @@ function ProductPolicy() {
             </table>
             <p className="mt-6 font-bold">List of third parties accessing the User Data</p>
             <ul className="list-disc list-inside">
-                <li><b>Amazon Inc.</b> provides Safekidly the service of data hosting outside the European Economic Area (USA).</li>
-                <li><b>ZenDesk Inc.</b> provides Safekidly with support services outside the European Economic Area (USA).</li>
+                <li><b>Amazon Inc.</b> provides Safekidly the service of data hosting outside the India.</li>
+                <li><b>ZenDesk Inc.</b> provides Safekidly with support services outside the India.</li>
                 <li>The third parties indicated in section A.3 for the provision of their services.</li>
             </ul>
             <p className="mt-6 font-bold">C. DATA COLLECTED THROUGH SCHOOL MANAGER AND SHOWN VIA THE GUARDMYKIDS SERVICE</p>
