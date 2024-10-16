@@ -28,9 +28,9 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(true);
+  const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false); 
-  const [otpVerified, setOtpVerified] = useState(true);
+  const [otpVerified, setOtpVerified] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null); 
 
   const signupUser = async (userData) => {
@@ -111,7 +111,7 @@ function Signup() {
       { loading ? (
           <Loader />
         ) : (<></>)}
-      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-3/4 shadow-2xl px-4 py-5 lg:px-24 gap-1 flex flex-col bg-gray-100 rounded-xl `}>
+      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-1/2 shadow-2xl px-4 py-5 lg:px-24 gap-1 flex flex-col bg-gray-100 rounded-xl `}>
         {!isOtpSent ? (
           <div className="mb-5 text-center">
             <p className="font-semibold text-lg">Welcome!</p>
