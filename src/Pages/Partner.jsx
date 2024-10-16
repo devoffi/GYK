@@ -28,9 +28,9 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(true);
+  const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false); 
-  const [otpVerified, setOtpVerified] = useState(true);
+  const [otpVerified, setOtpVerified] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null); 
 
   const signupUser = async (userData) => {
@@ -66,7 +66,7 @@ function Signup() {
       return;
     }
 
-    const userData = { name, email, phone_number, username, password };
+    const userData = {"validation": "partner", name, email, phone_number, username, password };
     setLoading(true); // Start loading
     try {
       await signupUser(userData);
@@ -90,7 +90,7 @@ function Signup() {
 
     setLoading(true); // Start loading
     try {
-      await verifyOtp({email, otp });
+      await verifyOtp({"validation":"partner", email, otp });
       setSuccessMessage('Email verification successful! You can now choose plane ');
       setOtpVerified(true); 
     } catch (error) {
@@ -111,11 +111,11 @@ function Signup() {
       { loading ? (
           <Loader />
         ) : (<></>)}
-      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-3/4 shadow-2xl px-4 py-5 lg:px-24 gap-1 flex flex-col bg-gray-100 rounded-xl `}>
+      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-1/2 shadow-2xl px-4 py-5 lg:px-24 gap-1 flex flex-col bg-gray-100 rounded-xl `}>
         {!isOtpSent ? (
           <div className="mb-5 text-center">
             <p className="font-semibold text-lg">Welcome!</p>
-            <p className='py-2'>Create your account and enjoy 3 days of Premium features, free!</p>
+            <p className='py-2'>Join us as Partner</p>
           </div>
         ) : !otpVerified ?  (
           <p className='py-2 w-full text-center'>Verify your email</p>
@@ -231,7 +231,7 @@ function Signup() {
           </form>
         ): (
           <div className="mt-6">
-            <Pricing selectedPlan={selectedPlan} onPlanSelect={handlePlanSelect} />
+            {/* <Pricing selectedPlan={selectedPlan} onPlanSelect={handlePlanSelect} /> */}
           </div>
         )}
 

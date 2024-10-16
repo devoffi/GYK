@@ -1,5 +1,6 @@
 import React from "react";
 import PrimaryButton from "../components/common/PrimaryButton";
+import { Link } from 'react-router-dom';
 
 function PartnersLogin() {
   return (
@@ -11,7 +12,13 @@ function PartnersLogin() {
         Earn up to 20% commission by promoting the best Parental Control app!
       </p>
       <div className=" justify-center items-center flex flex-col my-2 lg:py-8">
-        <PrimaryButton>Sign up today</PrimaryButton>
+
+          <Link
+            to="/partners-login" // Change href to to
+            className="bg-blue-700 w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg"
+          > 
+            Sign up today
+          </Link>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-center items-center lg:gap-32 gap-10 lg:w-[80%] lg:mx-auto">

@@ -13,8 +13,8 @@ import { FaLaptop } from "react-icons/fa";
 function Help() {
   
   const [query, setQuery] = useState('');
-  const [activeTab, setActiveTab] = useState('fruits');
-  const fruits = [
+  const [activeTab, setActiveTab] = useState('Family');
+  const Family = [
     { id: 1, icon: TbLetterG , title: 'My GuadrMyKid Account', details: 'Everything you need to manage your account and subscription', img: 'https://via.placeholder.com/150' },
     { id: 2, icon: FaPersonChalkboard , title: " Kids' Android, Kindle & Chromebook", details: "Guides to setting up protection on your children's Android devices", img: 'https://via.placeholder.com/150' },
     { id: 3, icon: FaPersonChalkboard , title: "Parents' features", details: "How to balance screen time, filter content, and view activity reports", img: 'https://via.placeholder.com/150' },
@@ -23,7 +23,7 @@ function Help() {
     { id: 6, icon: FaLaptop , title: "Kids' computers (Windows & Mac)", details: "Guides to setting up protection on your children's computers", img: 'https://via.placeholder.com/150' },
   ];
 
-  const vegetables = [
+  const Schools = [
     { id: 1, icon: FaPersonChalkboard , title: "For parents", details: "Guides for parents invited to use Safekidly by their school", img: 'https://via.placeholder.com/150' },
     { id: 2, icon: FaLaptop , title: "For administrators", details: "Guades to setting up Safekidly Professional on your devices", img: 'https://via.placeholder.com/150' }
   ];
@@ -67,20 +67,20 @@ function Help() {
       <div className="p-4">
         <div className="flex justify-center w-full text-[20px] gap-1  mb-4">
           <button
-            className={`py-2 px-4 rounded-lg ${activeTab === 'fruits' ? "text-blue-500 border border-gray-300" : 'text-gray-700'}`}
-            onClick={() => setActiveTab('fruits')}
+            className={`py-2 px-4 rounded-lg ${activeTab === 'Family' ? "text-blue-500 border border-gray-300" : 'text-gray-700'}`}
+            onClick={() => setActiveTab('Family')}
           >
             Family
           </button>
           <button
-            className={`py-2 px-4 rounded-lg ${activeTab === 'vegetables' ? 'text-blue-500 border border-gray-300' : 'text-gray-700'}`}
-            onClick={() => setActiveTab('vegetables')}
+            className={`py-2 px-4 rounded-lg ${activeTab === 'Schools' ? 'text-blue-500 border border-gray-300' : 'text-gray-700'}`}
+            onClick={() => setActiveTab('Schools')}
           >
             Schools
           </button>
         </div>
         <div className="grid items-center grid-cols-1 md:grid-cols-3 md:gap-4">
-          {activeTab === 'fruits' ? renderCards(fruits) : renderCards(vegetables)}
+          {activeTab === 'Family' ? renderCards(Family) : renderCards(Schools)}
         </div>
       </div>
       <div className='w-full text-start text-gray-700 px-12 my-12'>

@@ -20,9 +20,9 @@ const Footer = () => {
                     <div className="w-[220px]">
                         <p className="text-2xl font-bold mb-6">About us</p>
                         <Link
-                            to="/partners-login" // Change href to to
+                            to="/partners" // Change href to to
                             className="text-base text-lightGray hover:text-white mb-3"
-                        >
+                        > 
                            Partners
                         </Link>
                         <Link

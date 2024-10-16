@@ -25,6 +25,7 @@ import WebsitePolicy from "./Pages/Website-policy";
 import CookiePolicy from "./Pages/Cookie-policy";
 import LegalNotic from "./Pages/Legal-notic";
 import ProductPolicy from "./Pages/Product-policy";
+import Partner from "./Pages/Partner"
 
 
 function App() {
@@ -35,7 +36,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
-      <Route path="/partners-login" element={<PartnersLogin />} />
+      <Route path="/partners" element={<PartnersLogin />} />
+      <Route path="/partners-login" element={<Partner />} />
 
       <Route path="/" element={<Home />} />
       <Route path="/why" element={<Why />} />
