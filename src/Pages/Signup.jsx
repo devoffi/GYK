@@ -66,7 +66,7 @@ function Signup() {
       return;
     }
 
-    const userData = { name, email, phone_number, username, password };
+    const userData = {"validation": "user", name, email, phone_number, username, password };
     setLoading(true); // Start loading
     try {
       await signupUser(userData);
@@ -90,7 +90,7 @@ function Signup() {
 
     setLoading(true); // Start loading
     try {
-      await verifyOtp({email, otp });
+      await verifyOtp({"validation": "user", email, otp });
       setSuccessMessage('Email verification successful! You can now choose plane ');
       setOtpVerified(true); 
     } catch (error) {
