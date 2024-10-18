@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PrimaryButton from "../components/common/PrimaryButton";
 import logo from "../assets/images/logo1.jpg";
@@ -28,10 +28,11 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(false);
+  const [isOtpSent, setIsOtpSent] = useState(true);
   const [loading, setLoading] = useState(false); 
-  const [otpVerified, setOtpVerified] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(true);
   const [selectedPlan, setSelectedPlan] = useState(null); 
+
 
   const signupUser = async (userData) => {
     const response = await axios.post('https://mdm.prabhaktech.com/api/email-validation', userData);
@@ -42,6 +43,8 @@ function Signup() {
     const response = await axios.post('https://mdm.prabhaktech.com/api/verify-otp', otpData);
     return response.data;
   };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -65,17 +68,16 @@ function Signup() {
       setErrors(newErrors);
       return;
     }
-
     const userData = {"validation": "user", name, email, phone_number, username, password };
-    setLoading(true); // Start loading
+    setLoading(true);
     try {
       await signupUser(userData);
       setSuccessMessage('Signup successful! Please check your email for verification.');
-      setIsOtpSent(true); // Show OTP input
+      setIsOtpSent(true); 
     } catch (error) {
       setErrors({ server: error.message || 'Signup failed. Please try again.' });
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
 
@@ -103,6 +105,7 @@ function Signup() {
     setSelectedPlan(plan);
   };
 
+
   return (
     <div className="flex flex-col h-full justify-center items-center container mx-auto py-8 px-4">
       <div>
@@ -111,7 +114,7 @@ function Signup() {
       { loading ? (
           <Loader />
         ) : (<></>)}
-      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-1/2 shadow-2xl px-4 py-5 lg:px-24 gap-1 flex flex-col bg-gray-100 rounded-xl `}>
+      <div className={` ${loading ? "opacity-50" : ""} w-full lg:w-1/2 shadow-2xl px-4 py-5  gap-1 flex flex-col bg-gray-100 rounded-xl `}>
         {!isOtpSent ? (
           <div className="mb-5 text-center">
             <p className="font-semibold text-lg">Welcome!</p>
@@ -125,7 +128,7 @@ function Signup() {
 
         
         {!isOtpSent ? (
-          <form className="gap-2 flex flex-col" onSubmit={handleSubmit}>
+          <form className="gap-2 flex flex-col md:px-4" onSubmit={handleSubmit}>
             <label className="mb-1">
               Name
               <input
@@ -213,7 +216,7 @@ function Signup() {
             </div>
           </form>
         ) : !otpVerified ?  (
-          <form className="gap-2 flex flex-col" onSubmit={handleOtpSubmit}>
+          <form className="gap-2 flex flex-col md:px-4 " onSubmit={handleOtpSubmit}>
             <label className="mb-1">
               Enter OTP
               <input
@@ -231,7 +234,15 @@ function Signup() {
           </form>
         ): (
           <div className="mt-6">
-            <Pricing selectedPlan={selectedPlan} onPlanSelect={handlePlanSelect} />
+            <Pricing 
+              selectedPlan={selectedPlan} 
+              onPlanSelect={handlePlanSelect} 
+              name={name}
+              email={email}
+              phone_number={phone_number}
+              username={username}
+              password={password}
+               />
           </div>
         )}
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import PrimaryButton from "../components/common/PrimaryButton";
 import logo from "../assets/images/logo1.jpg";
@@ -28,10 +28,13 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(false);
+  const [isOtpSent, setIsOtpSent] = useState(true);
   const [loading, setLoading] = useState(false); 
-  const [otpVerified, setOtpVerified] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null); 
+  const [otpVerified, setOtpVerified] = useState(true);
+  const [error, setError] = useState(null);
+  const [exchangeRate, setExchangeRate] = useState(1);
+  const [currency, setCurrency] = useState('USD');
+  const [amount, setAmount] = useState('');
 
   const signupUser = async (userData) => {
     const response = await axios.post('https://mdm.prabhaktech.com/api/email-validation', userData);
@@ -99,9 +102,50 @@ function Signup() {
       setLoading(false);
     }
   };
-  const handlePlanSelect = (plan) => {
-    setSelectedPlan(plan);
-  };
+
+
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      try {
+        const response = await axios.get('http://ip-api.com/json/');
+        const country = response.data.country;
+        
+        const currencyMap = {
+          "USA": "USD",
+          "China": "CNY",
+          "India": "INR",
+        };
+        setCurrency(currencyMap[country] || 'USD');
+      } catch (err) {
+        console.error('Error fetching user location:', err);
+        setError('Failed to fetch user location');
+      }
+    };
+
+    fetchUserLocation();
+  }, []);
+
+  useEffect(() => {
+    const fetchExchangeRate = async () => {
+      if (currency !== 'USD') {
+        try {
+          const response = await axios.get(`https://v6.exchangerate-api.com/v6/64fc3b3c664efa7d97d80956/latest/USD`);
+          setExchangeRate(response.data.conversion_rates[currency]);
+        } catch (err) {
+          setError('Failed to fetch exchange rate');
+          console.error(err);
+        }
+      }
+    };
+
+    fetchExchangeRate();
+  }, [currency]);
+  useEffect(() => {
+    let calculatedAmount = (1 * exchangeRate).toFixed(2);
+    setAmount(calculatedAmount);
+  }, [exchangeRate]);
+
+  console.log(exchangeRate, currency)
 
   return (
     <div className="flex flex-col h-full justify-center items-center container mx-auto py-8 px-4">
@@ -231,7 +275,14 @@ function Signup() {
           </form>
         ): (
           <div className="mt-6">
-            {/* <Pricing selectedPlan={selectedPlan} onPlanSelect={handlePlanSelect} /> */}
+            <div className="flex flex-col gap-2">
+            <p className='text-center'>Please confirm your {amount} payment:</p>
+            <div className="mx-auto my-6">
+              <PrimaryButton title="Confirm Payment" 
+              // onClick={handlePayment} 
+              />
+            </div>
+          </div>
           </div>
         )}
 
