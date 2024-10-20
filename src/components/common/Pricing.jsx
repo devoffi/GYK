@@ -349,12 +349,15 @@ const Pricing = ({
     }
   };
 
+  
   useEffect(() => {
     const fetchUserLocation = async () => {
       try {
-        const response = await axios.get("http://api.ipstack.com/check?access_key=62a3129031f301b98aed43afa7de3dcc");
-        console.log(response?.data?.country_code)
-        const countryCode =   response?.data?.country_code
+        // const response = await axios.get("http://api.ipstack.com/check?access_key=62a3129031f301b98aed43afa7de3dcc");
+        // const countryCode =   response?.data?.country_code
+        const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
+        console.log(response?.data?.country_code2)
+        const countryCode =   response?.data?.country_code2
         setCurrency(countryCurrencyMap[countryCode] || "USD");
       } catch (err) {
         console.error("Error fetching user location:", err);
@@ -412,7 +415,7 @@ const Pricing = ({
       key: "rzp_live_wWYL886Z2NVQAe",
       amount: (amount * 100).toString(),
       currency: "INR",
-      name: "Your Company Name",
+      name: "Prabhak Tech Solutions Pvt Ltd.",
       description: "Purchase Description",
       image: "https://example.com/logo.png",
       handler: (response) => {
