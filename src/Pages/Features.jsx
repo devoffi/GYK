@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef,  useEffect } from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 import PrimaryButton from "../components/common/PrimaryButton";
 import CreateAccount from "../components/CreateAccount";
@@ -11,6 +11,9 @@ import { IoCallOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 function Features() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const filterRef = useRef(null);
   const monitorRef = useRef(null);

@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { SectionContainer } from '../components/common/SectionContainer'
 import { FaUserShield } from "react-icons/fa";
 
 function School() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
     <div className='text-gray-700 mt-10'>
         <SectionContainer>

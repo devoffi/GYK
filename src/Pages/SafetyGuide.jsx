@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect} from "react";
 import TextInputBox from "../components/common/TextInputBox";
 import { SectionContainer } from "../components/common/SectionContainer";
 import BlogCard from "../components/common/BlogCard";
 import PrimaryButton from "../components/common/PrimaryButton";
 
 function SafetyGuide() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="bg-gray-300 py-5 lg:py-16">

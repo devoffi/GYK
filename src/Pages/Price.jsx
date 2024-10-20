@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { SectionContainer } from '../components/common/SectionContainer'
 import PriceCard from '../components/PriceCard'
 import AvailableFor from "../components/common/AvailableFor"
@@ -20,6 +20,9 @@ import Faq from '../components/Faq';
 
 
 function Price() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const List = ({ items = [], childStyle }) => (
     <ul className={`list-none p-0 m-0 ${childStyle}`}>

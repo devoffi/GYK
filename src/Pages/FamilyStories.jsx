@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect} from "react";
 import PrimaryButton from "../components/common/PrimaryButton";
 
 function FamilyStories() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="pt-5 lg:pt-20 bg-gray-200">
       <p className="text-2xl lg:text-5xl font-bold text-center">

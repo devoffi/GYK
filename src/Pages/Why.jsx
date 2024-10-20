@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 import Collapsible from "react-collapsible";
 import {
@@ -26,6 +26,9 @@ import { FaUserShield } from "react-icons/fa6";
 
 
 function Why() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const colorMapping = {
     "#22c55e": { text: "green-500", bg: "green-100" },

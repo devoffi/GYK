@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,  useEffect } from "react";
 import AccordionIcon from '../components/common/AccordianIcon';
 import { FaAndroid } from "react-icons/fa6";
 
 
 function Downloads() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
 
   const accordionItems = [

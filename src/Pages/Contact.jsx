@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SectionContainer>
       <h1 className="text-3xl font-bold text-center pt-16 pb-6 text-gray-800">Contact us</h1>

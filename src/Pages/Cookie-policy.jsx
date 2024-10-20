@@ -1,9 +1,12 @@
-import React from 'react'
+import React, {  useEffect} from 'react'
 import { SectionContainer } from '../components/common/SectionContainer'
 import { GoDotFill } from "react-icons/go";
 
 
 function CookiePolicy() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SectionContainer >
         <div className="p-4 my-6 md:my-10">

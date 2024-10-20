@@ -1,8 +1,11 @@
-import React from "react";
+import React, {  useEffect } from "react";
 import PrimaryButton from "../components/common/PrimaryButton";
 import { Link } from 'react-router-dom';
 
 function PartnersLogin() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="lg:py-20 py-5">
       <p className="text-2xl lg:text-5xl text-center font-bold">

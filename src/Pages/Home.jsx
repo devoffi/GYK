@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useEffect } from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 import PrimaryButton from "../components/common/PrimaryButton";
 import AvailableFor from "../components/common/AvailableFor";
@@ -10,6 +10,9 @@ import Feature from "../components/Feature";
 import CreateAccount from "../components/CreateAccount";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SectionContainer>
       <div className="flex flex-col lg:flex-row mt-10 md:mt-20">

@@ -1,10 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef,  useEffect } from "react";
 import { SectionContainer } from "../components/common/SectionContainer";
 import CreateAccount from "../components/CreateAccount";
 import Faq from "../components/Faq";
 import { PiNumberOneBold } from "react-icons/pi";
 
 function GetStarted() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const createAccountRef = useRef(null);
   const installRef = useRef(null);
   const superviseRef = useRef(null);

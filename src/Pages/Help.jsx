@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,  useEffect } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import  Icon1  from "../assets/Icons"
 import  Icon2  from "../assets/Icon2"
@@ -11,7 +11,9 @@ import { IoIosPhonePortrait } from "react-icons/io";
 import { FaLaptop } from "react-icons/fa";
 
 function Help() {
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [query, setQuery] = useState('');
   const [activeTab, setActiveTab] = useState('Family');
   const Family = [

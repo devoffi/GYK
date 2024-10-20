@@ -18,6 +18,7 @@ function Loader() {
 }
 
 function Signup() {
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
@@ -35,6 +36,10 @@ function Signup() {
   const [exchangeRate, setExchangeRate] = useState(1);
   const [currency, setCurrency] = useState('USD');
   const [amount, setAmount] = useState('');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const signupUser = async (userData) => {
     const response = await axios.post('https://mdm.prabhaktech.com/api/email-validation', userData);

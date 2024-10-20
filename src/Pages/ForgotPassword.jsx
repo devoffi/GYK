@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TextInputBox from "../components/common/TextInputBox";
 import PrimaryButton from "../components/common/PrimaryButton";
 import logo from "../assets/images/logo1.jpg";
 import SecondaryButton from "../components/common/SecondaryButton";
 
 function ForgotPassword() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex flex-col justify-center items-center container mx-auto py-10">
       <div className="">

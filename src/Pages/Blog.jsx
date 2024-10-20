@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PrimaryButton from "../components/common/PrimaryButton";
 
 function Blog() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div className="py-4 lg:py-16 lg:w-2/3 mx-auto">

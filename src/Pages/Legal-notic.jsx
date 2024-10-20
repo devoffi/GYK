@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {  useEffect } from 'react'
 import { SectionContainer } from '../components/common/SectionContainer'
 
 function LegalNotic() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   return (
         <SectionContainer >
             <div className='text-gray-700 text-lg font-medium my-10 md:my-20 text-center md:text-start'>

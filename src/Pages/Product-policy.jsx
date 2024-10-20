@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect} from 'react'
 import { SectionContainer } from '../components/common/SectionContainer'
 
 function ProductPolicy() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <SectionContainer >
         <div className=" mx-auto p-6 bg-white rounded-lg">
