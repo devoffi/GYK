@@ -3,6 +3,8 @@ import axios from 'axios';
 import PrimaryButton from "../components/common/PrimaryButton";
 import logo from "../assets/images/logo1.jpg";
 import Pricing from '../components/common/Pricing';
+import countryCurrencyMap from '../components/common/countryCurrencyMap'; 
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
 
 function Loader() {
@@ -29,13 +31,15 @@ function Signup() {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [otp, setOtp] = useState('');
-  const [isOtpSent, setIsOtpSent] = useState(true);
+  const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false); 
-  const [otpVerified, setOtpVerified] = useState(true);
+  const [otpVerified, setOtpVerified] = useState(false);
   const [error, setError] = useState(null);
   const [exchangeRate, setExchangeRate] = useState(1);
   const [currency, setCurrency] = useState('USD');
   const [amount, setAmount] = useState('');
+  const [payerror, setPayError] = useState(null);
+  const [referal, setReferal] = useState("");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -112,15 +116,10 @@ function Signup() {
   useEffect(() => {
     const fetchUserLocation = async () => {
       try {
-        const response = await axios.get('http://ip-api.com/json/');
-        const country = response.data.country;
-        
-        const currencyMap = {
-          "USA": "USD",
-          "China": "CNY",
-          "India": "INR",
-        };
-        setCurrency(currencyMap[country] || 'USD');
+        const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
+        console.log(response?.data?.country_code2)
+        const countryCode =   response?.data?.country_code2
+        setCurrency(countryCurrencyMap[countryCode] || "USD");
       } catch (err) {
         console.error('Error fetching user location:', err);
         setError('Failed to fetch user location');
@@ -134,7 +133,7 @@ function Signup() {
     const fetchExchangeRate = async () => {
       if (currency !== 'USD') {
         try {
-          const response = await axios.get(`https://v6.exchangerate-api.com/v6/64fc3b3c664efa7d97d80956/latest/USD`);
+          const response = await axios.get(`https://v6.exchangerate-api.com/v6/b0c12547e82cc43ea3c02f1f/latest/USD`);
           setExchangeRate(response.data.conversion_rates[currency]);
         } catch (err) {
           setError('Failed to fetch exchange rate');
@@ -149,7 +148,104 @@ function Signup() {
     let calculatedAmount = (1 * exchangeRate).toFixed(2);
     setAmount(calculatedAmount);
   }, [exchangeRate]);
+  const creatUser = async () => {
+    setLoading(true)
+    const currentDate = new Date();
+    const newExpiryDate = new Date(currentDate);
 
+    const userData = {
+      user_details: {
+        validation: "partner",
+        name,
+        email,
+        phone_number,
+        username,
+        password,
+        confirm_password: password,
+        referral_code: referal,
+        payment_amount: amount,
+        currency: currency,
+        status: "active",
+      },
+    };
+    try {
+      await createUser(userData);
+      console.log("Signup successful! Please login");
+      window.location.href = "https://mdm.prabhaktech.com";
+      setLoading(false)
+    } catch (error) {
+      setLoading(false)
+      setError({ server: error.message || "Signup failed. Please try again." });
+    }
+  };
+
+  const createUser = async (userData) => {
+    const response = await axios.post(
+      "https://mdm.prabhaktech.com/api/create-user",
+      userData
+    );
+    return response.data;
+  };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleRazorpayPayment = async () => {
+    const options = {
+      key: "rzp_live_wWYL886Z2NVQAe",
+      amount: (1 * 100).toString(),
+      currency: "INR",
+      name: "Prabhak Tech Solutions Pvt Ltd.",
+      description: "Purchase Description",
+      image: "https://example.com/logo.png",
+      handler: (response) => {
+        alert(
+          `Payment successful! Payment ID: ${response.razorpay_payment_id}`
+        );
+        creatUser();
+      },
+      prefill: {
+        name: "Customer Name",
+        email: "customer@example.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Customer Address",
+      },
+      theme: {
+        color: "#F37254",
+      },
+    };
+    const razorpay = new window.Razorpay(options);
+    razorpay.open();
+  };
+
+  const createOrder = (data, actions) => {
+    console.log("Amount before creating order:", amount, currency);
+
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            currency_code: currency,
+            value: amount,
+          },
+        },
+      ],
+    });
+  };
+  const onApprove = (data, actions) => {
+    return actions.order.capture().then(function (details) {
+      alert("Transection completed" + details.payer.name.given_name);
+      creatUser();
+    });
+  };
   console.log(exchangeRate, currency)
 
   return (
@@ -279,16 +375,53 @@ function Signup() {
             </div>
           </form>
         ): (
+          <PayPalScriptProvider
+          options={{
+            "client-id":
+              "ASeTLjejgCUSUlXzY65o5s6iHaUTTejxLc_kKbRicH-iClmKXjlCmsvjVQ-pIkO3Dz6Xidffl-0t92-v",
+              currency: currency,
+          }}
+        >
           <div className="mt-6">
             <div className="flex flex-col gap-2">
             <p className='text-center'>Please confirm your {amount} payment:</p>
             <div className="mx-auto my-6">
-              <PrimaryButton title="Confirm Payment" 
-              // onClick={handlePayment} 
-              />
+              
+              <div className="mt-4">
+                {/* Conditionally render PayPal buttons only if amount is properly set */}
+                {amount && parseFloat(amount) > 0 ? (
+                  <>
+                  {currency === "INR" ? (
+                    <button
+                      onClick={handleRazorpayPayment}
+                      className="mt-4 py-2 px-8 bg-viridianGreen text-white rounded"
+                    >
+                      Pay Now
+                    </button>
+                     ) : (
+                    <PayPalButtons
+                      style={{
+                        layout: 'vertical',
+                        color: 'blue',
+                        shape: 'rect', 
+                        label: 'pay', 
+                        height: 40 
+                    }}
+                      className="p-3"
+                      createOrder={createOrder}
+                      onApprove={onApprove}
+                    />
+                  )}
+                  </>
+
+                ) : (
+                  <p className="text-red-500">{payerror ? payerror :  "Loading payment details..."}</p>
+                )}
+              </div>
             </div>
           </div>
           </div>
+          </PayPalScriptProvider>
         )}
 
         <div className={`flex gap-2 justify-center ${isOtpSent ? "hidden" : ""}`}>

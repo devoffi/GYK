@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 import Loader from "./Loader";
-
+import countryCurrencyMap from './countryCurrencyMap';
 
 
 
@@ -25,253 +25,11 @@ const Pricing = ({
   const [payerror, setPayError] = useState(null);
   const [message, setMessage] = useState("");
   const [discount, setDiscount] = useState();
-  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
-  const countryCurrencyMap = {
-    "AF": "AFN",
-    "AL": "ALL",
-    "DZ": "DZD",
-    "AS": "USD",
-    "AD": "EUR",
-    "AO": "AOA",
-    "AI": "XCD",
-    "AQ": "NZD",
-    "AG": "XCD",
-    "AR": "ARS",
-    "AM": "AMD",
-    "AW": "AWG",
-    "AU": "AUD",
-    "AT": "EUR",
-    "AZ": "AZN",
-    "BS": "BSD",
-    "BH": "BHD",
-    "BD": "BDT",
-    "BB": "BBD",
-    "BY": "BYN",
-    "BE": "EUR",
-    "BZ": "BZD",
-    "BJ": "XOF",
-    "BM": "BMD",
-    "BT": "INR",
-    "BO": "BOB",
-    "BQ": "USD",
-    "BA": "BAM",
-    "BW": "BWP",
-    "BV": "NOK",
-    "BR": "BRL",
-    "IO": "USD",
-    "BN": "BND",
-    "BG": "BGN",
-    "BF": "XOF",
-    "BI": "BIF",
-    "CV": "CVE",
-    "KH": "KHR",
-    "CM": "XAF",
-    "CA": "CAD",
-    "KY": "KYD",
-    "CF": "XAF",
-    "TD": "XAF",
-    "CL": "CLP",
-    "CN": "CNY",
-    "CX": "AUD",
-    "CC": "AUD",
-    "CO": "COP",
-    "KM": "KMF",
-    "CD": "CDF",
-    "CG": "XAF",
-    "CK": "NZD",
-    "CR": "CRC",
-    "HR": "HRK",
-    "CU": "CUP",
-    "CW": "USD",
-    "CY": "EUR",
-    "CZ": "CZK",
-    "DK": "DKK",
-    "DJ": "DJF",
-    "DM": "XCD",
-    "DO": "DOP",
-    "EC": "USD",
-    "EG": "EGP",
-    "SV": "USD",
-    "GQ": "XAF",
-    "ER": "ERN",
-    "EE": "EUR",
-    "SZ": "SZL",
-    "ET": "ETB",
-    "FK": "FKP",
-    "FO": "DKK",
-    "FJ": "FJD",
-    "FI": "EUR",
-    "FR": "EUR",
-    "GF": "EUR",
-    "PF": "XPF",
-    "GA": "XAF",
-    "GM": "GMD",
-    "GE": "GEL",
-    "DE": "EUR",
-    "GH": "GHS",
-    "GI": "GIP",
-    "GR": "EUR",
-    "GL": "DKK",
-    "GD": "XCD",
-    "GP": "EUR",
-    "GU": "USD",
-    "GT": "GTQ",
-    "GG": "GBP",
-    "GN": "GNF",
-    "GW": "XOF",
-    "GY": "GYD",
-    "HT": "HTG",
-    "HM": "AUD",
-    "VA": "EUR",
-    "HN": "HNL",
-    "HK": "HKD",
-    "HU": "HUF",
-    "IS": "ISK",
-    "IN": "INR",
-    "ID": "IDR",
-    "IR": "IRR",
-    "IQ": "IQD",
-    "IE": "EUR",
-    "IM": "GBP",
-    "IL": "ILS",
-    "IT": "EUR",
-    "JM": "JMD",
-    "JP": "JPY",
-    "JE": "GBP",
-    "JO": "JOD",
-    "KZ": "KZT",
-    "KE": "KES",
-    "KI": "AUD",
-    "KP": "KPW",
-    "KR": "KRW",
-    "KW": "KWD",
-    "KG": "KGS",
-    "LA": "LAK",
-    "LV": "EUR",
-    "LB": "LBP",
-    "LS": "LSL",
-    "LR": "LRD",
-    "LY": "LYD",
-    "LI": "CHF",
-    "LT": "EUR",
-    "LU": "EUR",
-    "MO": "MOP",
-    "MG": "MGA",
-    "MW": "MWK",
-    "MY": "MYR",
-    "MV": "MVR",
-    "ML": "XOF",
-    "MT": "EUR",
-    "MH": "USD",
-    "MQ": "EUR",
-    "MR": "MRU",
-    "MU": "MUR",
-    "YT": "EUR",
-    "MX": "MXN",
-    "FM": "USD",
-    "MD": "MDL",
-    "MC": "EUR",
-    "MN": "MNT",
-    "ME": "EUR",
-    "MS": "XCD",
-    "MA": "MAD",
-    "MZ": "MZN",
-    "MM": "MMK",
-    "NA": "NAD",
-    "NR": "AUD",
-    "NP": "NPR",
-    "NL": "EUR",
-    "NC": "XPF",
-    "NZ": "NZD",
-    "NI": "NIO",
-    "NE": "XOF",
-    "NG": "NGN",
-    "NU": "NZD",
-    "NF": "AUD",
-    "MP": "USD",
-    "NO": "NOK",
-    "OM": "OMR",
-    "PK": "PKR",
-    "PW": "USD",
-    "PS": "ILS",
-    "PA": "PAB",
-    "PG": "PGK",
-    "PY": "PYG",
-    "PE": "PEN",
-    "PH": "PHP",
-    "PN": "NZD",
-    "PL": "PLN",
-    "PT": "EUR",
-    "PR": "USD",
-    "QA": "QAR",
-    "RE": "EUR",
-    "RO": "RON",
-    "RU": "RUB",
-    "RW": "RWF",
-    "BL": "EUR",
-    "SH": "SHP",
-    "KN": "XCD",
-    "LC": "XCD",
-    "MF": "EUR",
-    "PM": "EUR",
-    "VC": "XCD",
-    "WS": "WST",
-    "SM": "EUR",
-    "ST": "STN",
-    "SA": "SAR",
-    "SN": "XOF",
-    "RS": "RSD",
-    "SC": "SCR",
-    "SL": "SLL",
-    "SG": "SGD",
-    "SX": "USD",
-    "SK": "EUR",
-    "SI": "EUR",
-    "SB": "AUD",
-    "SO": "SOS",
-    "ZA": "ZAR",
-    "GS": "GBP",
-    "SS": "SSP",
-    "ES": "EUR",
-    "LK": "LKR",
-    "SD": "SDG",
-    "SR": "SRD",
-    "SJ": "NOK",
-    "SZ": "SZL",
-    "SE": "SEK",
-    "CH": "CHF",
-    "SY": "SYP",
-    "TW": "TWD",
-    "TJ": "TJS",
-    "TZ": "TZS",
-    "TH": "THB",
-    "TL": "USD",
-    "TG": "XOF",
-    "TK": "AUD",
-    "TO": "TOP",
-    "TT": "TTD",
-    "TN": "TND",
-    "TR": "TRY",
-    "TM": "TMT",
-    "TC": "USD",
-    "TV": "AUD",
-    "UG": "UGX",
-    "UA": "UAH",
-    "AE": "AED",
-    "GB": "GBP",
-    "US": "USD",
-    "UY": "UYU",
-    "UZ": "UZS",
-    "VU": "VUV",
-    "VE": "VES",
-    "VN": "VND",
-    "WF": "XPF",
-    "EH": "MAD",
-    "YE": "YER",
-    "ZM": "ZMW",
-    "ZW": "ZWL"
-};
+  const payNowRef = useRef(null);
+ 
+
 
   const prices = {
     Basic: { yearly: 2, monthly: 1 },
@@ -489,7 +247,8 @@ const Pricing = ({
       
       <div
         key={plan.id}
-        className={`relative md:w-[50%] border rounded-xl p-8 ${
+        onClick={() => setSelectedPlan(plan.id)}
+        className={`relative md:w-[50%] border cursor-pointer rounded-xl p-8 ${
           plan.id === "Premium" ? "bg-blue-900/90" : "bg-white"
         } hover:shadow-xl transition-shadow duration-300 mb-10`}
       >
@@ -552,8 +311,8 @@ const Pricing = ({
               {(parseFloat(plan.priceYearly) / 12).toFixed(2)}/month
             </p>
           )}
-          <button
-            onClick={() => setSelectedPlan(plan.id)}
+          {/* <button
+            
             className={`hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md ${
               plan.id === "Premium"
                 ? "bg-white text-black"
@@ -561,7 +320,7 @@ const Pricing = ({
             } sm:text-md text-xl`}
           >
             Buy now
-          </button>
+          </button> */}
         </div>
       </div>
     ));
@@ -579,35 +338,9 @@ const Pricing = ({
           <Loader />
         ) : (<></>)}
       <div className="flex h-full flex-col items-center">
-        <h1 className="text-2xl font-bold mb-6">Choose Your Plan</h1>
-        <div className="flex mb-4">
-          <button
-            onClick={() => setIsMonthly(false)}
-            className={`py-2 px-4 rounded-lg ${
-              !isMonthly
-                ? "text-blue-500 border border-gray-300"
-                : "text-gray-700"
-            }`}
-          >
-            Yearly
-          </button>
-          <button
-            onClick={() => setIsMonthly(true)}
-            className={`py-2 px-4 rounded-lg ${
-              isMonthly
-                ? "text-blue-500 border border-gray-300"
-                : "text-gray-700"
-            }`}
-          >
-            Monthly
-          </button>
-        </div>
-        <div className="gap-4">
-          <div className="md:flex w-full justify-center gap-10">
-            {renderCards()}
-          </div>
+        <h1 className="text-2xl font-bold">Choose Your Plan</h1>
 
-          <div>
+        <div className="w-full my-6">
             <h2>Referral Code </h2>
             <div className="flex gap-5">
               <input
@@ -626,13 +359,38 @@ const Pricing = ({
             </div>
             {message && <p className="text-black ">{message}</p>}
           </div>
+        <div className="flex justify-center mb-6">
+          <button
+            className={`px-4 py-2 font-semibold ${!isMonthly ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-700'} rounded-l`}
+            onClick={() => setIsMonthly(false)}
+          >
+            Yearly
+          </button>
+          <button
+            className={`px-4 py-2 font-semibold ${isMonthly ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-700'} rounded-r`}
+            onClick={() => setIsMonthly(true)}
+          >
+            Monthly
+          </button>
+        </div>
+        <div className="gap-4">
+          <div className="md:flex w-full justify-center gap-10">
+            {renderCards()}
+          </div>
+
+         
 
           {selectedPlan && (
-            <div className="mt-2 w-full flex flex-col justify-center items-center">
+            <div ref={payNowRef} className="mt-2 w-full flex flex-col justify-center items-center">
               <h3 className="text-lg font-medium">
                 You selected:{" "}
                 <span className="inline font-bold">
-                  {selectedPlan} Plan {amount}
+                  {selectedPlan} Plan
+                </span>
+                <br/>
+                Amount:{" "}
+                <span className="inline font-bold">
+                  {currency}.{amount} 
                 </span>
               </h3>
               <div className="mt-4">
@@ -644,11 +402,17 @@ const Pricing = ({
                       onClick={handleRazorpayPayment}
                       className="mt-4 py-2 px-8 bg-viridianGreen text-white rounded"
                     >
-                      Pay with Razorpay
+                      Pay Now
                     </button>
-                    ) : (
+                     ) : (
                     <PayPalButtons
-                      style={{ layout: "horizontal", padding: "16px" }}
+                      style={{
+                        layout: 'vertical',
+                        color: 'blue',
+                        shape: 'rect', 
+                        label: 'pay', 
+                        height: 40 
+                    }}
                       className="p-3"
                       createOrder={createOrder}
                       onApprove={onApprove}
