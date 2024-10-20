@@ -235,8 +235,8 @@ function Signup() {
         )}
 
         <div className={`flex gap-2 justify-center ${isOtpSent ? "hidden" : ""}`}>
-          <p>Already have an account? </p>
-          <a className="text-blue-600 font-medium" href="/login">Log in</a>
+          {/* <p>Already have an account? </p> */}
+          {/* <a className="text-blue-600 font-medium" href="/login">Log in</a> */}
         </div>
       </div>
     </div>
