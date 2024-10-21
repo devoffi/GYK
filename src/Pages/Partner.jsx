@@ -24,7 +24,6 @@ function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -36,10 +35,16 @@ function Signup() {
   const [otpVerified, setOtpVerified] = useState(false);
   const [error, setError] = useState(null);
   const [exchangeRate, setExchangeRate] = useState(1);
+  const [callCode, setCallCode] = useState('');
   const [currency, setCurrency] = useState('USD');
   const [amount, setAmount] = useState('');
   const [payerror, setPayError] = useState(null);
+  const [plainId, setPlainId] = useState('');
   const [referal, setReferal] = useState("");
+  const [message, setMessage] = useState("");
+  const [discount, setDiscount] = useState();
+  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
+  const regexStr = /^[0-9]{10,13}$/; 
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -68,8 +73,15 @@ function Signup() {
       if (!emailPattern.test(email)) newErrors.email = "Invalid email format";
     }
     if (!phone_number) newErrors.phoneNumber = "Phone number is required";
-    if (!username) newErrors.username = "Username is required";
+    if (!phone_number) {
+      newErrors.phoneNumber = "Phone number is required";
+    } else if (phone_number.length < 10 || phone_number.length > 15 || !regexStr.test(phone_number)) {
+        newErrors.phoneNumber = "Please enter a valid phone number"; // Set the error message
+    }
     if (!password) newErrors.password = "Password is required";
+    if (!password || !passwordRegex.test(password)) {
+        newErrors.password = "Password must be at least 10 characters long, contain at least one letter, one number, and one special character.";
+    }
     if (password && password.length < 6) newErrors.password = "Password must be at least 6 characters";
     if (password !== confirmPassword) newErrors.confirmPassword = "Passwords do not match";
 
@@ -78,14 +90,14 @@ function Signup() {
       return;
     }
 
-    const userData = {"validation": "partner", name, email, phone_number, username, password };
+    const userData = {"validation": "partner", name, email, phone_number, password };
     setLoading(true); // Start loading
     try {
       await signupUser(userData);
       setSuccessMessage('Signup successful! Please check your email for verification.');
       setIsOtpSent(true); // Show OTP input
     } catch (error) {
-      setErrors({ server: error.message || 'Signup failed. Please try again.' });
+      setErrors({ server: 'Email is already exist' });
     } finally {
       setLoading(false); // Stop loading
     }
@@ -117,8 +129,9 @@ function Signup() {
     const fetchUserLocation = async () => {
       try {
         const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
-        console.log(response?.data?.country_code2)
         const countryCode =   response?.data?.country_code2
+        const callCode =   response?.data?.calling_code
+        setCallCode(callCode);
         setCurrency(countryCurrencyMap[countryCode] || "USD");
       } catch (err) {
         console.error('Error fetching user location:', err);
@@ -146,36 +159,40 @@ function Signup() {
   }, [currency]);
   useEffect(() => {
     let calculatedAmount = (1 * exchangeRate).toFixed(2);
+    if (discount && discount > 0) {
+      const discountAmount = (calculatedAmount * (discount / 100)).toFixed(2);
+      calculatedAmount = (calculatedAmount - discountAmount).toFixed(2);
+    }
     setAmount(calculatedAmount);
-  }, [exchangeRate]);
+  }, [exchangeRate, discount]);
   const creatUser = async () => {
     setLoading(true)
-    const currentDate = new Date();
-    const newExpiryDate = new Date(currentDate);
 
     const userData = {
       user_details: {
         validation: "partner",
         name,
         email,
-        phone_number,
-        username,
+        phone_number: callCode+phone_number,
+        username : email,
         password,
         confirm_password: password,
         referral_code: referal,
         payment_amount: amount,
         currency: currency,
+        subscription_plan: {
+          payment_id: plainId,
+        },
         status: "active",
       },
     };
     try {
       await createUser(userData);
-      console.log("Signup successful! Please login");
       window.location.href = "https://mdm.prabhaktech.com";
       setLoading(false)
     } catch (error) {
       setLoading(false)
-      setError({ server: error.message || "Signup failed. Please try again." });
+      setError({ server: "Email already exist." });
     }
   };
 
@@ -196,24 +213,31 @@ function Signup() {
     };
   }, []);
 
+  useEffect(() => {
+    if (plainId) {
+        creatUser();
+    }
+  }, [plainId]);
+
   const handleRazorpayPayment = async () => {
     const options = {
       key: "rzp_live_wWYL886Z2NVQAe",
-      amount: (1 * 100).toString(),
+      amount: (amount * 100).toString(),
       currency: "INR",
       name: "Prabhak Tech Solutions Pvt Ltd.",
       description: "Purchase Description",
       image: "https://example.com/logo.png",
       handler: (response) => {
-        alert(
-          `Payment successful! Payment ID: ${response.razorpay_payment_id}`
-        );
-        creatUser();
+        // alert(
+        //   `Payment successful! Payment ID: ${response.razorpay_payment_id}`
+        // );
+        // creatUser();
+        setPlainId(response.razorpay_payment_id)
       },
       prefill: {
-        name: "Customer Name",
-        email: "customer@example.com",
-        contact: "9999999999",
+        name: name,
+        email: email,
+        contact: phone_number,
       },
       notes: {
         address: "Customer Address",
@@ -225,9 +249,31 @@ function Signup() {
     const razorpay = new window.Razorpay(options);
     razorpay.open();
   };
+  const handleInputChange = (e) => {
+    setReferal(e.target.value);
+  };
+
+  const handleRefSubmit = async () => {
+    try {
+      if (referal.length > 2) {
+        const response = await axios.post(
+          "https://mdm.prabhaktech.com/api/validate-referralcode",
+          { referral_code: referal }
+        );
+        if (response?.status === 200) {
+          setMessage(response?.data?.message);
+          setDiscount(response?.data?.discount_percentage);
+        } else {
+          setMessage("invalid referal");
+        }
+      }
+    } catch (err) {
+      console.log(err);
+      setMessage("invalid referal");
+    }
+  };
 
   const createOrder = (data, actions) => {
-    console.log("Amount before creating order:", amount, currency);
 
     return actions.order.create({
       purchase_units: [
@@ -242,11 +288,11 @@ function Signup() {
   };
   const onApprove = (data, actions) => {
     return actions.order.capture().then(function (details) {
-      alert("Transection completed" + details.payer.name.given_name);
-      creatUser();
+      // alert("Transection completed" + details.payer.name.given_name);
+      // creatUser();
+      setPlainId(details.payer.name.given_name)
     });
   };
-  console.log(exchangeRate, currency)
 
   return (
     <div className="flex flex-col h-full justify-center items-center container mx-auto py-8 px-4">
@@ -293,30 +339,23 @@ function Signup() {
             </label>
             <label className="mb-1">
               Phone Number
+              <div className=' flex border rounded  w-full outline-none '>
+              <p className='p-1'>{callCode}</p>
               <input
                 type="number"
                 value={phone_number}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="border rounded py-1 px-2 w-full outline-none"
-              />
+                className="py-1 px-2 outline-none "
+                />
+              </div>
               {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber}</p>}
-            </label>
-            <label className="mb-1">
-              Username
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="border rounded py-1 px-2 w-full outline-none"
-              />
-              {errors.username && <p className="text-red-600">{errors.username}</p>}
             </label>
             <label className="mb-1">
               Password
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder="6+ characters"
+                  placeholder="10+ characters"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="border rounded py-1 px-2 w-full pr-10 outline-none"
@@ -384,6 +423,25 @@ function Signup() {
         >
           <div className="mt-6">
             <div className="flex flex-col gap-2">
+            <div className="w-full my-6">
+              <h2>Referral Code </h2>
+              <div className="flex gap-5">
+                <input
+                  type="text"
+                  value={referal}
+                  onChange={handleInputChange}
+                  placeholder="Enter your referral code"
+                  className="w-1/2 px-4  py-1.5 my-2 rounded-md outline-none"
+                />
+                <button
+                  className=" my-2  px-8 bg-viridianGreen text-white rounded"
+                  onClick={handleRefSubmit}
+                >
+                  Verify
+                </button>
+              </div>
+              {message && <p className="text-black ">{message}</p>}
+            </div>
             <p className='text-center'>Please confirm your {amount} payment:</p>
             <div className="mx-auto my-6">
               

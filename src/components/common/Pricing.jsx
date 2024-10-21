@@ -13,7 +13,6 @@ const Pricing = ({
   name,
   email,
   phone_number,
-  username,
   password,
 }) => {
   const [isMonthly, setIsMonthly] = useState(false);
@@ -27,6 +26,8 @@ const Pricing = ({
   const [discount, setDiscount] = useState();
   const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
+  const [callCode, setCallCode] = useState('');
+  const [plainId, setPlainId] = useState('');
   const payNowRef = useRef(null);
  
 
@@ -47,7 +48,7 @@ const Pricing = ({
           { referral_code: referal }
         );
         if (response?.status === 200) {
-          console.log(response?.data?.message);
+          // console.log(response?.data?.message);
           setMessage(response?.data?.message);
           setDiscount(response?.data?.discount_percentage);
         } else {
@@ -77,8 +78,8 @@ const Pricing = ({
         validation: "user",
         name,
         email,
-        phone_number,
-        username,
+        username:email,
+        phone_number: callCode+phone_number,
         password,
         confirm_password: password,
         referral_code: referal,
@@ -86,6 +87,7 @@ const Pricing = ({
         currency: currency,
         subscription_plan: {
           plan_name: selectedPlan,
+          payment_id: plainId,
           subscription_status: "active",
           expiry_date: isMonthly
             ? newExpiryDate.setMonth(currentDate.getMonth() + 1) &&
@@ -98,7 +100,7 @@ const Pricing = ({
     };
     try {
       await createUser(userData);
-      console.log("Signup successful! Please login");
+      // console.log("Signup successful! Please login");
       window.location.href = "https://mdm.prabhaktech.com";
       setLoading(false)
     } catch (error) {
@@ -114,8 +116,9 @@ const Pricing = ({
         // const response = await axios.get("http://api.ipstack.com/check?access_key=62a3129031f301b98aed43afa7de3dcc");
         // const countryCode =   response?.data?.country_code
         const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
-        console.log(response?.data?.country_code2)
         const countryCode =   response?.data?.country_code2
+        const callCode =   response?.data?.calling_code
+        setCallCode(callCode);
         setCurrency(countryCurrencyMap[countryCode] || "USD");
       } catch (err) {
         console.error("Error fetching user location:", err);
@@ -167,6 +170,11 @@ const Pricing = ({
       document.body.removeChild(script);
     };
   }, []);
+  useEffect(() => {
+    if (plainId) {
+        creatUser();
+    }
+  }, [plainId]);
 
   const handleRazorpayPayment = async () => {
     const options = {
@@ -177,15 +185,15 @@ const Pricing = ({
       description: "Purchase Description",
       image: "https://example.com/logo.png",
       handler: (response) => {
-        alert(
-          `Payment successful! Payment ID: ${response.razorpay_payment_id}`
-        );
-        creatUser();
+        // alert(
+        //   `Payment successful! Payment ID: ${response.razorpay_payment_id}`
+        // );
+        setPlainId(response.razorpay_payment_id)
       },
       prefill: {
-        name: "Customer Name",
-        email: "customer@example.com",
-        contact: "9999999999",
+        name: name,
+        email: email,
+        contact: phone_number,
       },
       notes: {
         address: "Customer Address",
@@ -198,7 +206,7 @@ const Pricing = ({
     razorpay.open();
   };
   const createOrder = (data, actions) => {
-    console.log("Amount before creating order:", amount, currency);
+    // console.log("Amount before creating order:", amount, currency);
 
     return actions.order.create({
       purchase_units: [
@@ -213,12 +221,13 @@ const Pricing = ({
   };
   const onApprove = (data, actions) => {
     return actions.order.capture().then(function (details) {
-      alert("Transection completed" + details.payer.name.given_name);
-      creatUser();
+      // alert("Transection completed" + details.payer.name.given_name);
+      // creatUser();
+      setPlainId(details.payer.name.given_name)
     });
   };
   const onCancel = (data) => {
-    console.log("Payment cancelled:", data);
+    // console.log("Payment cancelled:", data);
     setAmount("0.00")
     setPayError("Something went wrong! try again..")
 };
@@ -248,7 +257,7 @@ const Pricing = ({
       <div
         key={plan.id}
         onClick={() => setSelectedPlan(plan.id)}
-        className={`relative md:w-[50%] border cursor-pointer rounded-xl p-8 ${
+        className={` ${selectedPlan === plan.id ? "border-4 border-gray-700" : "" } relative md:w-[50%] border cursor-pointer rounded-xl p-8 ${
           plan.id === "Premium" ? "bg-blue-900/90" : "bg-white"
         } hover:shadow-xl transition-shadow duration-300 mb-10`}
       >

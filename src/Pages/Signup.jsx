@@ -12,7 +12,7 @@ function Signup() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone_number, setPhoneNumber] = useState('');
-  const [username, setUsername] = useState('');
+  const [callCode, setCallCode] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -22,6 +22,8 @@ function Signup() {
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false); 
   const [otpVerified, setOtpVerified] = useState(false);
+  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
+  const regexStr = /^[0-9]{10,13}$/; 
    
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -37,7 +39,22 @@ function Signup() {
     return response.data;
   };
 
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      try {
+        // const response = await axios.get("http://api.ipstack.com/check?access_key=62a3129031f301b98aed43afa7de3dcc");
+        // const countryCode =   response?.data?.country_code
+        const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
+        // console.log(response?.data?.calling_code)
+        const callCode =   response?.data?.calling_code
+        setCallCode(callCode);
+      } catch (err) {
+        console.error("Error fetching user location:", err);
+      }
+    };
 
+    fetchUserLocation();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -52,23 +69,29 @@ function Signup() {
       if (!emailPattern.test(email)) newErrors.email = "Invalid email format";
     }
     if (!phone_number) newErrors.phoneNumber = "Phone number is required";
-    if (!username) newErrors.username = "Username is required";
+    if (!phone_number) {
+      newErrors.phoneNumber = "Phone number is required";
+    } else if (phone_number.length < 10 || phone_number.length > 15 || !regexStr.test(phone_number)) {
+        newErrors.phoneNumber = "Please enter a valid phone number"; // Set the error message
+    }
     if (!password) newErrors.password = "Password is required";
-    if (password && password.length < 6) newErrors.password = "Password must be at least 6 characters";
+    if (!password || !passwordRegex.test(password)) {
+        newErrors.password = "Password must be at least 10 characters long, contain at least one letter, one number, and one special character.";
+    }
     if (password !== confirmPassword) newErrors.confirmPassword = "Passwords do not match";
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    const userData = {"validation": "user", name, email, phone_number, username, password };
+    const userData = {"validation": "user", name, email, phone_number, password };
     setLoading(true);
     try {
       await signupUser(userData);
       setSuccessMessage('Signup successful! Please check your email for verification.');
       setIsOtpSent(true); 
     } catch (error) {
-      setErrors({ server: error.message || 'Signup failed. Please try again.' });
+      setErrors({ server: 'Email already exist.' });
     } finally {
       setLoading(false); 
     }
@@ -141,30 +164,23 @@ function Signup() {
             </label>
             <label className="mb-1">
               Phone Number
+              <div className=' flex border rounded  w-full outline-none '>
+              <p className='p-1'>{callCode}</p>
               <input
                 type="number"
                 value={phone_number}
                 onChange={(e) => setPhoneNumber(e.target.value)}
-                className="border rounded py-1 px-2 w-full outline-none"
-              />
+                className="py-1 px-2 outline-none "
+                />
+              </div>
               {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber}</p>}
-            </label>
-            <label className="mb-1">
-              Username
-              <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                className="border rounded py-1 px-2 w-full outline-none"
-              />
-              {errors.username && <p className="text-red-600">{errors.username}</p>}
             </label>
             <label className="mb-1">
               Password
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder="6+ characters"
+                  placeholder="10+ characters"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   className="border rounded py-1 px-2 w-full pr-10 outline-none"
@@ -228,7 +244,6 @@ function Signup() {
               name={name}
               email={email}
               phone_number={phone_number}
-              username={username}
               password={password}
                />
           </div>
