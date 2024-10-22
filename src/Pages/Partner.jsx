@@ -5,7 +5,7 @@ import logo from "../assets/images/logo1.jpg";
 import Pricing from '../components/common/Pricing';
 import countryCurrencyMap from '../components/common/countryCurrencyMap'; 
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-
+import { countries } from '../components/common/Counties';
 
 function Loader() {
   return (
@@ -252,6 +252,10 @@ function Signup() {
   const handleInputChange = (e) => {
     setReferal(e.target.value);
   };
+  const handleCountryChange = (e) => {
+    setCallCode(e.target.value); // Update the selected country code
+  };
+
 
   const handleRefSubmit = async () => {
     try {
@@ -339,13 +343,23 @@ function Signup() {
             </label>
             <label className="mb-1">
               Phone Number
-              <div className=' flex border rounded  w-full outline-none '>
-              <p className='p-1'>{callCode}</p>
-              <input
-                type="number"
-                value={phone_number}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className="py-1 px-2 outline-none "
+              <div className='flex gap-2 border rounded w-full outline-none'>
+                <select
+                  value={callCode}
+                  onChange={handleCountryChange}
+                  className="py-1 w-1/2 text-center px-2 outline-none"
+                >
+                  {countries.map((country) => (
+                    <option key={country.code} value={country.code}>
+                      {country.name.length >15 ? country.name.slice[0,15] : country.name} {country.code}
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="number"
+                  value={phone_number}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="py-1 w-1/2 px-2 outline-none"
                 />
               </div>
               {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber}</p>}

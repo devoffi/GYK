@@ -4,7 +4,7 @@ import PrimaryButton from "../components/common/PrimaryButton";
 import logo from "../assets/images/logo1.jpg";
 import Pricing from '../components/common/Pricing';
 import Loader from '../components/common/Loader';
-
+import { countries } from '../components/common/Counties';
 
 
 
@@ -118,6 +118,10 @@ function Signup() {
     }
   };
 
+  const handleCountryChange = (e) => {
+    setCallCode(e.target.value); // Update the selected country code
+  };
+
 
   return (
     <div className="flex flex-col h-full justify-center items-center container mx-auto py-8 px-4">
@@ -164,13 +168,23 @@ function Signup() {
             </label>
             <label className="mb-1">
               Phone Number
-              <div className=' flex border rounded  w-full outline-none '>
-              <p className='p-1'>{callCode}</p>
-              <input
-                type="number"
-                value={phone_number}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                className="py-1 px-2 outline-none "
+              <div className='flex gap-2 border rounded w-full outline-none'>
+                <select
+                  value={callCode}
+                  onChange={handleCountryChange}
+                  className="py-1 w-1/2 text-center px-2 outline-none"
+                >
+                  {countries.map((country) => (
+                    <option key={country.code} value={country.code}>
+                      {country.name.length >15 ? country.name.slice[0,15] : country.name} {country.code}
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="number"
+                  value={phone_number}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  className="py-1 w-1/2 px-2 outline-none"
                 />
               </div>
               {errors.phoneNumber && <p className="text-red-600">{errors.phoneNumber}</p>}
@@ -245,6 +259,7 @@ function Signup() {
               email={email}
               phone_number={phone_number}
               password={password}
+              callCode={callCode}
                />
           </div>
         )}

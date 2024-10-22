@@ -14,6 +14,7 @@ const Pricing = ({
   email,
   phone_number,
   password,
+  callCode
 }) => {
   const [isMonthly, setIsMonthly] = useState(false);
   const [amount, setAmount] = useState("0.00");
@@ -26,7 +27,6 @@ const Pricing = ({
   const [discount, setDiscount] = useState();
   const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
-  const [callCode, setCallCode] = useState('');
   const [plainId, setPlainId] = useState('');
   const payNowRef = useRef(null);
  
@@ -72,7 +72,6 @@ const Pricing = ({
     setLoading(true)
     const currentDate = new Date();
     const newExpiryDate = new Date(currentDate);
-
     const userData = {
       user_details: {
         validation: "user",
@@ -89,11 +88,13 @@ const Pricing = ({
           plan_name: selectedPlan,
           payment_id: plainId,
           subscription_status: "active",
-          expiry_date: isMonthly
-            ? newExpiryDate.setMonth(currentDate.getMonth() + 1) &&
-              newExpiryDate.toISOString().split("T")[0]
-            : newExpiryDate.setFullYear(currentDate.getFullYear() + 1) &&
-              newExpiryDate.toISOString().split("T")[0],
+          expiry_date: 
+            isMonthly 
+              ? (newExpiryDate.setMonth(currentDate.getMonth() + 1), newExpiryDate.toISOString().split("T")[0])
+              : (isMonthly === null
+                  ? (newExpiryDate.setDate(currentDate.getDate() + 3), newExpiryDate.toISOString().split("T")[0]) 
+                  : (newExpiryDate.setFullYear(currentDate.getFullYear() + 1), newExpiryDate.toISOString().split("T")[0])
+                )
         },
         status: "active",
       },
@@ -101,7 +102,7 @@ const Pricing = ({
     try {
       await createUser(userData);
       // console.log("Signup successful! Please login");
-      window.location.href = "https://mdm.prabhaktech.com";
+      // window.location.href = "https://mdm.prabhaktech.com";
       setLoading(false)
     } catch (error) {
       setLoading(false)
@@ -117,8 +118,6 @@ const Pricing = ({
         // const countryCode =   response?.data?.country_code
         const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
         const countryCode =   response?.data?.country_code2
-        const callCode =   response?.data?.calling_code
-        setCallCode(callCode);
         setCurrency(countryCurrencyMap[countryCode] || "USD");
       } catch (err) {
         console.error("Error fetching user location:", err);
@@ -175,7 +174,12 @@ const Pricing = ({
         creatUser();
     }
   }, [plainId]);
-
+  const handleTrial = () => {
+    setAmount("0.00")
+    setIsMonthly(null)
+    creatUser()
+  }
+  
   const handleRazorpayPayment = async () => {
     const options = {
       key: "rzp_live_wWYL886Z2NVQAe",
@@ -431,11 +435,20 @@ const Pricing = ({
                   </>
 
                 ) : (
-                  <p className="text-red-500">{payerror ? payerror :  "Loading payment details..."}</p>
+                  <></>
+                  // <p className=."text-red-500">{payerror ? payerror :  "Loading payment details..."}</p>
                 )}
               </div>
             </div>
           )}
+          <div className="flex justify-center items-center">
+            <button
+                onClick={handleTrial}
+                className="mt-4 py-2 px-8 bg-viridianGreen text-white rounded"
+                >
+                Start free trial
+            </button>
+          </div>
         </div>
       </div>
     </PayPalScriptProvider>
