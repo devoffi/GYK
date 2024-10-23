@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import PrimaryButton from "../components/common/PrimaryButton";
+import { Link } from 'react-router-dom';
 
 function Blog() {
   useEffect(() => {
@@ -195,7 +196,11 @@ function Blog() {
               ensure they don't access inappropriate content or spend too much
               time in front of their screens.
             </p>
-            <PrimaryButton>Get started free</PrimaryButton>
+            <Link 
+                to="/signup" 
+                className="bg-blue-700 w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg">
+                Get started free
+            </Link>
           </div>
         </div>
       </div>

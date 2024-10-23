@@ -9,7 +9,7 @@ import { TbLetterG } from "react-icons/tb";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineNotifications } from "react-icons/md";
-
+import { Link } from 'react-router-dom';
 
 
 function Controls() {
@@ -162,7 +162,12 @@ function Controls() {
             </video>
           </div>
       </div>
-      <div className=" self-center"><PrimaryButton>Get started free</PrimaryButton></div>
+      <div className=" self-center">
+        <Link 
+            to="/signup" 
+            className="bg-blue-700 w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg">
+            Get started free
+        </Link></div>
     </div>
   );
 }

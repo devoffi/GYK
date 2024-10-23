@@ -8,6 +8,7 @@ import Concern from "../components/Concern";
 import Testimonial from "../components/Testimonial";
 import Feature from "../components/Feature";
 import CreateAccount from "../components/CreateAccount";
+import { Link } from 'react-router-dom';
 
 function Home() {
   useEffect(() => {
@@ -25,8 +26,12 @@ function Home() {
             Join over 6 million parents who trust Safekidly to ensure their kids' screen time is safe and balanced across all devices, all from a single, user-friendly dashboard.
           </p>
           <div className="flex justify-center md:justify-start ">
-            <PrimaryButton>Get started free</PrimaryButton>
-          </div>
+          <Link 
+            to="/signup" 
+            className="bg-blue-700 w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg">
+            Get started free
+        </Link>    
+        </div>
           <AvailableFor />
         </div>
         <div>
