@@ -24,6 +24,10 @@ function Signup() {
   const [otpVerified, setOtpVerified] = useState(false);
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
   const regexStr = /^[0-9]{10,13}$/; 
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+  };
    
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -231,8 +235,24 @@ function Signup() {
               {errors.confirmPassword && <p className="text-red-600">{errors.confirmPassword}</p>}
             </label>
             {errors.server && <p className="text-red-600 text-center">{errors.server}</p>}
-            <div className="mx-auto my-6">
-              <PrimaryButton title="Sign up" onClick={handleSubmit} />
+            <div className="flex justify-center items-center w-full my-6 ">
+            <input 
+              type="checkbox" 
+              checked={isChecked} 
+              onChange={handleCheckboxChange} 
+              className="mr-2 w-10" 
+            />
+            <label className="text-sm whitespace-nowrap ">
+              I agree to the terms and conditions
+            </label>
+          </div>
+            <div className="mx-auto my-6" >
+              <button 
+              disabled={!isChecked} 
+              onClick={ handleSubmit}
+              className= {` ${ isChecked ?"bg-blue-700" : "bg-blue-400" } w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg `}>
+              Sign Up
+            </button> 
             </div>
           </form>
         ) : !otpVerified ?  (

@@ -102,7 +102,7 @@ const Pricing = ({
     try {
       await createUser(userData);
       // console.log("Signup successful! Please login");
-      // window.location.href = "https://mdm.prabhaktech.com";
+      window.location.href = "https://mdm.prabhaktech.com";
       setLoading(false)
     } catch (error) {
       setLoading(false)
