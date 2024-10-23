@@ -8,12 +8,12 @@ function ProductPolicy() {
   return (
     <SectionContainer >
         <div className=" mx-auto p-6 bg-white rounded-lg">
-            <h1 className="text-2xl font-bold mb-2">GUARDMYKIDS FAMILY PRIVACY POLICY</h1>
+            <h1 className="text-2xl font-bold mb-2">SAFEKIDLY FAMILY PRIVACY POLICY</h1>
             <h2 className="text-lg font-normal mb-4">Last Updated: 10 October, 2024</h2>
 
             <p className="mb-4">
-                Safekidly Technologies SL (“GuardMyKids”, the “Company”, or “we/us”) is committed to respecting and protecting your privacy and that of your Users. This Privacy Policy explains our practices regarding the use of personal data collected and processed through our 
-                <a href="#" className="text-blue-600 hover:underline  inline"> Safekidly Family Services</a> (the “Services” or “GuardMyKids Services”). This Privacy Policy integrates our conditions of use of our Services.
+                Safekidly Technologies SL (“safeKidly”, the “Company”, or “we/us”) is committed to respecting and protecting your privacy and that of your Users. This Privacy Policy explains our practices regarding the use of personal data collected and processed through our 
+                <a href="#" className="text-blue-600 hover:underline  inline"> Safekidly Family Services</a> (the “Services” or “safeKidly Services”). This Privacy Policy integrates our conditions of use of our Services.
             </p>
             <p className="mb-4">
                 In this Privacy Policy we will explain our practices regarding the use of personal data obtained and/or processed through our Safekidly Services.
@@ -52,7 +52,7 @@ function ProductPolicy() {
                 The Safekidly Services is designed for use in a household environment by parents and not by children, and we do not knowingly collect personal information directly from children under the age of 13. You warrant that (a) you have informed any Users that are 14 years old or more that the Monitored Devices used by them include control and monitoring software and have obtained authorization from such Users for this kind of activity or (b) there are rules in your country that exempt you from the aforementioned obligation of information and consent, or provides for a different age limit, in which case that age limit will apply. Both Safekidly and you agree to fully comply with this Privacy Policy.
             </p>
 
-            <h2 className="font-bold mt-6 mb-2">A. DATA PROCESSED BY GUARDMYKIDS AS DATA CONTROLLER</h2>
+            <h2 className="font-bold mt-6 mb-2">A. DATA PROCESSED BY SAFEKIDLY AS DATA CONTROLLER</h2>
             <p className="mb-4">
                 Please note that this Section does NOT regulate the processing of user data from the Monitored Devices (“User Data”) by Safekidly in its capacity as Processor, which is regulated by Section B attached.
             </p>
@@ -112,7 +112,7 @@ function ProductPolicy() {
                 <p className="ml-4">We retain your personal data only for as long as necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, accounting, or reporting requirements.</p>
             </ol>
 
-            <h2 className="font-bold mt-6 mb-2">B. DATA PROCESSED BY GUARDMYKIDS AS DATA PROCESSOR</h2>
+            <h2 className="font-bold mt-6 mb-2">B. DATA PROCESSED BY SAFEKIDLY AS DATA PROCESSOR</h2>
             <ol className="list-decimal ml-6 mb-4">
                 <li className="font-bold">General Description of the Data Processed</li>
                 <p className="ml-4">When you register with Safekidly and create a User Account, you can link it to monitored devices (“Monitored Devices”), where you will be able to view information and reports from each User’s activity on those devices.</p>
@@ -300,7 +300,7 @@ function ProductPolicy() {
 
       <h2 className="text-xl font-semibold mt-6">Commercial Communications</h2>
       <p>
-        As a user of GuardMyKids’s Services, you will receive electronic commercial communications in accordance with applicable law, including alerts, notices, newsletters, offers, and promotions related to GuardMyKids’s Services. If you do not wish to receive such information, you can opt out by clicking “unsubscribe” in one of our emails or by sending a notification to 
+        As a user of safeKidly’s Services, you will receive electronic commercial communications in accordance with applicable law, including alerts, notices, newsletters, offers, and promotions related to safeKidly’s Services. If you do not wish to receive such information, you can opt out by clicking “unsubscribe” in one of our emails or by sending a notification to 
         <a href="mailto:info@prabhaktech.com" className="text-blue-600 hover:underline inline "> info@prabhaktech.com</a>.
       </p>
 
@@ -472,7 +472,7 @@ function ProductPolicy() {
                 <li><b>ZenDesk Inc.</b> provides Safekidly with support services outside the India.</li>
                 <li>The third parties indicated in section A.3 for the provision of their services.</li>
             </ul>
-            <p className="mt-6 font-bold">C. DATA COLLECTED THROUGH SCHOOL MANAGER AND SHOWN VIA THE GUARDMYKIDS SERVICE</p>
+            <p className="mt-6 font-bold">C. DATA COLLECTED THROUGH SCHOOL MANAGER AND SHOWN VIA THE SAFEKIDLY SERVICE</p>
             <p>
                 If your child’s school subscribed to Linewize Inc’s service “School Manager”, you may be able to see data about your child’s usage of the school’s devices (“School Manager Data”) on the Safekidly Service.
             </p>

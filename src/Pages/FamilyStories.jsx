@@ -145,9 +145,7 @@ function FamilyStories() {
           Ready to protect your family too?
           </p>
           <p className="text-lg lg:text-xl text-white text-center">
-          Join the millions of parents who already use GuardMyKids’s features to keep their kids safe online and create screen time balance.
-
-
+          Join the millions of parents who already use safeKidly’s features to keep their kids safe online and create screen time balance.
           </p>
           <PrimaryButton>Get started free</PrimaryButton>
         </div>

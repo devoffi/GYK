@@ -11,7 +11,7 @@ function LegalNotic() {
                 <h1 className='text-5xl font-extrabold '>Legal Notice</h1>
                 <h2 className='text-2xl font-semibold pt-8'>Who we are</h2>
                 <p className="py-4">
-                    You are accessing the website of Safekidly Technologies S.L. (“GuardMyKids”, the “Company” or “we/us”) available at 
+                    You are accessing the website of Safekidly Technologies S.L. (“safeKidlys”, the “Company” or “we/us”) available at 
                     <a href="https://mdm.prabhaktech.com" className="text-blue-500 hover:underline inline "> www.mdm.prabhaktech.com</a> 
                     (hereinafter the “Website”).
                 </p>
