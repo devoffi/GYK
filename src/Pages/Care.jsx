@@ -11,6 +11,7 @@ import Carousel from 'react-multi-carousel';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
+import { Link } from 'react-router-dom';
 
 
 const responsive = {
@@ -240,7 +241,9 @@ function Care() {
                 troubleshooting when you need
             </p>
             <div className='w-full flex justify-center md:justify-start'>
-            <PrimaryButton>Buy now</PrimaryButton>
+            <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-28 text-center py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
+              Buy now
+            </Link>
             </div>
             <span className='pt-5 text-gray-700 font-normal text-center md:text-start'>Available in English h</span>
         </div>
@@ -409,11 +412,9 @@ function Care() {
                   </label>
                   </div>
                   <div className='px-8'>
-                  <a
-                    className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl bg-gray-100 mt-4 "
-                  >
+                  <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
                     Buy now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <List items={points} childStyle="text-[16px] font-[500] text-gray-700 px-8" />
@@ -466,11 +467,9 @@ function Care() {
                   </label>
                 </div>
                 <div className='px-8 pt-4'>
-                <a
-                  className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-solid rounded-md bg-white text-black sm:text-md text-xl"
-                >
+                <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
                   Buy now
-                </a>
+                </Link>
                 </div>
               </div>
               <List items={points1} childStyle="text-[16px] font-[500] text-white px-8" />
@@ -525,11 +524,9 @@ function Care() {
                   </label>
                 </div>
                 <div className='px-8 pt-4'>
-                <a
-                  className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-solid rounded-md bg-white text-black sm:text-md text-xl"
-                >
+                <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
                   Buy now
-                </a>
+                </Link>
                 </div>
               </div>
               <List items={points1} childStyle="text-[16px] font-[500] text-white px-8" />
@@ -578,11 +575,9 @@ function Care() {
                   </label>
                   </div>
                   <div className='px-8'>
-                  <a
-                    className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl bg-gray-100 mt-4 "
-                  >
+                  <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
                     Buy now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <List items={points} childStyle="text-[16px] font-[500] text-gray-700  px-8" />
