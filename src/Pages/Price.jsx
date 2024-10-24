@@ -16,8 +16,8 @@ import Testimonial from  "../components/Testimonial"
 import Feature from  "../components/Feature"
 import { MdOutlineDevices } from "react-icons/md";
 import Faq from '../components/Faq';
-
-
+import { BsApple, BsWindows, BsTablet, BsBook, BsLaptop, BsCircle } from 'react-icons/bs';
+import { ImAndroid } from "react-icons/im";
 
 function Price() {
   useEffect(() => {
@@ -178,6 +178,14 @@ function Price() {
 
   ]
 
+  const devices = [
+    { icon: <BsApple className="text-4xl text-gray-500" />, name: "Mac" },
+    { icon: <BsWindows className="text-4xl text-gray-500" />, name: "Windows" },
+    { icon: <BsTablet className="text-4xl text-gray-500" />, name: "iPad" },
+    { icon: <ImAndroid className="text-4xl text-gray-500" />, name: "Android" }, // Placeholder
+    { icon: <BsBook className="text-4xl text-gray-500" />, name: "Kindle" },
+    { icon: <BsLaptop className="text-4xl text-gray-500" />, name: "Chromebook" },
+  ];
         
   return (
     <>
@@ -186,8 +194,16 @@ function Price() {
 
 
         <div className='px-4 md:px-0 w-full flex flex-col gap-3 justify-center items-center'>
-          <p className='text-xs'>AvailableFor:</p>
-          <img width={400} src='https://www.qustodio.com/wp-content/themes/Divi-child/assets/dist/svg/blocks/planbox-b/device-list.svg'/>
+          <p className='text-xs'>Available For:</p>
+          <div className="flex gap-4 items-center justify-around p-4">
+              {devices.map((device, index) => (
+                <div key={index} className="flex flex-col items-center">
+                  <span className={`   text-black text-[10px] `}>{device.name === "Android" ? "Avilable" : "Coming Soon"}</span>
+                  {device.icon}
+                  <span className="mt-2 text-[12px] text-center">{device.name}</span>
+                </div>
+              ))}
+            </div>
         </div>
         <div className='py-16'>
           <p className='text-center text-gray-700 text-2xl md:text-4xl font-bold'>Learn more about what's included</p>
