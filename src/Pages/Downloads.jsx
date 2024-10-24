@@ -1,7 +1,7 @@
 import React, { useState,  useEffect } from "react";
 import AccordionIcon from '../components/common/AccordianIcon';
 import { FaAndroid } from "react-icons/fa6";
-
+import { Link } from 'react-router-dom';
 
 function Downloads() {
   useEffect(() => {
@@ -82,9 +82,12 @@ function Downloads() {
         <p className="lg:text-4xl text-xl font-bold text-center text-white">
           Download on childrens devices
         </p>
-        <p className="lg:text-2xl text-lg font-bold text-center text-white underline">
+        <Link
+          to="/contact"
+         className="lg:text-2xl text-lg font-bold text-center text-white underline">
           Contact us
-        </p>
+        </Link>
+        
       </div>
     </div>
   );
