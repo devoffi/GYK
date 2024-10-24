@@ -3,7 +3,8 @@ import TextInputBox from "./common/TextInputBox";
 import PrimaryButton from "./common/PrimaryButton";
 import axios from 'axios';
 import { countries } from './common/Counties';
-
+import SuccessPopup from "./common/SuccessPopup"; 
+import { Link } from 'react-router-dom';
 
 
 function CreateAccount() {
@@ -18,19 +19,15 @@ function CreateAccount() {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
-  const [isMonthly, setIsMonthly] = useState(false);
   const [amount, setAmount] = useState("0.00");
   const [currency, setCurrency] = useState("USD");
   const [referal, setReferal] = useState("");
   const [exchangeRate, setExchangeRate] = useState(1);
   const [error, setError] = useState(null);
-  const [payerror, setPayError] = useState(null);
-  const [message, setMessage] = useState("");
-  const [discount, setDiscount] = useState();
-  const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
   const regexStr = /^[0-9]{10,13}$/;
+  const [showPopup, setShowPopup] = useState(false); 
 
 
   const createUser = async (userData) => {
@@ -67,8 +64,9 @@ function CreateAccount() {
     };
     try {
       await createUser(userData);
-      window.location.href = "https://mdm.prabhaktech.com";
+      // window.location.href = "https://mdm.prabhaktech.com";
       setLoading(false)
+      setShowPopup(true);
     } catch (error) {
       setLoading(false)
       setError({ server: error.message || "Signup failed. Please try again." });
@@ -97,6 +95,8 @@ function CreateAccount() {
     if (!password || !passwordRegex.test(password)) {
         newErrors.password = "Password must be at least 10 characters long, contain at least one letter, one number, and one special character.";
     }
+    if (password !== confirmPassword) newErrors.confirmPassword = "Passwords do not match";
+
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
@@ -210,6 +210,26 @@ function CreateAccount() {
               </div>
               {errors.password && <p className="text-red-600">{errors.password}</p>}
             </label>
+            <label className="mb-1">
+              Confirm Password
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="border rounded py-1 px-2 w-full pr-10 outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-2 top-1"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  {showPassword ? '🙈' : '👁️'}
+                </button>
+              </div>
+              {errors.confirmPassword && <p className="text-red-600">{errors.confirmPassword}</p>}
+            </label>
           </div>
 
           <div className="flex justify-center items-center w-full my-6 ">
@@ -217,10 +237,23 @@ function CreateAccount() {
               type="checkbox" 
               checked={isChecked} 
               onChange={handleCheckboxChange} 
-              className="mr-2 w-10" 
+              className="mr-1 w-10" 
             />
-            <label className="text-sm whitespace-nowrap ">
-              I agree to the terms and conditions
+            <label className="text-sm  ">
+            I agree to the{' '}
+              <Link
+                    to="/terms"
+                    className="text-blue-600 inline "
+                >
+                    Terms of Service
+                </Link>{' '}
+                and{' '}
+                <Link
+                    to="/product-privacy"
+                    className="text-blue-600 inline"
+                >
+                    Privacy Policy
+                </Link>.
             </label>
           </div>
 
@@ -237,6 +270,7 @@ function CreateAccount() {
             /> */}
           </div>
         </div>
+        {showPopup && <SuccessPopup onClose={() => setShowPopup(false)} />}
       </div>
     </div>
   );

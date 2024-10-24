@@ -21,7 +21,7 @@ function ForgotPassword() {
         <div className="mb-5">
           <p className="font-semibold text-lg text-center">Recover password</p>
           <p className="text-center">
-            Please enter the email address used to create your GuardMyKid account
+            Please enter the email address used to create your Safekidly account
             below:{" "}
           </p>
         </div>

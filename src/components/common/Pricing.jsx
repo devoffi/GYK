@@ -6,7 +6,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import axios from "axios";
 import Loader from "./Loader";
 import countryCurrencyMap from './countryCurrencyMap';
-
+import SuccessPopup from "../common/SuccessPopup"; 
 
 
 const Pricing = ({
@@ -24,11 +24,13 @@ const Pricing = ({
   const [error, setError] = useState(null);
   const [payerror, setPayError] = useState(null);
   const [message, setMessage] = useState("");
+  const [errmessage, setErrMessage] = useState("");
   const [discount, setDiscount] = useState();
   const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
   const [plainId, setPlainId] = useState('');
   const payNowRef = useRef(null);
+  const [showPopup, setShowPopup] = useState(false); 
  
 
 
@@ -51,13 +53,16 @@ const Pricing = ({
           // console.log(response?.data?.message);
           setMessage(response?.data?.message);
           setDiscount(response?.data?.discount_percentage);
+          setErrMessage("")
         } else {
-          setMessage("invalid referal");
+          setMessage("")
+          setErrMessage("invalid referal....");
         }
       }
     } catch (err) {
       console.log(err);
-      setMessage("invalid referal");
+      setMessage("")
+      setErrMessage("invalid referal");
     }
   };
 
@@ -85,7 +90,7 @@ const Pricing = ({
         payment_amount: amount,
         currency: currency,
         subscription_plan: {
-          plan_name: selectedPlan,
+          plan_name: selectedPlan ? selectedPlan : "Trial",
           payment_id: plainId,
           subscription_status: "active",
           expiry_date: 
@@ -102,7 +107,8 @@ const Pricing = ({
     try {
       await createUser(userData);
       // console.log("Signup successful! Please login");
-      window.location.href = "https://mdm.prabhaktech.com";
+      // window.location.href = "https://mdm.prabhaktech.com";
+      setShowPopup(true);
       setLoading(false)
     } catch (error) {
       setLoading(false)
@@ -370,7 +376,8 @@ const Pricing = ({
                 Verify
               </button>
             </div>
-            {message && <p className="text-black ">{message}</p>}
+            {message && <p className="text-green-500 ">{message}</p>}
+            {errmessage && <p className="text-red-500 ">{ errmessage }</p>}
           </div>
         <div className="flex justify-center mb-6">
           <button
@@ -450,6 +457,7 @@ const Pricing = ({
             </button>
           </div>
         </div>
+        {showPopup && <SuccessPopup onClose={() => setShowPopup(false)} />}
       </div>
     </PayPalScriptProvider>
   );

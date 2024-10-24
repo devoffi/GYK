@@ -104,7 +104,7 @@ const Header = () => {
                                       <img src={icon} alt="courses" className='w-20 h-15  object-cover'/>
                                   </div>
                                   <div className="rounded-lg  group-hover">
-                                      <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start "> Why GuardMyKid </p>
+                                      <p className="text-base whitespace-nowrap pt-1 font-bold flex items-start "> Why safeKidly </p>
                                       <p className="text-xs">
                                           Protecting your kids' digital lives is crucial
                                       </p>
@@ -377,6 +377,19 @@ const Header = () => {
                           </div>
                         </div>
                       </div>
+                      <div className="relative flex-row font-medium cursor-pointer group hover:text-lightGray hidden md:block">
+                        <NavLink
+                          to="/partners"
+                          className="flex gap-2"
+                          smooth={true}
+                          duration={100}
+                          offset={-50}
+                          onClick={() => setToggle(false)}
+                        >
+                          Partner{" "}
+                          
+                        </NavLink>
+                        </div>
                     </div>
                     <div className="flex gap-5"   >
                       <NavLink

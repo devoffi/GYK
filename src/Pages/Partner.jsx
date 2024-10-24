@@ -6,6 +6,8 @@ import Pricing from '../components/common/Pricing';
 import countryCurrencyMap from '../components/common/countryCurrencyMap'; 
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { countries } from '../components/common/Counties';
+import { Link } from 'react-router-dom';
+import SuccessPopup from "../components/common/SuccessPopup"; 
 
 function Loader() {
   return (
@@ -46,6 +48,7 @@ function Signup() {
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
   const regexStr = /^[0-9]{10,13}$/; 
   const [isChecked, setIsChecked] = useState(false);
+  const [showPopup, setShowPopup] = useState(false); 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
@@ -192,7 +195,8 @@ function Signup() {
     };
     try {
       await createUser(userData);
-      window.location.href = "https://mdm.prabhaktech.com";
+      // window.location.href = "https://mdm.prabhaktech.com";
+      setShowPopup(true);
       setLoading(false)
     } catch (error) {
       setLoading(false)
@@ -417,7 +421,22 @@ function Signup() {
               className="mr-2 w-10" 
             />
             <label className="text-sm whitespace-nowrap ">
-              I agree to the terms and conditions
+            <label className="text-sm  ">
+            I agree to the{' '}
+              <Link
+                    to="/terms"
+                    className="text-blue-600 inline "
+                >
+                    Terms of Service
+                </Link>{' '}
+                and{' '}
+                <Link
+                    to="/product-privacy"
+                    className="text-blue-600 inline"
+                >
+                    Privacy Policy
+                </Link>.
+            </label>
             </label>
           </div>
             {errors.server && <p className="text-red-600 text-center">{errors.server}</p>}
@@ -512,6 +531,7 @@ function Signup() {
               </div>
             </div>
           </div>
+          {showPopup && <SuccessPopup onClose={() => setShowPopup(false)} />}
           </div>
           </PayPalScriptProvider>
         )}

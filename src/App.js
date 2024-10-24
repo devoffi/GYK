@@ -26,6 +26,7 @@ import CookiePolicy from "./Pages/Cookie-policy";
 import LegalNotic from "./Pages/Legal-notic";
 import ProductPolicy from "./Pages/Product-policy";
 import Partner from "./Pages/Partner"
+import Terms from "./Pages/Terms";
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
       <Route path="/web-privacy" element={<WebsitePolicy />} />
       <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="/legal-notice" element={<LegalNotic />} />
+      <Route path="/terms" element={<Terms />} />
       
 
 

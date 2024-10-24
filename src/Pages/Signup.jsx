@@ -5,7 +5,7 @@ import logo from "../assets/images/logo1.jpg";
 import Pricing from '../components/common/Pricing';
 import Loader from '../components/common/Loader';
 import { countries } from '../components/common/Counties';
-
+import { Link } from 'react-router-dom';
 
 
 function Signup() {
@@ -243,7 +243,22 @@ function Signup() {
               className="mr-2 w-10" 
             />
             <label className="text-sm whitespace-nowrap ">
-              I agree to the terms and conditions
+            <label className="text-sm  ">
+            I agree to the{' '}
+              <Link
+                    to="/terms"
+                    className="text-blue-600 inline "
+                >
+                    Terms of Service
+                </Link>{' '}
+                and{' '}
+                <Link
+                    to="/product-privacy"
+                    className="text-blue-600 inline"
+                >
+                    Privacy Policy
+                </Link>.
+            </label>
             </label>
           </div>
             <div className="mx-auto my-6" >
