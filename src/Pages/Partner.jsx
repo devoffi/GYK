@@ -253,6 +253,7 @@ function Signup() {
       theme: {
         color: "#F37254",
       },
+      handleRazorpayPayment
     };
     const razorpay = new window.Razorpay(options);
     razorpay.open();

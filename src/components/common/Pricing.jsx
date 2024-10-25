@@ -26,6 +26,7 @@ const Pricing = ({
   const [message, setMessage] = useState("");
   const [errmessage, setErrMessage] = useState("");
   const [discount, setDiscount] = useState();
+  const [yearlyDiscount, setYearlyDiscount] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState();
   const [loading, setLoading] = useState(false); 
   const [plainId, setPlainId] = useState('');
@@ -33,10 +34,13 @@ const Pricing = ({
   const [showPopup, setShowPopup] = useState(false); 
  
 
-
+const handleSelectPlan = (type) => {
+  setIsMonthly(type)
+  setYearlyDiscount(type)
+}
   const prices = {
-    Basic: { yearly: 2, monthly: 1 },
-    Premium: { yearly: 3, monthly: 2 },
+    Basic: { yearly: 12.744, monthly: 1.18 },
+    Premium: { yearly: 23.22, monthly: 2.15 },
   };
   const handleInputChange = (e) => {
     setReferal(e.target.value);
@@ -90,16 +94,19 @@ const Pricing = ({
         payment_amount: amount,
         currency: currency,
         subscription_plan: {
-          plan_name: selectedPlan ? selectedPlan : "Trial",
+          plan_name: plainId ? selectedPlan : "Trial",
           payment_id: plainId,
           subscription_status: "active",
           expiry_date: 
-            isMonthly 
-              ? (newExpiryDate.setMonth(currentDate.getMonth() + 1), newExpiryDate.toISOString().split("T")[0])
-              : (isMonthly === null
-                  ? (newExpiryDate.setDate(currentDate.getDate() + 3), newExpiryDate.toISOString().split("T")[0]) 
-                  : (newExpiryDate.setFullYear(currentDate.getFullYear() + 1), newExpiryDate.toISOString().split("T")[0])
-                )
+          !plainId 
+            ? (newExpiryDate.setDate(newExpiryDate.getDate() + 3), newExpiryDate.toISOString().split("T")[0]) 
+            : (isMonthly 
+              ? (newExpiryDate.setMonth(newExpiryDate.getMonth() + 1), newExpiryDate.toISOString().split("T")[0]) 
+              : (isMonthly === null 
+                  ? (newExpiryDate.setDate(newExpiryDate.getDate() + 3), newExpiryDate.toISOString().split("T")[0]) 
+                  : (newExpiryDate.setFullYear(newExpiryDate.getFullYear() + 1), newExpiryDate.toISOString().split("T")[0])
+              )
+            )
         },
         status: "active",
       },
@@ -158,6 +165,10 @@ const Pricing = ({
         ? prices[selectedPlan].monthly
         : prices[selectedPlan].yearly;
       let calculatedAmount = (baseAmount * exchangeRate).toFixed(2);
+      if (!yearlyDiscount) {
+        const discountAmount = (calculatedAmount * (10 / 100)).toFixed(2);
+        calculatedAmount = (calculatedAmount - discountAmount).toFixed(2);
+      }
       if (discount && discount > 0) {
         const discountAmount = (calculatedAmount * (discount / 100)).toFixed(2);
         calculatedAmount = (calculatedAmount - discountAmount).toFixed(2);
@@ -211,6 +222,7 @@ const Pricing = ({
       theme: {
         color: "#F37254",
       },
+      payment_capture: 1,
     };
     const razorpay = new window.Razorpay(options);
     razorpay.open();
@@ -345,6 +357,7 @@ const Pricing = ({
     ));
   };
 
+
   return (
     <PayPalScriptProvider
       options={{
@@ -379,20 +392,22 @@ const Pricing = ({
             {message && <p className="text-green-500 ">{message}</p>}
             {errmessage && <p className="text-red-500 ">{ errmessage }</p>}
           </div>
+          
         <div className="flex justify-center mb-6">
           <button
             className={`px-4 py-2 font-semibold ${!isMonthly ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-700'} rounded-l`}
-            onClick={() => setIsMonthly(false)}
+            onClick={() => handleSelectPlan(false)}
           >
             Yearly
           </button>
           <button
             className={`px-4 py-2 font-semibold ${isMonthly ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-700'} rounded-r`}
-            onClick={() => setIsMonthly(true)}
+            onClick={() => handleSelectPlan(true)}
           >
             Monthly
           </button>
         </div>
+        <span className="text-gray-700 py-2">Select the yearly plan and get 10% discount.</span>
         <div className="gap-4">
           <div className="md:flex w-full justify-center gap-10">
             {renderCards()}

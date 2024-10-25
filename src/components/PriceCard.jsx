@@ -1,13 +1,18 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdOutlineLock } from "react-icons/md";
 import { GoShieldCheck } from "react-icons/go";
 import { Link } from 'react-router-dom';
+import axios from "axios";
+import countryCurrencyMap from './common/countryCurrencyMap';
+
 
 const responsive = {
+
+  
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
@@ -34,7 +39,7 @@ const List = ({ items = [], childStyle }) => (
         </div>
         <span className={isAvailable ? '' : 'text-gray-700'}>
           {text}
-        </span>
+        </span> 
       </li>
     ))}
   </ul>
@@ -42,7 +47,43 @@ const List = ({ items = [], childStyle }) => (
 
 const Package = () => {
   const [activeTab, setActiveTab] = useState('yearly');
+  const [exchangeRate, setExchangeRate] = useState(1);
+  const [currency, setCurrency] = useState("USD");
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      try {
+        // const response = await axios.get("http://api.ipstack.com/check?access_key=62a3129031f301b98aed43afa7de3dcc");
+        // const countryCode =   response?.data?.country_code
+        const response = await axios.get("https://api.ipgeolocation.io/ipgeo?apiKey=33cc459168d049d7afcde66aa8ffe758");
+        const countryCode =   response?.data?.country_code2
+        setCurrency(countryCurrencyMap[countryCode] || "USD");
+      } catch (err) {
+        console.error("Error fetching user location:", err);
+        setError("Failed to fetch user location");
+      }
+    };
+
+    fetchUserLocation();
+  }, []);
+  useEffect(() => {
+    const fetchExchangeRate = async () => {
+      if (currency !== "USD") {
+        try {
+          const response = await axios.get(
+            `https://v6.exchangerate-api.com/v6/b0c12547e82cc43ea3c02f1f/latest/USD`
+          );
+          setExchangeRate(response.data.conversion_rates[currency]);
+        } catch (err) {
+          setError("Failed to fetch exchange rate");
+          console.error(err);
+        }
+      }
+    };
+
+    fetchExchangeRate();
+  }, [currency]);
   const points = [
     { id: 1, text: 'Games & apps blocking', isAvailable: true },
     { id: 2, text: 'Daily time limits', isAvailable: true },
@@ -75,16 +116,9 @@ const Package = () => {
     responsive,
   };
 
-  // Prices for yearly and monthly plans
   const pricing = {
-    BASIC: {
-      yearly: { price: 1870.00, monthlyEquivalent: 172.50 },
-      monthly: { price: 450, monthlyEquivalent: 15 }
-    },
-    COMPLETE: {
-      yearly: { price: 2070.00, monthlyEquivalent: 172.50 },
-      monthly: { price: 600, monthlyEquivalent: 20 }
-    }
+    BASIC: { yearly: 12.744, monthly: 1.18 },
+    COMPLETE: { yearly: 23.22, monthly: 2.15 },
   };
 
   return (
@@ -132,11 +166,11 @@ const Package = () => {
           </div>
           <div className="text-center my-6">
             <p className="text-3xl font-medium flex items-end text-gray-800">
-              ₹{pricing.BASIC[activeTab].price.toFixed(2)}
+            {currency} {(pricing.BASIC[activeTab] * exchangeRate).toFixed(2) }
               <span className="text-lg pb-1 text-gray-700">/{activeTab === 'monthly' ? 'month' : 'year'}</span>
             </p>
             <p className='text-start px-1 font-medium text-gray-500 pb-3'>
-              same as ₹{pricing.BASIC[activeTab].monthlyEquivalent}/{activeTab === 'monthly' ? 'day' : 'month'}
+              {/* same as ₹{pricing.BASIC[activeTab]/12}/{activeTab === 'monthly' ? 'day' : 'month'} */}
             </p>
             <Link to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
               Buy now
@@ -159,11 +193,11 @@ const Package = () => {
           </div>
           <div className="text-center my-6">
             <p className="text-3xl font-medium flex items-end text-white">
-              ₹{pricing.COMPLETE[activeTab].price.toFixed(2)}
+            {currency} {(pricing.COMPLETE[activeTab] * exchangeRate).toFixed(2)}
               <span className="text-lg pb-1 text-white">/{activeTab === 'monthly' ? 'month' : 'year'}</span>
             </p>
             <p className='text-start px-1 font-medium text-white pb-3'>
-              same as ₹{pricing.COMPLETE[activeTab].monthlyEquivalent}/{activeTab === 'monthly' ? 'day' : 'month'}
+              {/* same as ₹{pricing.COMPLETE[activeTab]}/{activeTab === 'monthly' ? 'day' : 'month'} */}
             </p>
             <Link to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-solid rounded-md bg-white text-black sm:text-md text-xl">
               Buy now
@@ -185,12 +219,10 @@ const Package = () => {
           </div>
           <div className="text-center my-6">
             <p className="text-3xl font-medium flex items-end text-gray-800">
-              ₹{pricing.BASIC[activeTab].price.toFixed(2)} 
+            {currency} {(pricing.BASIC[activeTab] * exchangeRate).toFixed(2)} 
               <span className="text-lg pb-1 text-gray-700">/{activeTab === 'monthly' ? 'month' : 'year'}</span>
             </p>
-            <p className='text-start px-1 font-medium text-gray-500 pb-3'>
-              same as ₹{activeTab === 'monthly' ? '36/day' : '300/month'}
-            </p>
+            
             <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
               Buy now
             </Link>
@@ -212,12 +244,10 @@ const Package = () => {
           </div>
           <div className="text-center my-6">
             <p className="text-3xl font-medium flex items-end text-gray-800">
-              ₹{pricing.COMPLETE[activeTab].price.toFixed(2)}
+              {currency} {(pricing.COMPLETE[activeTab] * exchangeRate).toFixed(2)}
               <span className="text-lg pb-1 text-gray-700">/{activeTab === 'monthly' ? 'month' : 'year'}</span>
             </p>
-            <p className='text-start px-1 font-medium text-gray-500 pb-3'>
-              same as ₹{activeTab === 'monthly' ? '600/day' : '8000/month'}
-            </p>
+            
             <Link  to="/signup" className="hover:text-white hover:bg-viridianGreen hover:font-[400] font-[500] w-full py-[8px] border-[2px] border-viridianGreen border-solid rounded-md bg-transparent text-black sm:text-md text-xl">
               Buy now
             </Link>
