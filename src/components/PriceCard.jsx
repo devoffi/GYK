@@ -130,11 +130,13 @@ const Package = () => {
           is now on
         </p>
         <p className="w-full md:w-3/4 text-lg text-gray-700 py-8">
-          Give your child the tools to excel this new school year. Use code{' '}
-          <span className="bg-viridianGreen text-white font-bold px-2 py-0.5 rounded inline">
+        <span className="text-gray-700 py-2">Select the yearly plan and get 10% discount.</span>
+
+          {/* Give your child the tools to excel this new school year. Use code{' '} */}
+          {/* <span className="bg-viridianGreen text-white font-bold px-2 py-0.5 rounded inline">
             BTS10
           </span>{' '} to
-          <span className='px-2 font-semibold w-fit inline'> unlock our most advanced digital safety features with 10% off.</span>
+          <span className='px-2 font-semibold w-fit inline'> unlock our most advanced digital safety features with 10% off.</span> */}
         </p>
       </div>
 
