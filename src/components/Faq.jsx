@@ -1,96 +1,153 @@
-import React from 'react'
-import Accordion from './common/Accordian';
-
+import React from "react";
+import Accordion from "./common/Accordian";
 
 function Faq() {
   const accordionItems = [
     {
-      title: 'What’s the right plan for me?	',
+      title: "Which plan is right for me?",
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>The Complete plan is perfect for families looking to protect multiple devices with the most advanced safety features. There is no limit on the number of devices you can protect and the features are customizable to work for every family and children of all ages. The Complete plan has all the features included in the Basic plan plus calls &amp; messages monitoring, custom rules for web, apps and games, YouTube monitoring, and more. The Complete plan also includes priority phone support and personalized help from our Care Plus team.</p>
-          <p>The Basic plan protects up to 5 devices with core safety features. This plan is ideal for small families looking for basic safety features such as games &amp; app blocking, location monitoring and web filtering.</p>
+          <p className="pb-1 md:pb-1.5">
+            The Complete plan is ideal for families who want to protect multiple
+            devices with the most advanced safety features. It offers unlimited
+            device protection, customizable settings for all family members, and
+            includes features like call & message monitoring, web and app
+            filtering, YouTube monitoring, and more. The Complete plan also
+            comes with priority phone support and personalized assistance from
+            our Care Plus team.
+          </p>
+          <p>
+            The Basic plan is perfect for small families, covering up to 5
+            devices with essential safety features such as app and game
+            blocking, location tracking, and web filtering.
+          </p>
         </>
       ),
     },
     {
-      title: 'What’s the difference between Free and Premium?	',
+      title: "What’s the difference between Free and Premium?",
       content: (
         <>
-          <p  className='pb-1 md:pb-1.5'>The Free version of GuadrMyKids can protect a single device and includes basic protection features.</p>
-          <p>There are two Premium plans to choose from. Basic Premium gives you access to core protection features for up to 5 devices. Complete Premium gives you access to advanced safety features (as well as all core features), and allows you to fully customize them for your family - on unlimited devices. You can see the full list of Premium features above on this page.</p>
+          <p className="pb-1 md:pb-1.5">
+            The Free version of GuardMyKids protects a single device and
+            includes basic protection features.
+          </p>
+          <p>
+            There are two Premium plans: Basic Premium covers up to 5 devices
+            with core protection features, while Complete Premium provides
+            advanced safety tools for unlimited devices and allows for full
+            customization. You can review the full list of Premium features
+            above.
+          </p>
         </>
       ),
     },
     {
-      title: 'How to get started with GuadrMyKids ?',
+      title: "How do I get started with GuardMyKids?",
       content: (
         <>
-          <p className='pb-1 md:pb-1.5'>First choose the plan which is right for you and create your GuadrMyKids account. Next, GuadrMyKids will guide you through an easy configuration process to make sure that all your family devices are protected. Need a download - check out the&nbsp;<a  href="/downloads/" className='text-blue-500 inline'>downloads section</a>&nbsp;of our website.</p>          
-          <p>There are two Premium plans to choose from. Basic Premium gives you access to core protection features for up to 5 devices. Complete Premium gives you access to advanced safety features (as well as all core features), and allows you to fully customize them for your family - on unlimited devices. You can see the full list of Premium features above on this page.</p>
+          <p className="pb-1 md:pb-1.5">
+            Start by selecting the plan that best suits your needs and creating
+            your GuardMyKids account. Our easy-to-follow setup process will
+            guide you through securing all your family’s devices. If you need to
+            download the app, visit our{" "}
+            <a href="/downloads/" className="text-blue-500 inline">
+              Downloads section
+            </a>
+            .
+          </p>
         </>
       ),
     },
     {
-      title: 'What platforms is GuadrMyKids compatible with?',
+      title: "Which platforms are supported by GuardMyKids?",
       content: (
         <>
-          <p>GuadrMyKids works on the most popular platforms: Windows, Android, iOS, Mac, and Kindle.</p>        
+          <p>
+            GuardMyKids is compatible with the most popular platforms, including
+            Windows, Android, iOS, Mac, and Kindle.
+          </p>
         </>
       ),
     },
     {
-      title: 'What are my payment options?',
+      title: "What are my payment options?",
       content: (
         <>
-          <p>We offer a wide variety of payment options depending on your location including Visa, Mastercard, American Express, PayPal, Google Pay and Apple Pay.</p>        
+          <p>
+            We offer a variety of payment methods, including Visa, Mastercard,
+            American Express, PayPal, Google Pay, and Apple Pay, depending on
+            your location.
+          </p>
         </>
       ),
     },
     {
-      title: 'Can I get my money back?',
+      title: "Can I get a refund?",
       content: (
         <>
-          <p>Absolutely, we do have 30-day money back guarantee in case you’re not satisfied with the product.</p>        
+          <p>
+            Yes, we offer a 30-day money-back guarantee if you're not completely
+            satisfied with the product.
+          </p>
         </>
       ),
     },
     {
-      title: 'How do I switch to a bigger Premium plan?',
+      title: "How do I upgrade to a higher Premium plan?",
       content: (
         <>
-          <p>Easy!&nbsp;<a href="https://family.qustodio.com/parents-app#/upgrade" target="_blank" rel="noopener" className='text-blue-500 inline'>Click here</a>&nbsp;to find out exclusive offers for Premium users.</p>        
+          <p>
+            Upgrading is easy!{" "}
+            <a
+              href="https://family.qustodio.com/parents-app#/upgrade"
+              target="_blank"
+              rel="noopener"
+              className="text-blue-500 inline">
+              Click here
+            </a>{" "}
+            to explore exclusive offers for Premium users.
+          </p>
         </>
       ),
     },
     {
-      title: 'More questions?',
+      title: "Have more questions?",
       content: (
         <>
-          <p>GuadrMyKids offers email support. If you'd like to ask a question, you can visit our&nbsp;<a href="/help/" className='text-blue-500 inline'>Support Center</a>&nbsp;or contact our support team directly&nbsp;<a href="mailto:premiumsupport@qustodio.com" className='text-blue-500 inline'>here</a>. We're here to help.</p>
+          <p>
+            If you need further assistance, GuardMyKids offers email support.
+            Visit our{" "}
+            <a href="/help/" className="text-blue-500 inline">
+              Support Center
+            </a>{" "}
+            or contact our support team directly{" "}
+            <a
+              href="mailto:premiumsupport@qustodio.com"
+              className="text-blue-500 inline">
+              here
+            </a>
+            . We're happy to help!
+          </p>
         </>
       ),
     },
-
-
- 
   ];
- 		
-  			
 
   return (
     <>
-        <div className='container mx-auto md:flex justify-between w-full pb-10 md:py-20 '>
-            <div className='w-full md:w-4/12 pb-8 md:pt-8 text-center'>
-                <p className='text-3xl md:text-4xl leading-20 text-gray-700 font-bold'>Frequently Asked GuadrMyKids </p>
-            </div>
-            <div className='w-full md:w-8/12 md:ml-4 md:border-t px-4'>
-              <Accordion items={accordionItems} />
-            </div>
-
+      <div className="container mx-auto md:flex justify-between w-full pb-10 md:py-20 ">
+        <div className="w-full md:w-4/12 pb-8 md:pt-8 text-center">
+          <p className="text-3xl md:text-4xl leading-20 text-gray-700 font-bold">
+            Frequently Asked GuadrMyKids{" "}
+          </p>
         </div>
+        <div className="w-full md:w-8/12 md:ml-4 md:border-t px-4">
+          <Accordion items={accordionItems} />
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Faq
+export default Faq;

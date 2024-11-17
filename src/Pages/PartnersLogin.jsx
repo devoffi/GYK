@@ -17,7 +17,7 @@ function PartnersLogin() {
       <div className=" justify-center items-center flex flex-col my-2 lg:py-8">
 
           <Link
-            to="/partners-login" // Change href to to
+            to="/partners-signup" // Change href to to
             className="bg-blue-700 w-max hover:bg-blue-800 duration-500 py-2 px-4 rounded cursor-pointer text-white text-center font-medium text-lg"
           > 
             Sign up today
