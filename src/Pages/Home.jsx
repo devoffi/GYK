@@ -20,9 +20,9 @@ function Home() {
       <div className="flex flex-col lg:flex-row mt-10 md:mt-20 gap-10">
         {/* Left Column - Text and Call to Action */}
         <div className="text-center md:text-start flex flex-col gap-6">
-          <p className="text-3xl lg:text-5xl font-extrabold leading-tight">
+          <p className="text-3xl lg:text-5xl font-extrabold leading-10 ">
             Discover a complete{" "}
-            <span className="text-green-400">parental control solution</span> to
+            <span className="text-green-400 py-1">parental control solution</span> to
             foster healthy digital habits.
           </p>
           <p className="text-lg md:text-xl">
