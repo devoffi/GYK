@@ -21,6 +21,7 @@ function Signup() {
   const [isOtpSent, setIsOtpSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [otpVerified, setOtpVerified] = useState(false);
+  const [referralCode, setReferralCode] = useState('');
   const passwordRegex =
     /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
   const regexStr = /^[0-9]{10,13}$/;
@@ -67,6 +68,18 @@ function Signup() {
 
     fetchUserLocation();
   }, []);
+  useEffect(() => {
+    // Function to get query parameters from the URL
+    const getReferralCodeFromURL = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const refCode = urlParams.get('ref_code'); // Extract 'ref_code' from URL
+      return refCode || ''; // Return the referral code, or empty string if not present
+    };
+
+    // Set the referral code in state
+    const code = getReferralCodeFromURL();
+    setReferralCode(code);
+  }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -337,6 +350,7 @@ function Signup() {
               phone_number={phone_number}
               password={password}
               callCode={callCode}
+              initialReferralCode={referralCode} 
             />
           </div>
         )}

@@ -45,6 +45,7 @@ function Signup() {
   const [referal, setReferal] = useState("");
   const [message, setMessage] = useState("");
   const [discount, setDiscount] = useState();
+  const [errmessage, setErrMessage] = useState("");
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>]).{10,}$/;
   const regexStr = /^[0-9]{10,13}$/; 
   const [isChecked, setIsChecked] = useState(false);
@@ -56,7 +57,20 @@ function Signup() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    const getReferralCodeFromURL = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const refCode = urlParams.get('ref_code');
+      return refCode || ''; 
+    };
 
+    // Set the referral code in state
+    const code = getReferralCodeFromURL();
+    setReferal(code);
+    if(code){
+      handleRefVerify(code)
+    }
+  }, [])
   const signupUser = async (userData) => {
     const response = await axios.post('https://mdm.prabhaktech.com/api/email-validation', userData);
     return response.data;
@@ -265,7 +279,28 @@ function Signup() {
     setCallCode(e.target.value); // Update the selected country code
   };
 
-
+  const handleRefVerify = async (code) => {
+    try {
+      if (code.length > 2) {
+        const response = await axios.post(
+          "https://mdm.prabhaktech.com/api/validate-referralcode",
+          { referral_code: code }
+        );
+        if (response?.status === 200) {
+          setMessage(response?.data?.message);
+          setDiscount(response?.data?.discount_percentage);
+          setErrMessage("")
+        } else {
+          setMessage("")
+          setErrMessage("invalid referal....");
+        }
+      }
+    } catch (err) {
+      console.log(err);
+      setMessage("")
+      setErrMessage("invalid referal");
+    }
+  };
   const handleRefSubmit = async () => {
     try {
       if (referal.length > 2) {
@@ -275,14 +310,16 @@ function Signup() {
         );
         if (response?.status === 200) {
           setMessage(response?.data?.message);
-          setDiscount(response?.data?.discount_percentage);
+          setErrMessage("")
         } else {
-          setMessage("invalid referal");
+          setMessage("")
+          setErrMessage("invalid referal....");
         }
       }
     } catch (err) {
       console.log(err);
-      setMessage("invalid referal");
+      setMessage("")
+      setErrMessage("invalid referal");
     }
   };
 
@@ -494,7 +531,8 @@ function Signup() {
                   Verify
                 </button>
               </div>
-              {message && <p className="text-black ">{message}</p>}
+              {message && <p className="text-green-500 ">{message}</p>}
+            {errmessage && <p className="text-red-500 ">{ errmessage }</p>}
             </div>
             <p className='text-center'>Please confirm your {amount} payment:</p>
             <div className="mx-auto my-6">

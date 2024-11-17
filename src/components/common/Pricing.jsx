@@ -14,12 +14,13 @@ const Pricing = ({
   email,
   phone_number,
   password,
-  callCode
+  callCode,
+  initialReferralCode
 }) => {
   const [isMonthly, setIsMonthly] = useState(false);
   const [amount, setAmount] = useState("0.00");
   const [currency, setCurrency] = useState("USD");
-  const [referal, setReferal] = useState("");
+  const [referal, setReferal] = useState(initialReferralCode);
   const [exchangeRate, setExchangeRate] = useState(1);
   const [error, setError] = useState(null);
   const [payerror, setPayError] = useState(null);
@@ -33,6 +34,12 @@ const Pricing = ({
   const payNowRef = useRef(null);
   const [showPopup, setShowPopup] = useState(false); 
  
+useEffect(() => {
+  if (initialReferralCode) {
+    setReferal(initialReferralCode); 
+    handleAutoVerify(initialReferralCode);  
+  }
+}, [initialReferralCode]);
 
 const handleSelectPlan = (type) => {
   setIsMonthly(type)
@@ -45,7 +52,28 @@ const handleSelectPlan = (type) => {
   const handleInputChange = (e) => {
     setReferal(e.target.value);
   };
-
+  const handleAutoVerify = async (initialReferralCode) => {
+    try {
+      if (initialReferralCode.length > 2) {
+        const response = await axios.post(
+          "https://mdm.prabhaktech.com/api/validate-referralcode",
+          { referral_code: initialReferralCode }
+        );
+        if (response?.status === 200) {
+          setMessage(response?.data?.message);
+          setDiscount(response?.data?.discount_percentage);
+          setErrMessage("")
+        } else {
+          setMessage("")
+          setErrMessage("invalid referal....");
+        }
+      }
+    } catch (err) {
+      console.log(err);
+      setMessage("")
+      setErrMessage("invalid referal");
+    }
+  };
   const handleSubmit = async () => {
     try {
       if (referal.length > 2) {
@@ -54,7 +82,6 @@ const handleSelectPlan = (type) => {
           { referral_code: referal }
         );
         if (response?.status === 200) {
-          // console.log(response?.data?.message);
           setMessage(response?.data?.message);
           setDiscount(response?.data?.discount_percentage);
           setErrMessage("")
