@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PrimaryButton from "../components/common/PrimaryButton";
-import logo from "../assets/images/logo1.jpg";
+import logo from "../assets/images/logo4.jpeg";
 import Pricing from "../components/common/Pricing";
 import Loader from "../components/common/Loader";
 import { countries } from "../components/common/Counties";

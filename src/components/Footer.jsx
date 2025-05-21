@@ -7,6 +7,7 @@ import {
     BsGoogle,
     BsHousesFill
 } from "react-icons/bs";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -148,35 +149,36 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-2 text-lightGray">
                         <Link
-                            to="#" // Change href to to
+                            to="https://youtube.com/@prabhaktechsolutionspvtltd?si=nKoyJkmz3qWiSXrk" // Change href to to
+                            className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
+                        >
+                            <FaYoutube />
+                        </Link>
+                        <Link
+                            to="https://www.facebook.com/profile.php?id=61576322097112" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsFacebook />
                         </Link>
                         <Link
-                            to="#" // Change href to to
+                            to="https://x.com/prabhak_tech?s=09" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
-                            <BsTwitter />
+                            <FaXTwitter />
                         </Link>
                         <Link
-                            to="#" // Change href to to
+                            to="https://www.instagram.com/prabhak_tech?igsh=b3QzZ2theDk1bmlk" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsInstagram />
                         </Link>
-                        <Link
-                            to="#" // Change href to to
-                            className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
-                        >
-                            <BsLinkedin />
-                        </Link>
-                        <Link
+                        
+                        {/* <Link
                             to="#" // Change href to to
                             className="p-[10px] rounded-full bg-independence hover:bg-viridianGreen"
                         >
                             <BsGoogle />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

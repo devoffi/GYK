@@ -11,7 +11,7 @@ import { FaRegLightbulb } from "react-icons/fa";
 import { AiOutlineSafety } from "react-icons/ai";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import icon from "../assets/images/img1.jpg";
-import logo from "../assets/images/logo1.jpg";
+import logo from "../assets/images/logo4.jpeg";
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {

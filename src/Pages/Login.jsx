@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import TextInputBox from "../components/common/TextInputBox";
 import PrimaryButton from "../components/common/PrimaryButton";
-import logo from "../assets/images/logo1.jpg";
+import logo from "../assets/images/logo4.jpeg";
 
 function Login() {
   useEffect(() => {
