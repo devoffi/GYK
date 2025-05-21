@@ -9,7 +9,6 @@ function School() {
   return (
     <div className="text-gray-700 mt-10">
       <SectionContainer>
-        {/* Hero Section */}
         <div className="p-4 md:p-10 text-center">
           <h1 className="font-extrabold text-3xl md:text-5xl md:px-10">
             Seamless{" "}
